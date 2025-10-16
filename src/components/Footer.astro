@@ -36,7 +36,7 @@ const contactText = isChinesePage
   : "Interested in mentoring, partnering, or applying with your team? Reach out to the Upstream Origin organizers.";
 
 const emailLabel = isChinesePage ? "邮箱" : "Email";
-const emailLinkText = "origin@upstreamlabs.com";
+const emailLinkText = "origin@upstreamlabs.org";
 
 const socials = [
   {
@@ -68,11 +68,6 @@ const slug = Astro.url.pathname;
             <Logo width={168} height={40} />
           </a>
         </div>
-        <p class="footer-tagline">
-          {isChinesePage
-            ? "凡创新者，皆溯源而行；凡协作者，皆向光而生。Upstream Origin 连接政府、产业、社区与高校，共同探索开源生态的可持续未来。"
-            : "Push to the Origin. Flow with the Source. Upstream Origin unites government, industry, community, and academia to build sustainable open-source ecosystems."}
-        </p>
       </div>
 
       <nav class="col col-sitemap" aria-label="Navigation Footer">
@@ -134,12 +129,6 @@ const slug = Astro.url.pathname;
     </div>
 
     <div class="row row-end">
-      <div class="col col-logo-gosim2">
-        <div class="logo">
-          <Logo width={141} height={32} />
-        </div>
-      </div>
-
       <div class="col col-copyright">
         <p>
           {isChinesePage
@@ -147,8 +136,6 @@ const slug = Astro.url.pathname;
             : `© ${new Date().getFullYear()} Upstream Origin. All rights reserved.`}
         </p>
       </div>
-
-      <div class="col col-dev-credits"></div>
     </div>
   </div>
 </footer>
