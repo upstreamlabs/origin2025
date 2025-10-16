@@ -15,6 +15,7 @@ interface HeroLogo {
 interface Props {
   title: string;
   tagline?: string;
+  quote?: string;
   description?: string;
   date?: string;
   location?: string;
@@ -31,6 +32,7 @@ interface Props {
 const {
   title,
   tagline,
+  quote,
   description,
   date,
   location,
@@ -83,6 +85,8 @@ const enLine = (mottoEn ?? fallbackEn) || null;
               {enLine && <span class="en">{enLine}</span>}
             </div>
           )}
+
+          {quote && <p class="hero-quote">{quote}</p>}
 
           {description && <p class="hero-description">{description}</p>}
 
@@ -210,12 +214,25 @@ const enLine = (mottoEn ?? fallbackEn) || null;
     font-family: 'Zhuque Fangsong', serif;
   }
 
+  .hero-quote {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    max-width: 1000px;
+    margin: 2.5rem 0 0;
+    text-align: left;
+    font-family: 'Zhuque Fangsong', serif;
+    font-weight: 400;
+  }
+
   .hero-description {
     font-size: 1.15rem;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.86);
-    max-width: 640px;
-    margin: 6rem 0 0;
+    width: 100%;
+    max-width: 1000px;
+    margin: 2rem 0 0;
     text-align: left;
     font-family: 'Zhuque Fangsong', serif;
   }
@@ -344,8 +361,15 @@ const enLine = (mottoEn ?? fallbackEn) || null;
       white-space: normal;
     }
 
+    .hero-quote {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-top: 2rem;
+    }
+
     .hero-description {
       font-size: 1rem;
+      margin-top: 1.5rem;
     }
 
     .organizer-logos {
