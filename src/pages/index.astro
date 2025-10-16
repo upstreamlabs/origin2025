@@ -1,11 +1,38 @@
 ---
-// Simple language detection and redirect
 const acceptLanguage = Astro.request.headers.get('accept-language') || '';
-const isChinesePreferred = acceptLanguage.toLowerCase().includes('zh');
+const serverPreferred = acceptLanguage.toLowerCase().includes('zh') ? '/cn/' : '/en/';
 
-// Default to English unless Chinese is preferred
-const redirectPath = isChinesePreferred ? '/cn/' : '/en/';
+const clientRedirectScript = `
+  (function () {
+    var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language];
+    var prefersChinese = langs.some(function (lang) {
+      return lang && lang.toLowerCase().startsWith('zh');
+    });
+    var target = prefersChinese ? '/cn/' : '/en/';
 
-// Perform redirect
-return Astro.redirect(redirectPath, 302);
+    if (window.location.pathname !== target) {
+      window.location.replace(target);
+    }
+  })();
+`;
 ---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <meta http-equiv="refresh" content={`0;url=${serverPreferred}`} />
+    <meta name="robots" content="noindex" />
+    <script is:inline set:html={clientRedirectScript} />
+  </head>
+
+  <body>
+    <noscript>
+      <p>
+        JavaScript is required for automatic language detection. Please continue to
+        <a href="/en/">English</a> or <a href="/cn/">Chinese</a>.
+      </p>
+    </noscript>
+  </body>
+</html>
