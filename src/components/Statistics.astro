@@ -37,11 +37,7 @@ const {
                 {stats?.map((loop) => (
                     <>
                     <div class="single-stat outline">
-                        <h2>
-                            <span class="count-up">{loop.title}</span>
-                            {loop?.hasPlus &&<span class="number-after">+</span>}
-                            {loop?.suffix &&<span class="number-after">{loop.suffix}</span>}
-                        </h2>
+                        <h2><span class="count-up">{loop.title}</span>{loop?.hasPlus &&<span class="number-after">+</span>}{loop?.suffix &&<span class="number-after">{loop.suffix}</span>}</h2>
                         <p>{loop.subtitle}</p>
                     </div>
 
@@ -67,10 +63,15 @@ const {
 </section>
 
 <style>
+    .single-stat.outline h2 {
+        word-spacing: 0;
+        letter-spacing: 0;
+    }
+
     .single-stat.outline p {
-        white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         padding: 0 1rem;
+        line-height: 1.4;
     }
 </style>
