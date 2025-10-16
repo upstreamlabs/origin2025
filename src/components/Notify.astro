@@ -1,0 +1,170 @@
+---
+// Components
+import Button from "components/Button.astro";
+
+interface Props {
+  title?: string;
+  text: string;
+  buttons?: Array<{
+    text: string;
+    link: string;
+    openInNewTab?: boolean;
+  }>;
+}
+
+const { title, text, buttons } = Astro.props;
+---
+
+<div class="floating-elements">
+  <div class="notification-modal" data-visible="true">
+    <div class="row">
+      <div class="col col-modal">
+        {
+          title && (
+            <div class="col-row">
+              <h3>{title}</h3>
+            </div>
+          )
+        }
+        <div class="col-row">
+          <p>{text}</p>
+        </div>
+        {
+          buttons && buttons.length > 0 && (
+            <div class="col-row-btn">
+              {buttons.map((button) => (
+                <a
+                  href={button.link}
+                  class="btn w-100"
+                  target={button.openInNewTab ? "_blank" : undefined}
+                  rel={button.openInNewTab ? "noopener noreferrer" : undefined}
+                >
+                  <div class="btn-click w-100">
+                    <div class="btn-content w-100">
+                      <div class="btn-fill" />
+                      <span>{button.text}</span>
+                    </div>
+                  </div>
+                </a>
+              ))}
+            </div>
+          )
+        }
+      </div>
+    </div>
+    <button
+      type="button"
+      class="close"
+      id="closeModal"
+      aria-label="Close notification"
+    >
+      <div class="close-fill"></div>
+      <div class="bar bar-top"></div>
+      <div class="bar bar-bottom"></div>
+    </button>
+  </div>
+</div>
+
+<style>
+  .floating-elements {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+    pointer-events: none;
+  }
+
+  .notification-modal {
+    pointer-events: all;
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    background-color: rgba(var(--color-light-rgb), 1);
+    padding: 2.5em 2em 2em 2em;
+    display: flex;
+    flex-direction: column;
+    max-width: 19em;
+    border-radius: var(--border-radius);
+    font-size: 1.1em;
+    z-index: 100;
+    box-shadow: 0px 0em 6em 0px rgba(var(--color-glow-rgb), 0.4);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+
+  .notification-modal[data-visible="false"] {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .col-modal {
+    gap: 16px;
+  }
+
+  .col-row-btn {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .w-100 {
+    width: 100%;
+  }
+
+  .notification-modal .close {
+    width: 2.25em;
+    height: 2.25em;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 440px) {
+    .notification-modal {
+      max-width: unset;
+      width: calc(100% - 2em);
+    }
+  }
+</style>
+
+<script>
+  function initializeModal() {
+    console.log("Initializing modal...");
+    const closeButton = document.getElementById("closeModal");
+    console.log("Close button found:", closeButton);
+
+    if (!closeButton) {
+      console.error("Close button not found!");
+      return;
+    }
+
+    const modal = closeButton.closest(".notification-modal");
+    console.log("Modal found:", modal);
+
+    if (!modal) {
+      console.error("Modal not found!");
+      return;
+    }
+
+    closeButton.addEventListener("click", (e) => {
+      console.log("Close button clicked");
+      e.preventDefault();
+      modal.setAttribute("data-visible", "false");
+      console.log("Modal visibility set to false");
+    });
+  }
+
+  // Try both DOMContentLoaded and load events to ensure the script runs
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initializeModal);
+  } else {
+    initializeModal();
+  }
+</script>

@@ -1,0 +1,131 @@
+---
+import Layout from "layouts/Layout.astro";
+import CodeOfConductZH from "markdown/CodeOfConduct.zh.md";
+---
+
+<Layout
+  title="行为准则｜Upstream Origin"
+  description="Upstream Origin 活动的社区参与准则。"
+  navDarkMode={true}
+  navBackground="header-home"
+  pageTransitionName="行为准则"
+>
+  <section class="coc-hero" data-theme-section="dark" data-bg-section="header-home">
+    <div class="container">
+      <div class="hero-wrap">
+        <p class="eyebrow">社区至上</p>
+        <h1>行为准则</h1>
+        <p class="intro">
+          我们致力于营造安全、包容、互相尊重的协作环境。本准则适用于 Upstream Origin 的所有活动与相关空间，帮助每位参与者安心共创。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="coc-content" data-theme-section="light" data-bg-section="light">
+    <div class="container">
+      <div class="content-card">
+        <CodeOfConductZH />
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .coc-hero {
+    padding: clamp(4rem, 10vw, 6rem) 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .coc-hero::before,
+  .coc-hero::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.25;
+  }
+
+  .coc-hero::before {
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, rgba(43, 116, 255, 0.4), transparent 70%);
+    top: -140px;
+    right: 16%;
+  }
+
+  .coc-hero::after {
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, rgba(255, 198, 64, 0.35), transparent 70%);
+    bottom: -120px;
+    left: 10%;
+  }
+
+  .hero-wrap {
+    max-width: 720px;
+    color: #ffffff;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .eyebrow {
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    opacity: 0.7;
+  }
+
+  .hero-wrap h1 {
+    font-size: clamp(2.4rem, 5vw, 3.4rem);
+    margin: 0;
+    font-weight: 700;
+  }
+
+  .intro {
+    font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+    line-height: 1.8;
+    opacity: 0.9;
+  }
+
+  .coc-content {
+    padding: clamp(3rem, 8vw, 5rem) 0;
+  }
+
+  .content-card {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 24px 60px rgba(13, 28, 58, 0.08);
+    padding: clamp(2.5rem, 6vw, 3.5rem);
+  }
+
+  .content-card :global(h2) {
+    font-size: 1.65rem;
+    margin-top: 2.5rem;
+  }
+
+  .content-card :global(h2:first-of-type) {
+    margin-top: 0;
+  }
+
+  .content-card :global(ul) {
+    margin-left: 1.2rem;
+  }
+
+  .content-card :global(li) {
+    margin-bottom: 0.75rem;
+  }
+
+  .content-card :global(em) {
+    color: rgba(13, 28, 58, 0.65);
+  }
+
+  @media (max-width: 768px) {
+    .content-card {
+      border-radius: 18px;
+      padding: 2rem;
+    }
+  }
+</style>

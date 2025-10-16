@@ -1,0 +1,115 @@
+---
+// Components
+import Button from "components/Button.astro"
+
+interface Props {
+	title: string,
+    list?: Array<{
+        title: string,
+        text: string,
+    }>,
+    ctaButton?: {
+        text: string,
+        link: string,
+    },
+    id?: string,
+    theme?: 'light' | 'dark';
+    background?: 'light' | 'lightgray' | 'dark' | 'primary';
+}
+
+const {
+    title,
+    list,
+    ctaButton,
+    id,
+    theme = 'light',
+    background = 'light',
+} = Astro.props;
+---
+
+<section
+    class="section section-agenda-grid"
+    id={id ?? 'grid'}
+    data-theme-section={theme}
+    data-bg-section={background}
+    data-scroll-section
+>
+    <div class="container">
+        <div class="row row-list accordion visible">
+            <div class="list-group">
+
+                <div class="row">
+                    <div class="col col-title">
+                        <h2>{title}</h2>
+                    </div>
+                </div>
+
+                <ul class="row row-list">
+                    {list?.map((loop, i) => (
+                        <li
+                            class="single-agenda-card single-accordion-item card-hover"
+                            data-accordion-status="not-active"
+                        >
+                            <div class="top" data-accordion-toggle>
+                                <div class="left">
+                                    <div class="timeslot">
+                                        <p class="h5">{(i + 1).toString().padStart(3, '0')}</p>
+                                    </div>
+                                    <h3 class="h4">{loop.title}</h3>
+                                </div>
+                                <div class="plus">
+                                    <div class="plus-fill"></div>
+                                    <div class="bar bar-top"></div>
+                                    <div class="bar bar-bottom"></div>
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                <div class="bottom-wrap">
+                                    <div class="bottom-content">
+                                        <div class="card-row styled-content">
+                                            <p>
+                                                {loop.text}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    ))}
+                </ul>
+
+            </div>
+        </div>
+
+        {ctaButton?.text && (
+            <div class="row row-custom">
+                <div class="col">
+                    <Button
+                        text={ctaButton.text}
+                        link={ctaButton.link}
+                        class="btn outline btn-hover xl"
+                    />
+                </div>
+            </div>
+        )}
+    </div>
+</section>
+
+<style>
+  .section-agenda-grid .single-agenda-card .bottom-content p {
+    font-size: clamp(1.15rem, 2vw, 1.35rem);
+    line-height: 1.85;
+    color: rgba(13, 28, 58, 0.78);
+  }
+
+  [data-theme-section="dark"] .section-agenda-grid .single-agenda-card .bottom-content p {
+    color: rgba(255, 255, 255, 0.82);
+  }
+
+  @media (max-width: 768px) {
+    .section-agenda-grid .single-agenda-card .bottom-content p {
+      font-size: 1.15rem;
+      line-height: 1.8;
+    }
+  }
+</style>

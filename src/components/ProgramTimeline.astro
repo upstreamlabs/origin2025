@@ -1,0 +1,213 @@
+---
+interface TimelineItem {
+  label: string;
+  title: string;
+  text: string;
+}
+
+interface Props {
+  id?: string;
+  title: string;
+  items: TimelineItem[];
+  theme?: 'light' | 'dark';
+  background?: 'light' | 'lightgray' | 'dark' | 'primary';
+  variant?: 'origin' | 'residency';
+}
+
+const {
+  id,
+  title,
+  items,
+  theme = 'light',
+  background = 'light',
+  variant = 'origin',
+} = Astro.props;
+---
+
+<section
+  class={`program-timeline variant-${variant}`}
+  id={id}
+  data-theme-section={theme}
+  data-bg-section={background}
+>
+  <div class="container">
+    <div class="timeline-header">
+      <h2>{title}</h2>
+    </div>
+    <div class="timeline-list">
+      {items.map((item, index) => (
+        <div class="timeline-item">
+          <div class="marker">
+            <span class="marker-label">{item.label}</span>
+          </div>
+          <div class="content">
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .program-timeline {
+    position: relative;
+    padding: clamp(3rem, 9vw, 6rem) 0;
+    overflow: hidden;
+  }
+
+  .program-timeline::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 15%, rgba(255, 198, 64, 0.18), transparent 55%),
+      radial-gradient(circle at 80% 15%, rgba(43, 116, 255, 0.16), transparent 60%),
+      radial-gradient(circle at 50% 85%, rgba(139, 210, 255, 0.16), transparent 60%);
+    pointer-events: none;
+  }
+
+  .timeline-header {
+    margin-bottom: clamp(2rem, 6vw, 3rem);
+  }
+
+  .timeline-header h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin: 0;
+    color: #0d1c3a;
+  }
+
+  [data-theme-section="dark"] .timeline-header h2 {
+    color: rgba(255, 255, 255, 0.92);
+  }
+
+  .timeline-list {
+    position: relative;
+    display: grid;
+    gap: clamp(1.75rem, 4vw, 2.5rem);
+    padding-left: clamp(1rem, 3vw, 1.75rem);
+  }
+
+  .timeline-list::before {
+    content: "";
+    position: absolute;
+    left: clamp(0.2rem, 1vw, 0.6rem);
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 2px;
+    background: linear-gradient(180deg, rgba(43, 116, 255, 0.35), rgba(255, 198, 64, 0.45));
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: minmax(0, 200px) minmax(0, 1fr);
+    gap: clamp(1rem, 3vw, 1.75rem);
+    position: relative;
+  }
+
+  .marker {
+    position: relative;
+    padding-left: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 1.8rem;
+  }
+
+  .marker::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 1.05rem;
+    height: 1.05rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, rgba(43, 116, 255, 0.95), rgba(255, 198, 64, 0.95));
+    box-shadow: 0 0 0 6px rgba(43, 116, 255, 0.12);
+    transform: translateY(-50%);
+  }
+
+  .marker-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(13, 28, 58, 0.8);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  [data-theme-section="dark"] .marker-label {
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  .content h3 {
+    font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+    margin-bottom: 0.75rem;
+    color: rgba(13, 28, 58, 0.9);
+  }
+
+  [data-theme-section="dark"] .content h3 {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .content p {
+    font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+    line-height: 1.8;
+    color: rgba(13, 28, 58, 0.75);
+    margin: 0;
+  }
+
+  .program-timeline.variant-residency::before {
+    background: radial-gradient(circle at 15% 20%, rgba(255, 140, 92, 0.2), transparent 55%),
+      radial-gradient(circle at 85% 30%, rgba(26, 196, 176, 0.2), transparent 60%),
+      radial-gradient(circle at 50% 80%, rgba(120, 180, 255, 0.18), transparent 60%);
+  }
+
+  .program-timeline.variant-residency .timeline-list::before {
+    background: linear-gradient(180deg, rgba(26, 196, 176, 0.35), rgba(255, 140, 92, 0.45));
+  }
+
+  .program-timeline.variant-residency .marker::before {
+    background: linear-gradient(135deg, rgba(26, 196, 176, 0.95), rgba(255, 140, 92, 0.95));
+    box-shadow: 0 0 0 6px rgba(26, 196, 176, 0.12);
+  }
+
+  .program-timeline.variant-residency .marker-label {
+    color: rgba(26, 55, 88, 0.82);
+  }
+
+  [data-theme-section="dark"] .program-timeline.variant-residency .marker-label {
+    color: rgba(233, 255, 250, 0.85);
+  }
+
+  [data-theme-section="dark"] .content p {
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  @media (max-width: 768px) {
+    .timeline-list {
+      padding-left: 1.25rem;
+    }
+
+    .timeline-list::before {
+      left: 0;
+    }
+
+    .timeline-item {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .marker {
+      padding-left: 1.6rem;
+    }
+
+    .marker::before {
+      width: 0.95rem;
+      height: 0.95rem;
+    }
+
+    .marker-label {
+      font-size: 0.88rem;
+    }
+  }
+</style>

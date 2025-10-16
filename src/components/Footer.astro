@@ -1,0 +1,198 @@
+---
+import Logo from "./Logo.astro";
+
+const pathname = Astro.url.pathname;
+const isChinesePage = pathname.startsWith('/cn/');
+const langPrefix = isChinesePage ? '/cn' : '/en';
+
+const primaryLinks = isChinesePage
+  ? [
+      { text: "项目概览", link: `${langPrefix}/#overview` },
+      { text: "课程安排", link: `${langPrefix}/#program` },
+      { text: "导师支持", link: `${langPrefix}/#mentors` },
+      { text: "成果与激励", link: `${langPrefix}/#support` },
+      { text: "报名入口", link: `${langPrefix}/#apply` },
+    ]
+  : [
+      { text: "Overview", link: `${langPrefix}/#overview` },
+      { text: "Program", link: `${langPrefix}/#program` },
+      { text: "Mentorship", link: `${langPrefix}/#mentors` },
+      { text: "Support", link: `${langPrefix}/#support` },
+      { text: "Apply", link: `${langPrefix}/#apply` },
+    ];
+
+const secondaryLinks = isChinesePage
+  ? [
+      { text: "资助说明", link: `${langPrefix}/#support` },
+    ]
+  : [
+      { text: "Grant Details", link: `${langPrefix}/#support` },
+      { text: "Code of Conduct", link: `${langPrefix}/code-of-conduct` },
+    ];
+
+const contactLabel = isChinesePage ? "联系我们" : "Stay in touch";
+const contactText = isChinesePage
+  ? "若你希望成为导师、合作伙伴或申请团队，请通过邮件与 Upstream Origin 联系。"
+  : "Interested in mentoring, partnering, or applying with your team? Reach out to the Upstream Origin organizers.";
+
+const emailLabel = isChinesePage ? "邮箱" : "Email";
+const emailLinkText = "origin@upstreamlabs.com";
+
+const socials = [
+  {
+    icon: "/icons/icon-website.svg",
+    alt: isChinesePage ? "访问官网" : "Visit website",
+    link: "https://upstreamignite.org",
+  },
+  {
+    icon: "/icons/icon-github.svg",
+    alt: isChinesePage ? "GitHub" : "GitHub",
+    link: "https://github.com/upstream-ignite",
+  },
+  {
+    icon: "/icons/icon-linkedin.svg",
+    alt: isChinesePage ? "LinkedIn" : "LinkedIn",
+    link: "https://www.linkedin.com/company/upstream-ignite",
+  },
+];
+
+const slug = Astro.url.pathname;
+---
+
+<footer class="section footer" data-theme-section="dark" data-bg-section="dark">
+  <div class="container">
+    <div class="row row-base">
+      <div class="col col-logo-gosim">
+        <div class="logo">
+          <a href={langPrefix + '/'} aria-label="Go to homepage" class="logo-click">
+            <Logo width={168} height={40} />
+          </a>
+        </div>
+        <p class="footer-tagline">
+          {isChinesePage
+            ? "凡创新者，皆溯源而行；凡协作者，皆向光而生。Upstream Origin 连接政府、产业、社区与高校，共同探索开源生态的可持续未来。"
+            : "Push to the Origin. Flow with the Source. Upstream Origin unites government, industry, community, and academia to build sustainable open-source ecosystems."}
+        </p>
+      </div>
+
+      <nav class="col col-sitemap" aria-label="Navigation Footer">
+        <ul>
+          {primaryLinks.map((link) => (
+            <li
+              class="link link-hover"
+              data-barba-update
+              data-link-status={link.link === slug ? 'active' : 'not-active'}
+            >
+              <a class="link-click" href={link.link}>
+                <span>{link.text}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <ul>
+          {secondaryLinks.map((link) => (
+            <li
+              class="link link-hover"
+              data-barba-update
+              data-link-status={link.link === slug ? 'active' : 'not-active'}
+            >
+              <a class="link-click" href={link.link}>
+                <span>{link.text}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      <div class="col col-newsletter">
+        <div class="col-row col-row-title">
+          <h2 class="h4">{contactLabel}</h2>
+        </div>
+        <div class="col-row col-row-text styled-content">
+          <p>{contactText}</p>
+        </div>
+        <div class="col-row col-row-info">
+          <p class="footer-email-label">{emailLabel}</p>
+          <a class="footer-email" href={`mailto:${emailLinkText}`}>{emailLinkText}</a>
+        </div>
+        <div class="row footer-socials">
+          {socials.map((social) => (
+            <a href={social.link} target="_blank" rel="noopener noreferrer">
+              <img
+                src={social.icon}
+                alt={social.alt}
+                width="18"
+                height="18"
+                loading="lazy"
+                style="filter: invert(1);"
+              />
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div class="row row-end">
+      <div class="col col-logo-gosim2">
+        <div class="logo">
+          <Logo width={141} height={32} />
+        </div>
+      </div>
+
+      <div class="col col-copyright">
+        <p>
+          {isChinesePage
+            ? `© ${new Date().getFullYear()} Upstream Origin. 保留所有权利。`
+            : `© ${new Date().getFullYear()} Upstream Origin. All rights reserved.`}
+        </p>
+      </div>
+
+      <div class="col col-dev-credits"></div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer-tagline {
+    margin-top: 1.5rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 360px;
+  }
+
+  .footer-email-label {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 0.25rem;
+  }
+
+  .footer-email {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .footer-email:hover {
+    text-decoration: underline;
+  }
+
+  .footer-socials {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1.5rem;
+  }
+
+  .footer-socials img {
+    transition: transform 0.3s ease;
+  }
+
+  .footer-socials img:hover {
+    transform: translateY(-2px);
+  }
+</style>

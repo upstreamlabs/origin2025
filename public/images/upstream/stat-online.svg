@@ -1,0 +1,18 @@
+<svg width="360" height="360" viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="glowOnline" cx="50%" cy="40%" r="70%" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#74A9FF" stop-opacity="0.85" />
+      <stop offset="1" stop-color="#132E62" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="waveOnline" x1="40" y1="300" x2="320" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2B74FF" />
+      <stop offset="1" stop-color="#8BD2FF" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="360" height="360" rx="32" fill="#0D1C3A" />
+  <rect x="0" y="0" width="360" height="360" rx="32" fill="url(#glowOnline)" />
+  <path d="M40 250C80 230 120 190 180 210C240 230 280 140 320 120" stroke="url(#waveOnline)" stroke-width="14" stroke-linecap="round" />
+  <path d="M60 300C110 270 170 260 220 220C270 180 300 120 320 80" stroke="rgba(255,198,64,0.55)" stroke-width="10" stroke-linecap="round" stroke-dasharray="14 20" />
+  <circle cx="96" cy="132" r="12" fill="#FFC640" />
+  <circle cx="232" cy="84" r="18" fill="#2B74FF" fill-opacity="0.8" />
+</svg>

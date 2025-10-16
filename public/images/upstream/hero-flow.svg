@@ -1,0 +1,30 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0A1633" />
+      <stop offset="1" stop-color="#122B4F" />
+    </linearGradient>
+    <radialGradient id="lightBurst" cx="50%" cy="30%" r="65%" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5EA5FF" stop-opacity="0.8" />
+      <stop offset="1" stop-color="#0A1633" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="waveBlue" x1="160" y1="820" x2="1380" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2B74FF" stop-opacity="0.35" />
+      <stop offset="0.5" stop-color="#6FC1FF" stop-opacity="0.5" />
+      <stop offset="1" stop-color="#90E7FF" stop-opacity="0.15" />
+    </linearGradient>
+    <linearGradient id="waveGold" x1="200" y1="860" x2="1460" y2="220" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFC640" stop-opacity="0.2" />
+      <stop offset="0.6" stop-color="#FFDF87" stop-opacity="0.35" />
+      <stop offset="1" stop-color="#FFEDBB" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bgGradient)" />
+  <rect width="1600" height="900" fill="url(#lightBurst)" />
+  <path d="M-40 720C140 640 300 520 520 560C740 600 900 350 1120 340C1320 330 1440 450 1660 400" stroke="url(#waveBlue)" stroke-width="120" stroke-linecap="round" opacity="0.75" />
+  <path d="M-80 780C120 690 360 630 560 640C780 650 980 550 1200 470C1350 415 1440 360 1640 400" stroke="url(#waveGold)" stroke-width="100" stroke-linecap="round" opacity="0.6" />
+  <circle cx="320" cy="260" r="46" fill="#FFC640" fill-opacity="0.6" />
+  <circle cx="1180" cy="200" r="68" fill="#2B74FF" fill-opacity="0.4" />
+  <circle cx="960" cy="120" r="32" fill="#8BD2FF" fill-opacity="0.5" />
+  <circle cx="1400" cy="360" r="54" fill="#FFC640" fill-opacity="0.32" />
+</svg>

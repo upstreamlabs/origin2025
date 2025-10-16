@@ -1,0 +1,144 @@
+---
+interface Props {
+    title: string;
+    text?: string;
+    lightgray?: boolean;
+    id?: string;
+    headingLevel?: 'h1' | 'h2';
+    image?: string;
+    imageAlt?: string;
+}
+
+const {
+  title,
+  text,
+  lightgray,
+  id,
+  headingLevel = 'h2',
+  image,
+  imageAlt,
+} = Astro.props;
+
+const HeadingTag = headingLevel;
+---
+
+<section
+    class="section default-header"
+    id={id}
+    data-theme-section="light"
+    data-bg-section={lightgray ? 'lightgray' : 'light'}
+    data-scroll-section
+>
+    <div class="gradient-circle-wrap">
+        <div class="gradient-circle" />
+    </div>
+
+    <div class="container">
+        <div class={`row ${text ? 'grid' : ''}`}>
+            <div class="border-bottom" />
+
+            <div class="col col-title">
+                <div class="col-row col-row-title">
+                    <HeadingTag>{title}</HeadingTag>
+                </div>
+            </div>
+
+            {text &&
+                <div class="col col-text">
+                    <div class="col-row styled-content">
+                        <p>{text}</p>
+                    </div>
+                </div>
+            }
+        </div>
+
+        {image && (
+          <div class="hero-visual">
+            <img src={image} alt={imageAlt || title} loading="lazy" />
+          </div>
+        )}
+    </div>
+</section>
+
+<style>
+  section.default-header {
+    position: relative;
+    overflow: hidden;
+  }
+
+  section.default-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 20%, rgba(255, 198, 64, 0.18), transparent 55%),
+                radial-gradient(circle at 80% 30%, rgba(43, 116, 255, 0.24), transparent 60%),
+                radial-gradient(circle at 50% 80%, rgba(139, 210, 255, 0.16), transparent 65%);
+    pointer-events: none;
+  }
+
+  .default-header .gradient-circle-wrap {
+    display: none;
+  }
+
+  .default-header .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .default-header .border-bottom {
+    display: none;
+  }
+
+  .default-header .col {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .default-header .col-row-title h1,
+  .default-header .col-row-title h2 {
+    font-size: clamp(2.25rem, 4vw, 3.5rem);
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+    color: #0d1c3a;
+  }
+
+  .default-header .col-row.styled-content p {
+    font-size: 1.25rem;
+    line-height: 1.9;
+    color: rgba(13, 28, 58, 0.78);
+    max-width: 760px;
+  }
+
+  .hero-visual {
+    width: min(720px, 100%);
+    margin-inline: auto;
+  }
+
+  .hero-visual img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(13, 28, 58, 0.18);
+  }
+
+  @media (max-width: 768px) {
+    .default-header .row {
+      gap: 1.25rem;
+    }
+
+    .default-header .col-row-title h1,
+    .default-header .col-row-title h2 {
+      font-size: clamp(1.9rem, 8vw, 2.7rem);
+      margin-bottom: 0.5rem;
+    }
+
+    .default-header .col-row.styled-content p {
+      font-size: 1.1rem;
+      line-height: 1.75;
+    }
+  }
+</style>

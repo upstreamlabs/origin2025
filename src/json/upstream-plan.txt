@@ -1,0 +1,288 @@
+🌊 Upstream Ignite 2025 — 
+开源生态创新营
+Upstream Ignite 2025 — Open Source Ecosystem Innovation Camp
+🎨 
+封面与视觉主题
+ Cover & Visual Theme
+主视觉概念｜Main
+ Concept:
+Flow of Source —
+ 
+流动的源力
+核心色彩｜Key
+ Palette:
+- 
+天青色
+ (Tech 
+Blue)：代表理性与科技精神
+- 
+桂花黄
+ (Osmanthus 
+Yellow)：代表温度与公共价值
+- 
+银灰
+ (Light 
+Silver)：代表开放、共享与信任
+视觉元素｜Visual
+ Motifs:
+- 
+流动的线条象征开源生态的能量流动；
+- 
+光晕与水纹代表协作与持续生长；
+- 
+社区节点网络象征全球协同的开源文明。
+主题口号｜Slogan:
+>
+ 
+“以开源之名，汇聚公共之力。”
+>
+ 
+From Open Source to Shared Future.
+💡 
+核心理念
+ Core Philosophy
+Upstream Ignite 
+以开源精神为根，以公共价值为核，探索可持续发展的新范式。
+商业化在这里并非终点，而是维护开源生态活力与信任的支撑力量。
+Rooted in the spirit of open source, centered on public value, Upstream Ignite explores a new paradigm of sustainable development. Commercialization here is not an end, but a means to sustain vitality and trust within the open ecosystem.
+🌱 
+项目定位与目标
+ Positioning & Objectives
+Upstream Ignite 
+是一个以
+ 
+开源生态建设与可持续发展
+ 
+为核心的学习与实践平台，致力于帮助参与者理解开源的文化、制度与社区逻辑，并通过真实项目实践，探索开源在社会与技术层面的长期影响力。
+主要目标
+ | Objectives:
+1. 
+普及开源文化与治理理念
+ Spread open-source culture and governance principles.
+2. 
+培育具备社区运营、传播与可持续能力的生态型人才
+ Cultivate ecosystem leaders capable of community and sustainability management.
+3. 
+联合政府、产业与社区资源，促进开源公共产品长期发展
+ Build collaboration across government, industry, and community to sustain open-source public goods.
+🧭 
+活动结构
+ Overview
+阶段
+ Stage
+时间
+ Duration
+内容
+ Content
+成果
+ Deliverables
+阶段一
+ Phase 1
+4 
+周
+ weeks
+线上训练营：开源文化、治理与可持续运营课程
+结业证书
+ + 
+团队初选
+阶段二
+ Phase 2
+5 
+天
+ days
+线下创新营：项目配对、共创实践、成果展示
+Demo, 
+生态方案,
+ 
+展示视频
+📘 
+第一阶段：线上训练营
+ Online Training Camp
+周次
+ Week
+模块主题
+ Topic
+学习重点
+ Focus
+讲师类型
+ Mentor Type
+1
+开源精神与公共价值
+ Open Source Spirit & Public Value
+开源历史、精神、社区文化
+基金会代表
+ / 
+高校教授
+2
+社区治理与生态运营
+ Governance & Community Growth
+治理机制、贡献者激励
+Maintainer / OSPO 
+负责人
+3
+可持续发展路径
+ Sustainability Model
+公共服务型商业模式
+企业导师
+ / 
+投资机构顾问
+4
+AIGC 
+传播与社区故事
+ Storytelling & AIGC Marketing
+用AIGC讲述项目故事
+创意顾问
+ / 
+设计导师
+输出成果
+ Deliverables:
+团队方案《开源生态可持续发展计划》
+ + 
+入选线下营前
+ 40 
+支团队。
+🏕️ 
+第二阶段：线下创新营
+ Offline Innovation Camp
+天数
+ Day
+主题
+ Theme
+内容与目标
+ Goals
+Day 1
+启航
+ Inception
+开幕式、项目发布、团队配对
+Day 2
+共识
+ Alignment
+目标共创、社区文化建设
+Day 3
+共创
+ Co-creation
+导师辅导、治理与生态方案设计
+Day 4
+共鸣
+ Amplify
+AIGC 
+传播实战、成果打磨
+Day 5
+共展
+ Showcase
+路演展示、评审点评、颁奖仪式
+🧑‍🏫 
+导师与支持体系
+ Mentorship & Support
+类别
+ Type
+来源
+ Source
+角色
+ Role
+学术导师
+ Academia
+高校教授
+ / 
+研究中心
+理论指导与文化塑造
+社区导师
+ Community
+开源项目
+ Maintainer
+实践与生态指导
+企业导师
+ Industry
+OSPO 
+负责人
+企业级开源运营经验
+政府与孵化器
+ Government
+地方科技园区
+ / 
+政策顾问
+提供政策与资源支持
+投资机构
+ Investment
+开源创新基金
+ / 
+可持续资本
+指导生态发展与资源链接
+💰 
+成果与激励
+ Outcomes & Support
+💡
+ 
+配对成功并完成成果展示的团队，将获得
+ Upstream 
+开源生态发展基金
+ 10 
+万元。
+Teams that successfully pair with open-source projects and complete the showcase will receive
+ 
+RMB 100,000 Upstream Ecosystem Development Grant
+.
+基金用途
+ Fund Usage:
+- 
+社区运营与开发者激励
+ Community operations & contributor programs
+- 
+网站、视频与传播内容建设
+ Project websites & communication materials
+- 
+合作拓展与生态活动
+ Ecosystem partnerships & outreach
+- 
+治理优化与长期机制
+ Governance improvement & sustainability
+🌐 
+长期支持机制
+ Long-term Support
+Upstream Mentorship Program
+ 
+— 3 
+个月持续导师辅导与资源支持。
+Upstream Knowledge Archive
+ 
+— 
+优秀案例入选公开教材与案例库。
+政府孵化合作机制
+ 
+— 
+提供场地、政策、资金与落地资源。
+🎨 
+品牌与传播主线
+ Visual Identity & Communication
+主题
+ Theme:
+ 
+Flow of Source —
+ 
+流动的源力
+主色调
+ Palette:
+ 
+天青
+ × 
+桂花黄
+视觉符号
+ Motifs:
+ 
+光流、节点网络、协作光环
+核心口号
+ Slogan:
+>
+ 
+“以开源之名，汇聚公共之力。”
+>
+ 
+From Open Source to Shared Future.
+🔮 
+结语
+ Vision Statement
+Upstream Ignite 
+相信，开源不仅是一种技术路径，更是一种协作文明。
+在这里，公共价值与创新精神相辅相成，
+我们用协作与信任，构建开源的可持续未来。
+Open collaboration, shared trust, and sustainable innovation — this is the spirit of Upstream Ignite.

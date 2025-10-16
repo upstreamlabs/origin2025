@@ -1,0 +1,18 @@
+<svg width="520" height="520" viewBox="0 0 520 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="flowCoreBlue" x1="40" y1="480" x2="480" y2="40" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1B3C82" />
+      <stop offset="1" stop-color="#1D5B99" />
+    </linearGradient>
+    <linearGradient id="flowCoreLine" x1="80" y1="420" x2="440" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFC640" />
+      <stop offset="1" stop-color="#2B74FF" />
+    </linearGradient>
+  </defs>
+  <rect x="40" y="40" width="440" height="440" rx="48" fill="url(#flowCoreBlue)" />
+  <path d="M110 360C150 320 210 260 270 260C330 260 370 210 400 180" stroke="url(#flowCoreLine)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M120 400C190 340 250 340 320 300C360 278 400 230 420 190" stroke="#8BD2FF" stroke-width="12" stroke-linecap="round" stroke-dasharray="18 24" />
+  <circle cx="170" cy="230" r="18" fill="#FFC640" />
+  <circle cx="310" cy="210" r="16" fill="#74A9FF" />
+  <circle cx="250" cy="330" r="14" fill="#FFDF87" />
+</svg>

@@ -1,0 +1,21 @@
+{
+  "name": "upstream-origin-2025",
+  "description": "Upstream Origin 2025 traces collaborative ecosystems back to their source through online training and a Beijing innovation residency.",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "build:gh-pages": "cross-env GITHUB_PAGES=true astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.2.1",
+    "astro": "^5.13.3",
+    "sass": "^1.85.1"
+  },
+  "devDependencies": {
+    "cross-env": "^10.0.0"
+  }
+}

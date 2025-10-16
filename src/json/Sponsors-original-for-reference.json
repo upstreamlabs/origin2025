@@ -1,0 +1,175 @@
+{
+    "categories": [
+        { "name": "All" },
+        { "name": "Co-Organizer" },
+        { "name": "Gold Sponsor" },
+        { "name": "Silver Sponsor" },
+        { "name": "Partner" }
+    ],
+    "partners": [
+        {
+            "category": "Co-Organizer",
+            "image": "baai.png"
+        },
+        {
+            "category": "Co-Organizer",
+            "image": "baai.png"
+        },
+        {
+            "category": "Gold Sponsor",
+            "image": "baai.png"
+        },
+        {
+            "category": "Silver Sponsor",
+            "image": "baai.png"
+        },
+        {
+            "category": "Partner",
+            "image": "ag2.png"
+        },
+        {
+            "category": "Partner",
+            "image": "aifc.png"
+        },
+        {
+            "category": "Partner",
+            "image": "airs.png"
+        },
+        {
+            "category": "Partner",
+            "image": "apache.png"
+        },
+        {
+            "category": "Partner",
+            "image": "baai.png"
+        },
+        {
+            "category": "Partner",
+            "image": "camelai.png"
+        },
+        {
+            "category": "Partner",
+            "image": "deepmind.png"
+        },
+        {
+            "category": "Partner",
+            "image": "dify.png"
+        },
+        {
+            "category": "Partner",
+            "image": "dora.png"
+        },
+        {
+            "category": "Partner",
+            "image": "eclipse-foundation.png"
+        },
+        {
+            "category": "Partner",
+            "image": "flagopen.png"
+        },
+        {
+            "category": "Partner",
+            "image": "huggingface.png"
+        },
+        {
+            "category": "Partner",
+            "image": "khronosgroup.png"
+        },
+        {
+            "category": "Partner",
+            "image": "koyeb.png"
+        },
+        {
+            "category": "Partner",
+            "image": "lerobot.png"
+        },
+        {
+            "category": "Partner",
+            "image": "lf-gen-ai.png"
+        },
+        {
+            "category": "Partner",
+            "image": "lf-research-color.png"
+        },
+        {
+            "category": "Partner",
+            "image": "makepad.png"
+        },
+        {
+            "category": "Partner",
+            "image": "metagpt.png"
+        },
+        {
+            "category": "Partner",
+            "image": "mianbi.png"
+        },
+        {
+            "category": "Partner",
+            "image": "moxin.png"
+        },
+        {
+            "category": "Partner",
+            "image": "neo4j.png"
+        },
+        {
+            "category": "Partner",
+            "image": "nvidia.png"
+        },
+        {
+            "category": "Partner",
+            "image": "openwallet.png"
+        },
+        {
+            "category": "Partner",
+            "image": "osi.png"
+        },
+        {
+            "category": "Partner",
+            "image": "peking-university.png"
+        },
+        {
+            "category": "Partner",
+            "image": "pytorch.png"
+        },
+        {
+            "category": "Partner",
+            "image": "qwen.png"
+        },
+        {
+            "category": "Partner",
+            "image": "ragflow.png"
+        },
+        {
+            "category": "Partner",
+            "image": "sgl.png"
+        },
+        {
+            "category": "Partner",
+            "image": "spring.png"
+        },
+        {
+            "category": "Partner",
+            "image": "sw-heritage.png"
+        },
+        {
+            "category": "Partner",
+            "image": "unitree.png"
+        },
+        {
+            "category": "Partner",
+            "image": "ustoc.png"
+        },
+        {
+            "category": "Partner",
+            "image": "vllm.png"
+        },
+        {
+            "category": "Partner",
+            "image": "zenoh.png"
+        },
+        {
+            "category": "Partner",
+            "image": "zhipuai.png"
+        }
+    ]
+}

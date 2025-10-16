@@ -1,0 +1,183 @@
+{
+    "categories": [
+        { "name": "All" },
+        { "name": "Sponsors" },
+        { "name": "Supporting Organization" },
+        { "name": "Speaker Affiliated" }
+    ],
+    "partners": [
+      {
+        "category": "Sponsors",
+        "image": "huawei.png"
+      },
+      {
+        "category": "Sponsors",
+        "image": "csdn.png"
+      },
+      {
+        "category": "Sponsors",
+        "image": "1msai.png"
+      },
+      {
+        "category": "Speaker Affiliated",
+        "image": "ag2.png"
+      },
+      {
+        "category": "Supporting Organization",
+        "image": "ajtis.jpg"
+      },
+      {
+        "category": "Supporting Organization",
+        "image": "aifc.png"
+      },
+      {
+        "category": "Speaker Affiliated",
+        "image": "airs.png"
+      },
+      {
+        "category": "Supporting Organization",
+        "image": "apache.png"
+      },
+      {
+        "category": "Speaker Affiliated",
+        "image": "baai.png"
+      },
+      {
+        "category": "Speaker Affiliated",
+        "image": "camelai.png"
+      },
+      {
+        "category": "Speaker Affiliated",
+        "image": "deepmind.png"
+      },
+      {
+        "category": "Speaker Affiliated",
+        "image": "dify.png"
+      },
+      {
+        "category": "Speaker Affiliated",
+        "image": "dora.png"
+      },
+      {
+        "category": "Supporting Organization",
+        "image": "eclipse-foundation.png"
+      },
+      {
+        "category": "Speaker Affiliated",
+        "image": "flagopen.png"
+      },
+      {
+        "category": "Speaker Affiliated",
+        "image": "huggingface.png"
+      },
+      {
+        "category": "Supporting Organization",
+        "image": "khronosgroup.png"
+      },
+      {
+        "category": "Supporting Organization",
+        "image": "wasmedge.png"
+      },
+      {
+        "category": "Speaker Affiliated",
+        "image": "koyeb.png"
+      },
+      {
+        "category": "Speaker Affiliated",
+        "image": "lerobot.png"
+      },
+      {
+        "category": "Supporting Organization",
+        "image": "lf-gen-ai.png"
+      },
+      {
+        "category": "Supporting Organization",
+        "image": "lf-research-color.png"
+      },
+      {
+        "category": "Speaker Affiliated",
+        "image": "makepad.png"
+      },
+      {
+        "category": "Speaker Affiliated",
+        "image": "metagpt.png"
+      },
+      {
+        "category": "Speaker Affiliated",
+        "image": "mianbi.png"
+      },
+      {
+        "category": "Speaker Affiliated",
+        "image": "moxin.png"
+      },
+      {
+        "category": "Speaker Affiliated",
+        "image": "neo4j.png"
+      },
+      {
+        "category": "Speaker Affiliated",
+        "image": "nvidia.png"
+      },
+      {
+        "category": "Supporting Organization",
+        "image": "openwallet.png"
+      },
+      {
+        "category": "Supporting Organization",
+        "image": "osi.png"
+      },
+      {
+        "category": "Speaker Affiliated",
+        "image": "peking-university.png"
+      },
+      {
+        "category": "Speaker Affiliated",
+        "image": "pytorch.png"
+      },
+      {
+        "category": "Speaker Affiliated",
+        "image": "qwen.png"
+      },
+      {
+        "category": "Speaker Affiliated",
+        "image": "ragflow.png"
+      },
+      {
+        "category": "Speaker Affiliated",
+        "image": "sgl.png"
+      },
+      {
+        "category": "Speaker Affiliated",
+        "image": "spring.png"
+      },
+      {
+        "category": "Supporting Organization",
+        "image": "sw-heritage.png"
+      },
+      {
+        "category": "Supporting Organization",
+        "image": "k8sug.png",
+        "link": "https://linktr.ee/k8sug"
+      },
+      {
+        "category": "Speaker Affiliated",
+        "image": "unitree.png"
+      },
+      {
+        "category": "Speaker Affiliated",
+        "image": "ustoc.png"
+      },
+      {
+        "category": "Speaker Affiliated",
+        "image": "vllm.png"
+      },
+      {
+        "category": "Speaker Affiliated",
+        "image": "zenoh.png"
+      },
+      {
+        "category": "Speaker Affiliated",
+        "image": "zhipuai.png"
+      }
+    ]
+}

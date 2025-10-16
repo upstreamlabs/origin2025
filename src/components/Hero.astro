@@ -1,0 +1,255 @@
+---
+import Button from "components/Button.astro";
+
+interface HeroLink {
+  text: string;
+  link: string;
+  openInNewTab?: boolean;
+}
+
+interface HeroLogo {
+  src: string;
+  alt: string;
+}
+
+interface Props {
+  title: string;
+  tagline?: string;
+  description?: string;
+  date?: string;
+  location?: string;
+  backgroundImage?: string;
+  backgroundAlt?: string;
+  logosHeading?: string;
+  logos?: HeroLogo[];
+  highlights?: string[];
+  links?: HeroLink[];
+}
+
+const {
+  title,
+  tagline,
+  description,
+  date,
+  location,
+  backgroundImage = "/images/homepage/spotlight-badge-ai-2025.webp",
+  backgroundAlt = "Abstract flowing light pattern",
+  logosHeading,
+  logos,
+  highlights,
+  links,
+} = Astro.props;
+---
+
+<section
+  class="section section-home-header full-height"
+  data-theme-section="dark"
+  data-bg-section="header-home"
+>
+  <div class="overlay overlay-background overlay-background-image">
+    {backgroundImage && (
+      <img
+        class="overlay"
+        src={backgroundImage}
+        alt={backgroundAlt}
+        loading="eager"
+      />
+    )}
+    <div class="overlay overlay-gradient-v2" />
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col hero-column">
+        <div class="hero-content-top">
+          {tagline && <p class="hero-eyebrow">{tagline}</p>}
+
+          <div class="hero-title">
+            <h1 class="display-title">{title}</h1>
+          </div>
+
+          {description && <p class="hero-description">{description}</p>}
+
+          {(date || location) && (
+            <div class="event-facts">
+              {date && <p>{date}</p>}
+              {location && <p>{location}</p>}
+            </div>
+          )}
+
+          {highlights?.length && (
+            <ul class="hero-highlights">
+              {highlights.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          )}
+
+          {logos?.length && (
+            <div class="organizer-block">
+              {logosHeading && <p class="organizer-heading">{logosHeading}</p>}
+              <div class="organizer-logos">
+                {logos.map((logo) => (
+                  <img src={logo.src} alt={logo.alt} class="org-logo" loading="lazy" />
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
+        {links?.length && (
+          <div class="btn-home-wrap">
+            {links.map((loop) => (
+              <Button
+                text={loop.text}
+                link={loop.link}
+                openInNewTab={loop?.openInNewTab}
+                class="btn light xl btn-hover fade-in-last"
+              />
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: calc(100vh - 6rem);
+    padding-top: 5rem;
+    align-items: flex-start;
+  }
+
+  .hero-title {
+    margin-bottom: 2.5rem;
+    text-align: left;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 1rem;
+  }
+
+  .display-title {
+    font-size: clamp(2rem, 5vw, 3.75rem);
+    font-weight: 700;
+    color: white;
+    text-align: left;
+    line-height: 1.05;
+    margin: 0;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.86);
+    max-width: 640px;
+  }
+
+  .event-facts {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .event-facts p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .hero-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .hero-highlights li {
+    position: relative;
+    padding-left: 1.75rem;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.88);
+    line-height: 1.5;
+  }
+
+  .hero-highlights li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
+    width: 0.65rem;
+    height: 0.65rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2b74ff, #ffc640);
+  }
+
+  .organizer-block {
+    margin-top: 2rem;
+  }
+
+  .organizer-heading {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.75rem;
+  }
+
+  .organizer-logos {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .org-logo {
+    height: 44px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .btn-home-wrap {
+    margin-top: 3rem;
+    padding-bottom: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .display-title {
+      font-size: clamp(1.75rem, 9vw, 2.75rem);
+    }
+
+    .hero-description {
+      font-size: 1rem;
+    }
+
+    .organizer-logos {
+      gap: 1.25rem;
+    }
+
+    .org-logo {
+      height: 34px;
+    }
+
+    .hero-column {
+      min-height: auto;
+    }
+  }
+</style>

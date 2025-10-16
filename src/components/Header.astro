@@ -1,0 +1,146 @@
+---
+import Button from "components/Button.astro";
+import Logo from "./Logo.astro";
+
+const pathname = Astro.url.pathname;
+const isChinesePage = pathname.startsWith('/cn/');
+const langPrefix = isChinesePage ? '/cn' : '/en';
+
+const navLinks = isChinesePage
+  ? [
+      { text: "项目概览", link: `${langPrefix}/#overview` },
+      { text: "课程安排", link: `${langPrefix}/#program` },
+      { text: "导师支持", link: `${langPrefix}/#mentors` },
+      { text: "成果与激励", link: `${langPrefix}/#support` },
+      { text: "报名", link: `${langPrefix}/#apply` },
+    ]
+  : [
+      { text: "Overview", link: `${langPrefix}/#overview` },
+      { text: "Program", link: `${langPrefix}/#program` },
+      { text: "Mentorship", link: `${langPrefix}/#mentors` },
+      { text: "Support", link: `${langPrefix}/#support` },
+      { text: "Apply", link: `${langPrefix}/#apply` },
+    ];
+
+const cta = isChinesePage
+  ? { text: "立即报名", link: `${langPrefix}/#apply` }
+  : { text: "Apply Now", link: `${langPrefix}/#apply` };
+
+const currentPath = pathname.replace(/^\/(en|cn)/, '');
+const langSwitchLink = isChinesePage ? `/en${currentPath}` : `/cn${currentPath}`;
+const langSwitchText = isChinesePage ? 'EN' : '中文';
+
+const slug = Astro.url.pathname;
+---
+
+<header>
+  <div class="floating-ticket-button">
+    <Button
+      text={cta.text}
+      link={cta.link}
+      openInNewTab={false}
+      class="btn primary btn-floating btn-hover"
+    />
+  </div>
+
+  <div class="mobile-nav">
+    <div class="overlay overlay-dark" data-navigation-toggle="close"></div>
+
+    <div class="mobile-nav-box">
+      <div class="box-row box-row-logo">
+        <Logo />
+      </div>
+      <nav class="box-row box-row-nav" aria-label="Navigation Mobile">
+        <ul>
+          {navLinks.map((link) => (
+            <li
+              class="link link-hover"
+              data-barba-update
+              data-link-status={link.link === slug ? 'active' : 'not-active'}
+            >
+              <a class="link-click" href={link.link}>
+                <span>{link.text}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <div class="box-row box-row-btn" style="display: flex; gap: 1rem; align-items: center;">
+        <div class="link link-hover" style="margin-right: 1rem;">
+          <a class="link-click" href={langSwitchLink} style="color: white; text-decoration: none;">
+            <span>{langSwitchText}</span>
+          </a>
+        </div>
+        <Button
+          text={cta.text}
+          link={cta.link}
+          openInNewTab={false}
+          class="btn primary xl btn-hover"
+        />
+      </div>
+    </div>
+  </div>
+
+  <button
+    class="hamburger btn-floating"
+    aria-label="Open menu"
+    data-navigation-toggle="toggle"
+    style="margin-top: 35px;"
+  >
+    <div class="hamburger-fill"></div>
+    <div class="bar bar-top"></div>
+    <div class="bar bar-bottom"></div>
+  </button>
+
+  <div class="main-nav-bar" style="opacity: 1;">
+    <div class="overlay nav-fill"></div>
+    <div class="row">
+      <div class="border-bottom"></div>
+
+      <div class="logo" style="padding-top: 25px;">
+        <a href="/" aria-label="Go to homepage" class="logo-click">
+          <Logo />
+          <Logo />
+        </a>
+      </div>
+
+      <nav aria-label="Navigation Desktop" style="padding-top: 35px;">
+        <ul>
+          {navLinks.map((link) => (
+            <li
+              class="link link-hover"
+              data-barba-update
+              data-link-status={link.link === slug ? 'active' : 'not-active'}
+            >
+              <a class="link-click" href={link.link}>
+                <span>{link.text}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      <div style="padding-top: 40px; display: flex; gap: 1rem; align-items: center;">
+        <div class="link link-hover" style="margin-right: 1rem;">
+          <a class="link-click" href={langSwitchLink} style="color: white; text-decoration: none;">
+            <span>{langSwitchText}</span>
+          </a>
+        </div>
+        <Button
+          text={cta.text}
+          link={cta.link}
+          openInNewTab={false}
+          class="btn outline btn-hover"
+        />
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  .floating-ticket-button {
+    position: relative;
+    top: -15px;
+    z-index: 10;
+  }
+</style>

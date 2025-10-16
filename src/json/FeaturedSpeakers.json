@@ -1,0 +1,302 @@
+{
+  "categories": [
+    {
+      "name": "All",
+      "id": "all"
+    },
+    {
+      "name": "AI Models × Infra",
+      "id": "ai-models-infra"
+    },
+    {
+      "name": "Embodied AI",
+      "id": "embodied-ai"
+    },
+    {
+      "name": "Agentic Web",
+      "id": "agentic-web"
+    },
+    {
+      "name": "Apps × Agents",
+      "id": "apps-agents"
+    },
+    {
+      "name": "AI Next",
+      "id": "ai-next"
+    },
+    {
+      "name": "Cangjie Workshop",
+      "id": "ws-cangjie"
+    },
+    {
+      "name": "Dora Workshop",
+      "id": "ws-dora"
+    },
+    {
+      "name": "SGLang Workshop",
+      "id": "ws-sglang"
+    },
+    {
+      "name": "Edge AI Workshop",
+      "id": "ws-edge-ai"
+    },
+    {
+      "name": "Future Web Workshop",
+      "id": "ws-future-web"
+    },
+    {
+      "name": "Open for SDG Conference",
+      "id": "open-for-sdg"
+    },
+    {
+      "name": "AI Vision Forum",
+      "id": "forum-aivision"
+    },
+    {
+      "name": "Globalization Workshop",
+      "id": "ws-globalization"
+    }
+  ],
+  "speakers": [
+    {
+      "id": "mehdi-snene",
+      "name": "Mehdi Snene",
+      "bio": "Dr. Mehdi Snene is a Senior Advisor to the UN Secretary-General's Special Envoy for Digital and Emerging Technologies and a member of the UN Office for Digital and Emerging Technologies, where he leads global initiatives in AI capacity-building, digital public infrastructure, and emerging tech. He previously directed the €1 billion Human Brain Project, EPFL, advancing neuromorphic computing and brain simulation, and served as Chief AI Officer, HealthAI, overseeing the strategic development and deployment of AI in healthcare. A former Associate Professor, the University of Geneva, he founded and led a research lab focused on AI, neuroscience, and high-performance computing.",
+      "role": "Chief AI Officer, Senior Advisor to the UN Secretary-General's Special Envoy for Digital and Emerging Technologies",
+      "org": "UN Office for Digital and Emerging Technologies",
+      "roleOrg": "Chief AI Officer, Digital infrastructure and emerging technologies, UN",
+      "image": "mehdi-snene.png",
+      "tag": "open-for-sdg"
+    },
+    {
+      "id": "walid-mathlouthi",
+      "name": "Walid Mathlouthi",
+      "bio": "Head of the Infrastructure division at the International Telecommunication Union (ITU).",
+      "role": "Head of Infrastructure division",
+      "org": "ITU",
+      "roleOrg": "ITU, Head of Infrastructure division",
+      "image": "walid-mathlouthi.jpg",
+      "tag": "open-for-sdg"
+    },
+    {
+      "id": "nooman-fehri",
+      "name": "Nooman Fehri",
+      "bio": "Former Minister of Digital and Technology for Tunisia.",
+      "role": "Former Minister",
+      "org": "Government of Tunisia",
+      "roleOrg": "Former Digital and technology minister, Tunisia",
+      "image": "nooman-fehri.jpg",
+      "tag": "open-for-sdg"
+    },
+    {
+      "id": "matt-white",
+      "name": "Matt White",
+      "bio": "Matt White is the Executive Director of the PyTorch Foundation and GM of AI at the Linux Foundation, as well as the Director of the Generative AI Commons under the LF AI & Data Foundation. With nearly 30 years of experience in AI research, standards, and applications across telecom, media, and gaming, he has specialized since 2012 in machine learning, simulations, and multi-sensory learning. He previously co-founded the Open Metaverse Foundation, chairs the Metaverse Standards Forum, and co-organizes both the Silicon Valley Generative AI paper reading group and the GenAI Collective.",
+      "role": "GM of AI/Executive Director",
+      "org": "Linux Foundation/PyTorch Foundation",
+      "roleOrg": "GM of AI/Executive Director, Linux Foundation/PyTorch Foundation",
+      "image": "matt-white.png",
+      "tag": "open-for-sdg"
+    },
+    {
+      "id": "tiejun-huang",
+      "name": "Tiejun Huang",
+      "bio": "Professor at Peking University and Chairman of the Beijing Academy of Artificial Intelligence (BAAI).",
+      "role": "Professor and Chairman",
+      "org": "Peking University / BAAI",
+      "roleOrg": "Prof. from Peking Univ., Chairman of BAAI",
+      "image": "tiejun-huang.jpg",
+      "tag": "open-for-sdg"
+    },
+    {
+      "id": "satya-mallick",
+      "name": "Satya Mallick",
+      "bio": "Dr. Satya Mallick is the CEO of OpenCV.org - the non-profit that maintains the largest computer vision library in the world. He is an entrepreneur in Artificial Intelligence, Computer Vision, and Machine Learning. Before starting his AI consulting company, Big Vision LLC, he co-founded Sight Commerce Inc (formerly Taaz Inc.), where he built AI products that reached over 100M users. His work has been covered in publications like TechCrunch, Huffington Post, NYTimes, and WSJ. Dr. Mallick is also the creator of some of the most popular online computer vision and AI courses. In 2017, IBM's AI Blog named Dr. Mallick as one of the top 20 people in AI to follow on Twitter. ",
+      "role": "CEO",
+      "org": "OpenCV.org",
+      "roleOrg": "CEO, OpenCV.org",
+      "image": "satya-mallick.jpg",
+      "tag": "open-for-sdg"
+    },
+    {
+      "id": "minghui-zhou",
+      "name": "Minghui Zhou",
+      "bio": "Tenured Full Professor and Vice Dean at Peking University. Former member of the UN HLAB on AI and a legal expert with UNESCO.",
+      "role": "Professor and Vice Dean",
+      "org": "Peking University",
+      "roleOrg": "Tenured Full Professor and Vice Dean at Peking University",
+      "image": "minghui-zhou.jpg",
+      "tag": "open-for-sdg"
+    },
+    {
+      "id": "vincent-caldeira",
+      "name": "Vincent Caldeira",
+      "bio": "Vincent Caldeira, CTO of Red Hat in APAC, is responsible for technology strategy and emerging\r\ntechnology engineering. Named a Top 10 CTO in APAC by Technology Magazine in 2023, he\r\nhas more than 20 years in IT, excelling in technology transformation in finance. An authority in\r\nopen source, cloud computing, and digital transformation, Vincent frequently speaks on data\r\nanalytics, AI/ML including AI Safety, digital sovereignty, and IT sustainability. He is a Technical\r\nAdvisor to Linux Foundation OS-Climate, a member of the GSF Green AI Committee, a\r\nTechnical Oversight Committee Member at FinTech Open Source Foundation (FINOS), a\r\nmember of LF AI & Data GenAI Commons and leads several CNCF AI Initiatives.",
+      "role": "CTO",
+      "org": "Red Hat APAC",
+      "roleOrg": "CTO, Red Hat APAC",
+      "image": "vincent-caldeira.jpeg",
+      "tag": "open-for-sdg"
+    },
+    {
+      "id": "yonghua-lin",
+      "name": "Yonghua Lin",
+      "bio": "VP and Chief Engineer at the Beijing Academy of Artificial Intelligence (BAAI).",
+      "role": "VP and Chief Engineer",
+      "org": "BAAI",
+      "roleOrg": "VP and Chief Engineer at BAAI",
+      "image": "yonghua-lin.jpg",
+      "tag": "open-for-sdg"
+    },
+    {
+      "id": "bryan-che",
+      "name": "Bryan Che",
+      "bio": "Board Member, Eclipse Foundation and LF CNCF",
+      "role": "Board Member",
+      "org": "Eclipse Foundation and LF CNCF",
+      "roleOrg": "Board Member, Eclipse Foundation and LF CNCF",
+      "image": "bryan-che.jpg",
+      "tag": "open-for-sdg"
+    },
+    {
+      "id": "richard-bian",
+      "name": "Richard Bian",
+      "bio": "Richard Bian (Chinese: 边思康) led Ant Group Open Source initiative from day 1 and developed the initiative from a single person effort to a cross-functional Open Source Program Office (OSPO) team covering governance, strategy, developer experience, product development, growth and internationalization efforts. His latest focus is on GenAI strategy and innovative products. \nAs an ex-Square, ex-Microsoft engineer, Richard has been studying and working for more than 5 years each in 4 different countries (Singapore, Canada, USA and China) with immensely cross-cultural collaboration experience.",
+      "role": "Director of Strategy and New Product (OSS)",
+      "org": "Ant Group",
+      "roleOrg": "Director of Strategy and New Product (OSS), Ant Group",
+      "image": "richard-bian.jpg",
+      "tag": "open-for-sdg"
+    },
+    {
+      "id": "alexy-khrabrov-",
+      "name": "Alexy Khrabrov ",
+      "bio": "Alexy Khrabrov is the AI Community Architect at Neo4j, the category-defining Graph database company. Alexy is the founding Chair of Open-Source Science at NumFOCUS, and a cofounder of the AI Alliance. Alexy was the founding Chair of the Generative AI Commons at the Linux Foundation for AI and Data (LFAI) and now represents Neo4j at LFAI.  Alexy is the founder and organizer of Bay Area AI and AI Agent SF meetups, as well as the Scale/Data/AI By the Bay conferences, the independent OSS AI conference running since 2013.",
+      "role": "AI Community Architect",
+      "org": "Neo4j",
+      "roleOrg": "AI Community Architect, Neo4j",
+      "image": "alexy-khrabrov-.jpeg",
+      "tag": "open-for-sdg"
+    },
+    {
+      "id": "liyun-yang",
+      "name": "Liyun Yang",
+      "bio": "Senior Engineer, Director of the Cloud Computing Research Office at the China Electronics Standardization Institute, Deputy Secretary-General of the China Open Source Cloud Alliance, Convener for the Mainland of the Cross-Strait Cloud Computing Sub-forum of the Ministry of Industry and Information Technology, and Head of the Secretariat of the National Information Technology Standardization Committee Cloud Computing Standards Working Group.",
+      "role": "Senior Engineer",
+      "org": "China Electronics Standardization Institute",
+      "roleOrg": "Senior Engineer, Director of the Cloud Computing Research Office at the China Electronics Standardization Institute",
+      "image": "liyun-yang.jpg",
+      "tag": "open-for-sdg"
+    },
+    {
+      "id": "xinwei-hu",
+      "name": "Xinwei Hu",
+      "bio": "Chair of the openEuler Community Technical Committee at Huawei.",
+      "role": "Chair",
+      "org": "openEuler Community Technical Committee",
+      "roleOrg": "Chair of the openEuler Community Technical Committee",
+      "image": "xinwei-hu.jpeg",
+      "tag": "open-for-sdg"
+    },
+    {
+      "id": "kai-du",
+      "name": "Kai Du",
+      "bio": "Board Member of the Eclipse Foundation and Professor in the Department of Psychology and Cognitive Science at Tsinghua University.",
+      "role": "Professor",
+      "org": "Tsinghua University",
+      "roleOrg": "Professor, Tsinghua University",
+      "image": "0-placeholder-person.png",
+      "tag": "open-for-sdg"
+    },
+    {
+      "id": "nicolas-flores-herr",
+      "name": "Nicolas Flores Herr",
+      "bio": "Team Lead for Foundation Models & Gen AI Systems at Fraunhofer IAIS.",
+      "role": "Team Lead",
+      "org": "Fraunhofer IAIS",
+      "roleOrg": "Team Lead Foundation Models & Gen AI Systems, Fraunhofer IAIS",
+      "image": "nicolas-flores-herr.jpg",
+      "tag": "open-for-sdg"
+    },
+    {
+      "id": "joaquin-salvachua",
+      "name": "Joaquin Salvachua",
+      "bio": "Professor at the Universidad Politecnica de Madrid, specializing in ML-OPS and Big Data architectures.",
+      "role": "Professor",
+      "org": "Universidad Politecnica de Madrid",
+      "roleOrg": "Professor at the Universidad Politecnica de Madrid",
+      "image": "joaquin-salvachua.jpg",
+      "tag": "open-for-sdg"
+    },
+    {
+      "id": "mohamed-farahat",
+      "name": "Mohamed Farahat",
+      "bio": "Mohamed Farahat is an Egyptian based legal practitioner, trainer, political, and legal researcher. Farahat works as programs director at Egyptian Foundation for refugees Rights (EFRR) , Legal Researcher officer -University of York-UK . Farahat was Access to Justice team leader at African and Middle East for Refugees Assistance , was Legal researcher at International Commission for Jurists (ICJ), As consultant he worked with HUMENA for human rights and civic engagement as a legal analyst, Legal Consultant with (IOM-Egypt)on projects related to ethical recruitment for migrants , Trafficking, Smuggling, Labor and Migration Policy Regimes, Justice for Children Consultant (UNICEF) ,Legal Expert with Center for Migration and Refugees Studies American University in Cairo (AUC) . research fellow and later as digital rights consultant with International ICT Policy for East and Southern Africa (CIPESA). Mr. Farahat was Researcher and Analyst, co-author in report on internet law surveillance and Digital Rights Landscape Reports ,in Africa -The Institute of Development Studies (IDS)-, research leader with African Digital Rights Hub (ADRH) in project about data protection in Africa, and Co-author with Paradigm Initiative about digital rights report in Africa. He is legal consultant with CARE-International Egypt about (SGBV). Mr. Farahat is a member of bord of directors - Innovation for Change Middle East and North Africa MENA Hub, Management Advisory Group (MAG) member at North Africa Internet Governance (NAIGF), member of African Digital Rights Network (ADRN), Steering committee member and North Africa Coordinator at MENA statelessness Network,. As a legal and political researcher, Farahat has 20 published articles related to international refugee law, Statelessness, Politics, Democracy, Parliamentary studies, Digital rights, and internet governance. Mr. Farahat has a variety experience in human rights as access to Justice, refugees’ rights, migrant and workers’ rights, statelessness and right to nationality , migration detention , deportation , criminal justice for Children, legislative reforms, independence of judiciary, freedom of expression, (SGBV), digital rights ,Internet surveillance, internet shutdown, access to internet and internet inclusion , fake news, data protection and rights to privacy. Academically, Mr. Farahat holds a degree in Law from Cairo University and several post-graduate diplomas in international law, Human Rights and civil society, International Negotiation, African Studies-politics division, Parliamentary Studies.",
+      "role": "",
+      "org": "",
+      "roleOrg": "Former UNSG HLAB member, former member of UN HLAB on AI, legal expert with UNESCO.",
+      "image": "mohamed-farahat.jpg",
+      "tag": "open-for-sdg"
+    },
+    {
+      "id": "johann-diedrick",
+      "name": "Johann Diedrick",
+      "bio": "I am an artist and engineer who makes listening rooms, spaces for encountering new sonic possibilities off-the-grid, through installations (🏗), performances (👯), software (📱), sculptures (🔊), and workshops (🛠).",
+      "role": "Staff Engineer & Data Scientist",
+      "org": "Mozilla Data Collective",
+      "roleOrg": "Staff Engineer & Data Scientist， Mozilla Data Collective",
+      "image": "johann-diedrick.jpg",
+      "tag": "open-for-sdg"
+    },
+    {
+      "id": "yin-peng",
+      "name": "Yin Peng",
+      "bio": "Assistant Professor in the Department of Data Science at the Chinese University of Hong Kong (CUHK).",
+      "role": "Assistant Professor",
+      "org": "CUHK",
+      "roleOrg": "Assistant Professor, Department of Data Science, CUHK",
+      "image": "0-placeholder-person.png",
+      "tag": "open-for-sdg"
+    },
+    {
+      "id": "weijie-sun",
+      "name": "Weijie Sun",
+      "bio": "Founder & CEO at DP Technology, focusing on AI for Science applications.",
+      "role": "Founder & CEO",
+      "org": "DP Technology",
+      "roleOrg": "Founder & CEO at DP Technology - AI for Science",
+      "image": "weijie-sun.png",
+      "tag": "open-for-sdg"
+    },
+    {
+      "id": "anni-lai",
+      "name": "Anni Lai",
+      "bio": "Co-Chair of the Generative AI Commons, focusing on open AI governance and policy.",
+      "role": "Co-Chair",
+      "org": "Generative AI Commons",
+      "roleOrg": "Co-Chair, Generative AI Commons",
+      "image": "anni-lai.png",
+      "tag": "open-for-sdg"
+    },
+    {
+      "id": "yong-qin",
+      "name": "Yong Qin",
+      "bio": "Professor at Nankai University.",
+      "role": "Professor",
+      "org": "Nankai University",
+      "roleOrg": "Prof., Nankai University",
+      "image": "yong-qin.png",
+      "tag": "open-for-sdg"
+    },
+    {
+      "id": "adina-yakefu",
+      "name": "Adina Yakefu",
+      "bio": "Working at Hugging Face | Advocate for diversity & open-source AI.",
+      "role": "EA / AI researcher",
+      "org": "Hugging Face",
+      "roleOrg": "EA / AI researcher, Hugging Face",
+      "image": "adina-yakefu.png",
+      "tag": "open-for-sdg"
+    }
+  ]
+}

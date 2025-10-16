@@ -1,0 +1,118 @@
+---
+import Layout from "layouts/Layout.astro";
+import Cards from "components/Cards.astro";
+import ProgramTimeline from "components/ProgramTimeline.astro";
+import Intro from "components/Intro.astro";
+
+const phaseOverviewCards = [
+  {
+    title: "Base Camp · Online Training",
+    description: "A four-week remote cohort with live teaching, peer studios, and guided practicum assignments.",
+    image: "/icons/workshops.svg",
+  },
+  {
+    title: "Ascend Camp · Immersive Bootcamp",
+    description: "A five-day Beijing residency for co-creation, storytelling labs, and final showcases.",
+    image: "/icons/startups.svg",
+  },
+];
+
+const stageOneTimeline = [
+  {
+    label: "Week One",
+    title: "Open Source Fundamentals",
+    text: "Survey the evolution of the open-source movement, compare major licenses, explore governance practices, and assess business models that balance openness with foundation-backed trust.",
+  },
+  {
+    label: "Week Two",
+    title: "Community Governance & Operations",
+    text: "Design contributor journeys, incentive models, and governance charters that sustain healthy communities while aligning ecosystem stakeholders.",
+  },
+  {
+    label: "Week Three",
+    title: "Product Management & Marketing",
+    text: "Build developer-first marketing muscle across Git/GitHub collaboration, CI/CD demos, Linux and cloud deployments, and AIGC-powered storytelling, informed by product management thinking.",
+  },
+  {
+    label: "Week Four",
+    title: "Public Service Business Models & Long-term Governance",
+    text: "Blend real-world commercialization playbooks with public-service business models, SaaS economics, investor storytelling, AARRR metrics, and growth techniques for sustainable value.",
+  },
+];
+
+const stageTwoTimeline = [
+  {
+    label: "Day One",
+    title: "Inception",
+    text: "Kick-off, project pairing, and team onboarding with mentors.",
+  },
+  {
+    label: "Day Two",
+    title: "Alignment",
+    text: "Co-create goals, rituals, and community culture.",
+  },
+  {
+    label: "Day Three",
+    title: "Co-creation",
+    text: "Mentor-led design sprints on governance, growth, and sustainability.",
+  },
+  {
+    label: "Day Four",
+    title: "Amplify",
+    text: "Storytelling workshops, AIGC media production, and demo rehearsals.",
+  },
+  {
+    label: "Day Five",
+    title: "Showcase",
+    text: "Public presentations, reviewer feedback, and celebration of top teams.",
+  },
+];
+---
+
+<Layout
+  title="Program Overview | Upstream Origin 2025"
+  description="Dive into the two-phase structure of Upstream Origin 2025, spanning a four-week online cohort and five-day Beijing innovation camp."
+  navDarkMode={true}
+  navBackground="header-home"
+  pageTransitionName="Program Overview"
+>
+  <Intro id="agenda-intro" background="light">
+    <h2 class="h3">A Cohort Designed for Practice</h2>
+    <p class="lead">
+      The Upstream Origin program flows from foundational learning to hands-on ecosystem building. Each phase builds momentum toward sustainable open-source outcomes.
+    </p>
+  </Intro>
+
+  <Cards
+    id="agenda-overview"
+    title="Two-phase Journey"
+    description="From remote collaboration to on-site immersion, each milestone is crafted to unlock collective intelligence."
+    cards={phaseOverviewCards}
+    theme="light"
+    background="lightgray"
+  />
+
+  <ProgramTimeline
+    id="agenda-phase-one"
+    title="Base Camp · Weekly Focus"
+    items={stageOneTimeline}
+    theme="light"
+    background="light"
+  />
+
+  <ProgramTimeline
+    id="agenda-phase-two"
+    title="Ascend Camp · Immersive Bootcamp"
+    items={stageTwoTimeline}
+    theme="light"
+    background="lightgray"
+    variant="residency"
+  />
+</Layout>
+
+<style>
+  .lead {
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
+</style>

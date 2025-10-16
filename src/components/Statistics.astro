@@ -1,0 +1,65 @@
+---
+// Packages
+import { Picture } from 'astro:assets';
+
+interface Props {
+    stats?: Array<{
+        title: string,
+        subtitle: string,
+        image: any,
+        imageAlt: string,
+        hasPlus?: boolean,
+    }>;
+    id?: string;
+    theme?: 'light' | 'dark';
+    background?: 'light' | 'lightgray' | 'dark' | 'primary';
+}
+
+const {
+    stats,
+    id,
+    theme = 'light',
+    background = 'light',
+} = Astro.props;
+---
+
+<section
+    class="section section-stats"
+    id={id}
+    data-theme-section={theme}
+    data-bg-section={background}
+>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                {stats?.map((loop) => (
+                    <>
+                    <div class="single-stat outline">
+                        <h2>
+                            <span class="count-up">{loop.title}</span>
+                            {loop?.hasPlus &&<span class="number-after">+</span>}
+                        </h2>
+                        <p>{loop.subtitle}</p>
+                    </div>
+
+                    <div class="single-stat filled">
+                        <div class="overlay overlay-image">
+                            {loop?.image &&
+                                <Picture
+                                    src={loop.image}
+                                    formats={['webp', 'jpg', 'png']}
+                                    alt={loop.imageAlt}
+                                    widths={[120, 240, 360, 480, 660]}
+                                    sizes="(max-width: 768px) 120px, 220px"
+                                />
+                            }
+                        </div>
+                    </div>
+                    </>
+                ))}
+                
+            </div>
+        </div>
+    </div>
+</section>

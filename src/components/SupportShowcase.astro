@@ -1,0 +1,181 @@
+---
+interface Section {
+  title: string;
+  bullets: string[];
+}
+
+interface Props {
+  id?: string;
+  title: string;
+  highlight: string;
+  amount: string;
+  amountNote?: string;
+  sections: Section[];
+  theme?: 'light' | 'dark';
+  background?: 'light' | 'lightgray' | 'dark' | 'primary';
+}
+
+const {
+  id,
+  title,
+  highlight,
+  amount,
+  amountNote,
+  sections,
+  theme = 'light',
+  background = 'lightgray',
+} = Astro.props;
+---
+
+<section
+  class="support-showcase"
+  id={id}
+  data-theme-section={theme}
+  data-bg-section={background}
+>
+  <div class="container">
+    <div class="showcase-grid">
+      <div class="grant-card">
+        <p class="grant-title">{title}</p>
+        <div class="grant-amount">
+          <span class="currency">RMB</span>
+          <span class="value">{amount}</span>
+        </div>
+        {amountNote && <p class="grant-note">{amountNote}</p>}
+        <p class="grant-highlight">{highlight}</p>
+      </div>
+
+      <div class="details">
+        {sections.map((section) => (
+          <div class="detail-block">
+            <h3>{section.title}</h3>
+            <ul>
+              {section.bullets.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .support-showcase {
+    position: relative;
+    padding: clamp(3rem, 10vw, 6rem) 0;
+    overflow: hidden;
+  }
+
+  .support-showcase::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 15%, rgba(255, 198, 64, 0.2), transparent 55%),
+      radial-gradient(circle at 80% 20%, rgba(43, 116, 255, 0.18), transparent 60%),
+      radial-gradient(circle at 50% 85%, rgba(139, 210, 255, 0.18), transparent 60%);
+    pointer-events: none;
+  }
+
+  .showcase-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 420px) minmax(0, 1fr);
+    gap: clamp(2rem, 6vw, 4rem);
+    align-items: stretch;
+  }
+
+  .grant-card {
+    position: relative;
+    background: linear-gradient(135deg, rgba(43, 116, 255, 0.92), rgba(255, 198, 64, 0.9));
+    border-radius: 28px;
+    padding: clamp(2rem, 5vw, 2.75rem);
+    color: #fff;
+    box-shadow: 0 30px 70px rgba(13, 28, 58, 0.22);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .grant-title {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.85rem;
+    opacity: 0.85;
+    margin: 0;
+  }
+
+  .grant-amount {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .grant-amount .currency {
+    font-size: 0.9rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    opacity: 0.8;
+  }
+
+  .grant-amount .value {
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .grant-note {
+    font-size: 0.95rem;
+    opacity: 0.85;
+    margin: 0;
+  }
+
+  .grant-highlight {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin: 0;
+  }
+
+  .details {
+    display: grid;
+    gap: clamp(1.75rem, 4vw, 2.5rem);
+    position: relative;
+  }
+
+  .detail-block h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    color: rgba(13, 28, 58, 0.9);
+  }
+
+  [data-theme-section="dark"] .detail-block h3 {
+    color: rgba(255, 255, 255, 0.92);
+  }
+
+  .detail-block ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    display: grid;
+    gap: 0.6rem;
+  }
+
+  .detail-block li {
+    font-size: clamp(1.05rem, 2vw, 1.2rem);
+    line-height: 1.8;
+    color: rgba(13, 28, 58, 0.75);
+  }
+
+  [data-theme-section="dark"] .detail-block li {
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  @media (max-width: 960px) {
+    .showcase-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .grant-card {
+      max-width: 520px;
+      margin: 0 auto;
+    }
+  }
+</style>

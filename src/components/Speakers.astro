@@ -1,0 +1,120 @@
+---
+import { Picture } from "astro:assets"
+import type { ImageMetadata } from "astro"
+
+// Import the speakers data
+import speakersData from "json/Speakers.json"
+
+// Filter speakers to only include those where draft is false and id is not "tbd"
+const filteredSpeakers = speakersData.speakers.filter(
+  (speaker) => speaker.draft !== true && speaker.id !== "tbd"
+)
+
+// Import all images
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "images/speakers/*.{jpeg,jpg,png,gif}"
+)
+---
+
+<div class="filter-container filter-alpha-animate">
+  <div class="overlay overlay-dark" data-filter-toggle="close">
+    <div class="close" data-filter-toggle="close">
+      <div class="close-fill"></div>
+      <div class="bar bar-top"></div>
+      <div class="bar bar-bottom"></div>
+    </div>
+  </div>
+  <div class="filter-box">
+    <p>Filter:</p>
+    <div class="filter-group" data-filter-group>
+      {
+        speakersData.categories.map((category) => (
+          <div
+            class="single-filter"
+            data-filter-status={category.id === "all" ? "active" : "not-active"}
+            data-filter-category={category.id}
+          >
+            <span>{category.name}</span>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>
+
+<section
+  class="section section-speakers-grid"
+  id="grid"
+  data-filter-section
+  data-theme-section="light"
+  data-bg-section="lightgray"
+  data-scroll-section
+>
+  <div class="container">
+    <div class="row row-filter">
+      <div class="col">
+        <div class="filter-group" data-filter-group>
+          {
+            speakersData.categories.map((category) => (
+              <div
+                class="single-filter"
+                data-filter-status={
+                  category.id === "all" ? "active" : "not-active"
+                }
+                data-filter-category={category.id}
+              >
+                <span>{category.name}</span>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+
+    <div class="row grid visible" data-filter-grid data-modal-grid>
+      {
+        filteredSpeakers.map((speaker, index) => (
+          <div
+            class="col"
+            data-filter-status="active"
+            data-filter-index={index}
+            data-filter-index-even={index % 2 === 0}
+            data-filter-category={speaker.tag}
+          >
+            <a
+              href={`/speakers/${speaker.id}/`}
+              class="single-speakers-card"
+              data-modal-card-status="not-active"
+              data-modal-card-id={speaker.id}
+            >
+              <div class="card-row card-row-image">
+                <div class="card-image">
+                  {speaker?.image &&
+                    images[`/public/images/speakers/${speaker.image}`] && (
+                      <Picture
+                        src={images[
+                          `/public/images/speakers/${speaker.image}`
+                        ]()}
+                        formats={["webp", "jpg"]}
+                        alt={speaker.name}
+                        class="overlay"
+                        widths={[275, 400, 500, 600, 750, 900]}
+                        sizes="(max-width: 700px) 58vw, 450px"
+                      />
+                    )}
+                </div>
+              </div>
+              <div class="card-row card-row-info">
+                <h2 class="h5">{speaker.name}</h2>
+                <p>{speaker.roleOrg}</p>
+              </div>
+            </a>
+          </div>
+        ))
+      }
+      <p style="text-align: center; width: 100%; margin: 1rem 0;">
+        Speakers are subject to change
+      </p>
+    </div>
+  </div>
+</section>

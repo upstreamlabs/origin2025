@@ -1,0 +1,163 @@
+[
+    {
+      "name": "Qwen2.5",
+      "description": "Qwen2.5 is the large language model series developed by Qwen team, Alibaba Cloud.",
+      "avatar": "https://avatars.githubusercontent.com/u/141221163?v=4",
+      "stars": 16.2,
+      "age": "13.3"
+    },
+    {
+      "name": "MiniMax-01",
+      "description": "MiniMax-01 comprises two open-source AI models—a 456B-parameter language model and a multimodal vision-language model—employing novel Lightning Attention architecture for 4M-token context windows at 90% lower costs, matching GPT-4o/Claude-3.5-Sonnet performance",
+      "avatar": "https://avatars.githubusercontent.com/u/194880281?v=4",
+      "stars": 2.3,
+      "age": "2"
+    },
+    {
+      "name": "MiniCPM",
+      "description": "MiniCPM3-4B: An edge-side LLM that surpasses GPT-3.5-Turbo.",
+      "avatar": "https://avatars.githubusercontent.com/u/89920203?v=4",
+      "stars": 7.3,
+      "age": "13.5"
+    },
+    {
+      "name": "OpenSeek",
+      "description": "OpenSeek aims to unite the global open source community to drive collaborative innovation in algorithms, data and systems to develop next-generation models that surpass DeepSeek.",
+      "avatar": "https://avatars.githubusercontent.com/u/109567851?v=4",
+      "stars": 0.1,
+      "age": "0.9"
+    },
+    {
+      "name": "open-r1",
+      "description": "Fully open reproduction of DeepSeek-R1",
+      "avatar": "https://avatars.githubusercontent.com/u/25720743?v=4",
+      "stars": 22.8,
+      "age": "1.6"
+    },
+    {
+      "name": "Moxin-LLM",
+      "description": "Moxin is a family of fully open-source and reproducible LLMs",
+      "avatar": "https://avatars.githubusercontent.com/u/167464495?v=4",
+      "stars": 0.1,
+      "age": "3.3"
+    },
+    {
+      "name": "pytorch",
+      "description": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
+      "avatar": "https://avatars.githubusercontent.com/u/21003710?s=48&v=4",
+      "stars": 87.9,
+      "age": "103"
+    },
+    {
+      "name": "vllm",
+      "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
+      "avatar": "https://avatars.githubusercontent.com/u/136984999?v=4",
+      "stars": 41.5,
+      "age": "25.1"
+    },
+    {
+      "name": "sglang",
+      "description": "SGLang is a fast serving framework for large language models and vision language models.",
+      "avatar": "https://avatars.githubusercontent.com/u/147780389?v=4",
+      "stars": 11.9,
+      "age": "14.2"
+    },
+    {
+      "name": "llama.cpp",
+      "description": "LLM inference in C/C++",
+      "avatar": "https://avatars.githubusercontent.com/u/134263123?v=4",
+      "stars": 76.6,
+      "age": "24.2"
+    },
+    {
+      "name": "mindspore",
+      "description": "MindSpore is a new open source deep learning training/inference framework that could be used for mobile, edge and cloud scenarios.",
+      "avatar": "https://avatars.githubusercontent.com/u/54143604?v=4",
+      "stars": 4.4,
+      "age": "61.1"
+    },
+    {
+      "name": "LlamaEdge",
+      "description": "The easiest & fastest way to run customized and fine-tuned LLMs locally or on the edge",
+      "avatar": "https://avatars.githubusercontent.com/u/159961578?v=4",
+      "stars": 1.3,
+      "age": "17.2"
+    },
+    {
+      "name": "dify",
+      "description": "Dify is an open-source LLM app development platform. Dify's intuitive interface combines AI workflow, RAG pipeline, agent capabilities, model management, observability features and more, letting you quickly go from prototype to production.",
+      "avatar": "https://avatars.githubusercontent.com/u/127165244?s=48&v=4",
+      "stars": 82.2,
+      "age": "23.1"
+    },
+    {
+      "name": "OpenManus",
+      "description": "No fortress, purely open ground. OpenManus is Coming.",
+      "avatar": "https://avatars.githubusercontent.com/u/52203545?v=4",
+      "stars": 34.2,
+      "age": "0.3"
+    },
+    {
+      "name": "ragflow",
+      "description": "RAGFlow is an open-source RAG (Retrieval-Augmented Generation) engine based on deep document understanding.",
+      "avatar": "https://avatars.githubusercontent.com/u/69962740?s=48&v=4",
+      "stars": 44.7,
+      "age": "15.1"
+    },
+    {
+      "name": "makepad",
+      "description": "Makepad is a creative software development platform for Rust that compiles to wasm/webGL, osx/metal, windows/dx11 linux/opengl",
+      "avatar": "https://avatars.githubusercontent.com/u/20386338?v=4",
+      "stars": 5.3,
+      "age": "72.8"
+    },
+    {
+      "name": "camel",
+      "description": "🐫 CAMEL: Finding the Scaling Law of Agents. The first and the best multi-agent framework. https://www.camel-ai.org",
+      "avatar": "https://avatars.githubusercontent.com/u/134388954?v=4",
+      "stars": 10.2,
+      "age": "23.9"
+    },
+    {
+      "name": "dora",
+      "description": "DORA (Dataflow-Oriented Robotic Architecture) is middleware designed to streamline and simplify the creation of AI-based robotic applications. It offers low latency, composable, and distributed dataflow capabilities. Applications are modeled as directed graphs, also referred to as pipelines.",
+      "avatar": "https://avatars.githubusercontent.com/u/99922143?s=48&v=4",
+      "stars": 1.8,
+      "age": "36.8"
+    },
+    {
+      "name": "lerobot",
+      "description": "🤗 LeRobot: Making AI for Robotics more accessible with end-to-end learning",
+      "avatar": "https://avatars.githubusercontent.com/u/25720743?v=4",
+      "stars": 10.2,
+      "age": "13.6"
+    },
+    {
+      "name": "zenoh",
+      "description": "zenoh unifies data in motion, data in-use, data at rest and computations. It carefully blends traditional pub/sub with geo-distributed storages, queries and computations, while retaining a level of time and space efficiency that is well beyond any of the mainstream stacks.",
+      "avatar": "https://avatars.githubusercontent.com/u/60146382?v=4",
+      "stars": 1.7,
+      "age": "61.8"
+    },
+    {
+      "name": "jan",
+      "description": "Jan is an open source alternative to ChatGPT that runs 100% offline on your computer",
+      "avatar": "https://avatars.githubusercontent.com/u/102363196?s=48&v=4",
+      "stars": 28.2,
+      "age": "19.3"
+    },
+    {
+      "name": "oxen-release",
+      "description": "Lightning fast data version control system for structured and unstructured machine learning datasets. We aim to make versioning datasets as easy as versioning code.",
+      "avatar": "https://avatars.githubusercontent.com/u/104101299?s=48&v=4",
+      "stars": 0.9,
+      "age": "31.8"
+    },
+    {
+      "name": "rerun",
+      "description": "Visualize streams of multimodal data. Free, fast, easy to use, and simple to integrate. Built in Rust.",
+      "avatar": "https://avatars.githubusercontent.com/u/99407368?s=48&v=4",
+      "stars": 8.1,
+      "age": "35.6"
+    }
+]

@@ -1,0 +1,130 @@
+---
+import { Picture } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+// Import the partners data
+import sponsorsData from "json/Sponsors.json";
+
+// Import all images
+const images = import.meta.glob<{ default: ImageMetadata }>(
+    "images/sponsors/*.{jpeg,jpg,png,gif}",
+);
+---
+
+<div class="filter-container filter-alpha-animate">
+    <div class="overlay overlay-dark" data-filter-toggle="close">
+        <div class="close" data-filter-toggle="close">
+            <div class="close-fill"></div>
+            <div class="bar bar-top"></div>
+            <div class="bar bar-bottom"></div>
+        </div>
+    </div>
+    <div class="filter-box">
+        <p>Filter:</p>
+        <div class="filter-group" data-filter-group>
+            {sponsorsData.categories.map((category) => (
+                <div
+                    class="single-filter"
+                    data-anchor-target="#grid"
+                    data-filter-status={category.name === "All" ? "active" : "not-active"}
+                    data-filter-category={category.name.toLowerCase().replace(/ /g, "-")}
+                >
+                    <span>{category.name}</span>
+                </div>
+            ))}
+        </div>
+    </div>
+</div>
+
+<section
+    class="section section-partners-grid"
+    id="grid"
+    data-filter-section
+    data-theme-section="light"
+    data-bg-section="lightgray"
+>
+    <div class="container">
+        <div class="row row-filter">
+            <div class="col">
+                <div class="filter-group" data-filter-group>
+                    {
+                        sponsorsData.categories.map((category) => (
+                            <div
+                                class="single-filter"
+                                data-filter-status={
+                                    category.name === "All"
+                                        ? "active"
+                                        : "not-active"
+                                }
+                                data-filter-category={category.name
+                                    .toLowerCase()
+                                    .replace(/ /g, "-")}
+                            >
+                                <span>{category.name}</span>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="grid-wrap visible" data-filter-grid>
+            {
+                sponsorsData.categories.map(
+                    (category) =>
+                        category.name !== "All" && (
+                            <div
+                                class="grid-group"
+                                data-filter-status="active"
+                                data-filter-category={category.name
+                                    .toLowerCase()
+                                    .replace(/ /g, "-")}
+                            >
+                                <div class="row">
+                                    <h2 class="h3">{category.name}</h2>
+                                </div>
+                                <div class="row grid">
+                                    {sponsorsData.partners
+                                        .filter(
+                                            (partner) =>
+                                                partner.category ===
+                                                category.name,
+                                        )
+                                        .map((partner) => (
+                                            <div class="col">
+                                                <div class="single-partners-card card-hover">
+                                                    <div class="overlay card-fill" />
+                                                    <div class="card-logo boxed-logo">
+                                                        {partner?.image &&
+                                                            images[
+                                                                `/public/images/sponsors/${partner.image}`
+                                                            ] && (
+                                                                <Picture
+                                                                    src={images[
+                                                                        `/public/images/sponsors/${partner.image}`
+                                                                    ]()}
+                                                                    formats={[
+                                                                        "webp",
+                                                                        "jpg",
+                                                                        "png",
+                                                                    ]}
+                                                                    alt="Sponsor Logo"
+                                                                    widths={[
+                                                                        75, 150,
+                                                                        225,
+                                                                        450,
+                                                                    ]}
+                                                                    sizes="(max-width: 480px) 75px, 225px"
+                                                                />
+                                                            )}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ))}
+                                </div>
+                            </div>
+                        ),
+                )
+            }
+        </div>
+    </div>
+</section>

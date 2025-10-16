@@ -1,0 +1,22 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="flowStroke" x1="80" y1="520" x2="880" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2B74FF" stop-opacity="0.3" />
+      <stop offset="0.5" stop-color="#8BD2FF" stop-opacity="0.55" />
+      <stop offset="1" stop-color="#FFC640" stop-opacity="0.65" />
+    </linearGradient>
+    <radialGradient id="flowGlow" cx="0.5" cy="0.45" r="0.75">
+      <stop offset="0" stop-color="#5EA5FF" stop-opacity="0.42" />
+      <stop offset="1" stop-color="#0A1633" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="960" height="540" rx="40" fill="#0F1E35" />
+  <rect width="960" height="540" rx="40" fill="url(#flowGlow)" />
+  <path d="M60 420C160 360 260 260 360 280C460 300 560 440 660 440C760 440 860 320 900 260" stroke="url(#flowStroke)" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" opacity="0.8" />
+  <path d="M90 360C200 260 320 210 420 230C520 250 600 340 720 340C820 340 880 280 920 200" stroke="url(#flowStroke)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" opacity="0.55" />
+  <circle cx="210" cy="250" r="18" fill="#FFC640" fill-opacity="0.95" />
+  <circle cx="480" cy="320" r="22" fill="#2B74FF" fill-opacity="0.75" />
+  <circle cx="710" cy="360" r="16" fill="#8BD2FF" fill-opacity="0.85" />
+  <circle cx="860" cy="230" r="20" fill="#FFC640" fill-opacity="0.7" />
+  <circle cx="320" cy="410" r="14" fill="#6FC1FF" fill-opacity="0.8" />
+</svg>

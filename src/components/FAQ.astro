@@ -1,0 +1,103 @@
+---
+// Import the FAQ data
+import faqData from "json/FAQ.json";
+---
+
+<div class="filter-container filter-alpha-animate">
+    <div class="overlay overlay-dark" data-filter-toggle="close">
+        <div class="close" data-filter-toggle="close">
+            <div class="close-fill"></div>
+            <div class="bar bar-top"></div>
+            <div class="bar bar-bottom"></div>
+        </div>
+    </div>
+    <div class="filter-box">
+        <p>Filter:</p>
+        <div class="filter-group" data-filter-group>
+            {faqData.categories.map((category) => (
+                <div
+                    class="single-filter"
+                    data-anchor-target="#grid"
+                    data-filter-status={
+                        category.name === "All" ? "active" : "not-active"
+                    }
+                    data-filter-category={category.name.toLowerCase().replace(/ /g, "-")}
+                >
+                    <span>{category.name}</span>
+                </div>
+            ))}
+        </div>
+    </div>
+</div>
+
+
+<section
+    class="section section-faq-grid"
+    id="grid"
+    data-filter-section
+    data-theme-section="light"
+    data-bg-section="lightgray"
+    data-scroll-section
+>
+    <div class="container">
+        <div class="row row-filter">
+            <div class="col">
+                <div class="filter-group" data-filter-group>
+                    {faqData.categories.map((category) => (
+                        <button
+                            class="single-filter"
+                            data-filter-status={category.name === "All" ? "active" : "not-active"}
+                            data-filter-category={category.name.toLowerCase().replace(/ /g, "-")}
+                        >
+                            <span>{category.name}</span>
+                        </button>
+                    ))}
+                </div>
+            </div>
+        </div>
+        <div class="row row-list accordion visible" data-filter-grid>
+            {faqData.categories.map((category) => (
+                category.name !== "All" &&
+                <div
+                    class="list-group"
+                    data-filter-status="active"
+                    data-filter-category={category.name.toLowerCase().replace(/ /g, "-")}
+                >
+                    <div class="row row-mini-title">
+                        <div class="card-tags group-tags">
+                            <div class="single-tag">
+                                <h2 class="p">{category.name}</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="row row-list">
+                        {faqData.faqs.filter((faq) => faq.category === category.name).map((faq) => (
+                            <li
+                                class="single-faq-card single-accordion-item card-hover"
+                                data-accordion-status="not-active"
+                                data-filter-status="active"
+                                data-filter-category={faq.category.toLowerCase().replace(/ /g, "-")}
+                            >
+                                <button class="top" data-accordion-toggle>
+                                    <h3 class="h5">{faq.question}</h5>
+                                    <div class="plus">
+                                        <div class="plus-fill" />
+                                        <div class="bar bar-top" />
+                                        <div class="bar bar-bottom" />
+                                    </div>
+                                </button>
+                                <div class="bottom">
+                                    <div class="bottom-wrap">
+                                        <div class="bottom-content styled-content">
+                                            <p set:html={faq.answer}/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>

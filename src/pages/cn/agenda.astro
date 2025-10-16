@@ -1,0 +1,118 @@
+---
+import Layout from "layouts/Layout.astro";
+import Cards from "components/Cards.astro";
+import ProgramTimeline from "components/ProgramTimeline.astro";
+import Intro from "components/Intro.astro";
+
+const phaseOverviewCards = [
+  {
+    title: "大本营｜线上训练",
+    description: "四周线上课程、同伴工作坊与实践任务，完成生态行动计划。",
+    image: "/icons/workshops.svg",
+  },
+  {
+    title: "挺进营｜沉浸式共创",
+    description: "五天北京共创营，完成治理设计、传播打磨与成果路演。",
+    image: "/icons/startups.svg",
+  },
+];
+
+const stageOneTimeline = [
+  {
+    label: "第一周",
+    title: "开源基础理论",
+    text: "系统梳理开源运动的历史沿革、典型事件与成功案例；解析主流开源许可证与合规要点；分享社区激励与治理模型；探讨开放核心、双许可与基金会在品牌信任中的作用。",
+  },
+  {
+    label: "第二周",
+    title: "社区治理与生态运营",
+    text: "设计贡献者激励、治理机制与社区运营路径，打造健康的社区文化节奏，并协同多方资源支持生态发展。",
+  },
+  {
+    label: "第三周",
+    title: "开源产品管理和营销技能",
+    text: "掌握 Git/GitHub、CI/CD、Linux 与云环境部署，利用 AIGC 制作宣传物料，结合产品管理思维与多平台社区运营、社媒策略，提升传播效率与用户基础。",
+  },
+  {
+    label: "第四周",
+    title: "探索公共服务型商业模式与长期治理工具",
+    text: "围绕公共服务型商业模式与长期治理工具，结合 SaaS 案例、AARRR 指标与增长黑客技巧，引入导师实战经验设计转化漏斗和投资人沟通方案，实现公共价值与商业增长的平衡。",
+  },
+];
+
+const stageTwoTimeline = [
+  {
+    label: "第一天",
+    title: "启航",
+    text: "开营仪式、项目发布、导师与团队配对。",
+  },
+  {
+    label: "第二天",
+    title: "共识",
+    text: "目标共创、社区文化建设与节奏设计。",
+  },
+  {
+    label: "第三天",
+    title: "共创",
+    text: "导师辅导，完善治理与生态发展方案。",
+  },
+  {
+    label: "第四天",
+    title: "共鸣",
+    text: "AIGC 传播实战，打磨故事线与展示内容。",
+  },
+  {
+    label: "第五天",
+    title: "共展",
+    text: "成果路演、评审点评与颁奖仪式。",
+  },
+];
+---
+
+<Layout
+  title="课程安排｜Upstream Origin 2025"
+  description="了解 Upstream Origin 2025 的双阶段课程结构：四周线上训练营与五天线下共创营。"
+  navDarkMode={true}
+  navBackground="header-home"
+  pageTransitionName="课程安排"
+>
+  <Intro id="agenda-intro" background="light">
+    <h2 class="h3">从学习走向实践</h2>
+    <p class="lead">
+      Upstream Origin 以阶段化设计带领团队从理论到落地，循序渐进地构建开源生态的可持续能力。
+    </p>
+  </Intro>
+
+  <Cards
+    id="agenda-overview"
+    title="双阶段旅程"
+    description="线上夯实基础，线下共创突破，每个节点都围绕公共产品与协作而设计。"
+    cards={phaseOverviewCards}
+    theme="light"
+    background="lightgray"
+  />
+
+  <ProgramTimeline
+    id="agenda-phase-one"
+    title="大本营｜每周聚焦"
+    items={stageOneTimeline}
+    theme="light"
+    background="light"
+  />
+
+  <ProgramTimeline
+    id="agenda-phase-two"
+    title="挺进营｜每日节奏"
+    items={stageTwoTimeline}
+    theme="light"
+    background="lightgray"
+    variant="residency"
+  />
+</Layout>
+
+<style>
+  .lead {
+    font-size: 1.15rem;
+    line-height: 1.7;
+  }
+</style>

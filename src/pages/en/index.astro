@@ -1,0 +1,347 @@
+---
+import Layout from "layouts/Layout.astro";
+import Hero from "components/Hero.astro";
+import Intro from "components/Intro.astro";
+import FeatureSpotlight from "components/FeatureSpotlight.astro";
+import ProgramTimeline from "components/ProgramTimeline.astro";
+import SupportShowcase from "components/SupportShowcase.astro";
+import Cards from "components/Cards.astro";
+import Statistics from "components/Statistics.astro";
+import Button from "components/Button.astro";
+
+import statOnline from "images/upstream/stat-online.svg";
+import statOffline from "images/upstream/stat-offline.svg";
+import statGrant from "images/upstream/stat-grant.svg";
+
+const heroLinks = [
+  {
+    text: "Apply Now",
+    link: "#apply",
+  },
+  {
+    text: "Explore the Program",
+    link: "#program",
+  },
+];
+
+const heroHighlights = [
+  "4-week online training camp focused on open governance and sustainability",
+  "5-day offline co-creation residency in Beijing",
+  "RMB 100,000 Upstream Origin Ecosystem Development Grant",
+];
+
+const objectives = [
+  {
+    title: "Spread Open Culture",
+    description:
+      "Build shared understanding of open-source principles, governance models, and public goods.",
+    image: "/icons/open-source-ai.svg",
+  },
+  {
+    title: "Grow Ecosystem Talent",
+    description:
+      "Equip community organizers and storytellers with the skills to sustain open ecosystems.",
+    image: "/icons/networking.svg",
+  },
+  {
+    title: "Connect Cross-Sector Partners",
+    description:
+      "Bridge government, industry, and community resources to support long-term public goods.",
+    image: "/icons/collaboration.svg",
+  },
+];
+
+const stats = [
+  {
+    title: "4",
+    subtitle: "Weeks of online training and mentorship",
+    image: statOnline,
+    imageAlt: "Abstract wave showing continuous learning",
+  },
+  {
+    title: "5",
+    subtitle: "Days of immersive offline innovation in Beijing",
+    image: statOffline,
+    imageAlt: "Golden beam representing in-person collaboration",
+  },
+  {
+    title: "100,000",
+    subtitle: "RMB Upstream Origin ecosystem development grant",
+    image: statGrant,
+    imageAlt: "Radiant arc symbolizing catalytic funding",
+  },
+];
+
+const stageOverviewCards = [
+  {
+    title: "Base Camp · Online Training",
+    description:
+      "Four-week remote program featuring weekly live sessions, peer studios, and guided assignments that culminate in a sustainable ecosystem action plan.",
+    image: "/icons/workshops.svg",
+  },
+  {
+    title: "Ascend Camp · Immersive Bootcamp",
+    description:
+      "Five-day residency in Beijing combining project pairing, governance design sprints, storytelling labs, and final showcases.",
+    image: "/icons/startups.svg",
+  },
+];
+
+const stageOneTimeline = [
+  {
+    label: "Week One",
+    title: "Open Source Fundamentals",
+    text: "Survey the evolution of the open-source movement, compare major licenses, explore governance and community-building practices, and examine business models that balance openness with foundation-led trust building.",
+  },
+  {
+    label: "Week Two",
+    title: "Community Governance & Operations",
+    text: "Design contributor journeys, incentive models, and governance charters that sustain healthy communities while aligning ecosystem stakeholders across government, industry, and civil society.",
+  },
+  {
+    label: "Week Three",
+    title: "Product Management & Marketing",
+    text: "Master developer-centric go-to-market skills—Git/GitHub collaboration, CI/CD demos, Linux and cloud deployments, and AIGC-powered storytelling—while applying product management thinking to roadmap and messaging decisions.",
+  },
+  {
+    label: "Week Four",
+    title: "Public Service Business Models & Long-term Governance",
+    text: "Blend real-world commercialization playbooks with public-service business models, SaaS economics, investor storytelling, AARRR metrics, and growth techniques to translate community traction into sustainable, mission-aligned revenue.",
+  },
+];
+
+const stageTwoTimeline = [
+  {
+    label: "Day One",
+    title: "Inception",
+    text: "Kick off onsite, meet mentors, align on shared purpose, and match teams with open-source projects.",
+  },
+  {
+    label: "Day Two",
+    title: "Alignment",
+    text: "Co-create goals, map community rituals, and strengthen collaborative culture across partner organizations.",
+  },
+  {
+    label: "Day Three",
+    title: "Co-creation",
+    text: "Design ecosystem strategies with mentor guidance on governance, engagement, and long-term sustainability.",
+  },
+  {
+    label: "Day Four",
+    title: "Amplify",
+    text: "Prototype communication assets, run AIGC storytelling sprints, and polish demos for public launch.",
+  },
+  {
+    label: "Day Five",
+    title: "Showcase",
+    text: "Present ecosystem roadmaps, gather cross-sector feedback, and celebrate outstanding collaborations.",
+  },
+];
+
+const mentorshipCards = [
+  {
+    title: "Academic Mentors",
+    description: "Professors and researchers guiding theoretical framing and cultural grounding.",
+    image: "/icons/whitepaper.svg",
+  },
+  {
+    title: "Community Mentors",
+    description: "Maintainers and community builders sharing operational best practices.",
+    image: "/icons/sovereignty.svg",
+  },
+  {
+    title: "Industry Mentors",
+    description: "OSPO leads and open-source strategists contributing enterprise experience.",
+    image: "/icons/aimodels.svg",
+  },
+  {
+    title: "Government & Incubators",
+    description: "Policy partners offering pilot spaces, regulatory insights, and local resources.",
+    image: "/icons/governance.svg",
+  },
+  {
+    title: "Investment Partners",
+    description: "Impact funds and sustainable capital linking long-term financial and ecosystem support.",
+    image: "/icons/positionpaper.svg",
+  },
+];
+---
+
+<Layout
+  title="Upstream Origin 2025｜源起之道"
+  description="Upstream Origin 2025 blends a four-week online camp and a five-day Beijing innovation residency to grow sustainable open-source ecosystems across public and civic sectors."
+  navDarkMode={true}
+  navBackground="header-home"
+  pageTransitionName="Upstream Origin 2025"
+>
+  <Hero
+    title="Upstream Origin 2025｜源起之道"
+    tagline="Push to the Origin. Flow with the Source."
+    description="“Return to the origin, reignite the light of collaboration.” Every innovator traces back to the source; every collaborator grows toward the light. Rooted in open collaboration and public goods, Upstream Origin convenes builders, policy innovators, and storytellers to co-design sustainable open-source ecosystems."
+    backgroundImage="/images/upstream/hero-flow.svg"
+    backgroundAlt="Flowing gradient abstract background for Upstream Origin"
+    highlights={heroHighlights}
+    links={heroLinks}
+  />
+
+  <FeatureSpotlight
+    id="overview"
+    title="Open Collaboration as Public Infrastructure"
+    text="Upstream Origin is a learning-and-doing platform devoted to sustainable open-source ecosystems. Participants deepen their understanding of community governance, civic value, and ecosystem storytelling while co-creating real projects that activate public impact."
+    image="/images/upstream/overview-flow.svg"
+    imageAlt="Flowing gradient artwork highlighting open-source collaboration"
+    theme="light"
+    background="lightgray"
+  />
+
+  <FeatureSpotlight
+    id="philosophy"
+    title="Core Philosophy"
+    text="Upstream Origin is rooted in open-source spirit and centered on public goods. Commercial momentum is never the destination—it is the sustaining force that preserves trust, vitality, and shared stewardship across the ecosystem. Upstream Origin believes open source is more than a technical pathway—it is a collaborative civic culture that cultivates trust, shared value, and long-term sustainability so collective innovation can power a shared future."
+    image="/images/upstream/flow-core.svg"
+    imageAlt="Gradient square illustrating the Flow of Source concept"
+    imagePosition="left"
+    theme="dark"
+    background="dark"
+  />
+
+  <Cards
+    id="objectives"
+    title="Program Objectives"
+    description="A dual-phase journey that equips teams to steward open ecosystems across governance, sustainability, and storytelling."
+    cards={objectives}
+    theme="light"
+    background="lightgray"
+  />
+
+  <Statistics
+    id="metrics"
+    stats={stats}
+    theme="light"
+    background="light"
+  />
+
+  <Cards
+    id="program"
+    title="Two-Phase Program Structure"
+    description="Participants move from online foundations to hands-on co-creation, building momentum that carries through launch, mentorship, and long-term implementation."
+    cards={stageOverviewCards}
+    theme="light"
+    background="lightgray"
+  />
+
+  <ProgramTimeline
+    id="phase-one"
+    title="Base Camp · Online Training"
+    items={stageOneTimeline}
+    theme="light"
+    background="light"
+  />
+
+  <ProgramTimeline
+    id="phase-two"
+    title="Ascend Camp · Immersive Bootcamp"
+    items={stageTwoTimeline}
+    theme="light"
+    background="lightgray"
+    variant="residency"
+  />
+
+  <Cards
+    id="mentors"
+    title="Mentorship & Support Network"
+    description="An ecosystem of mentors ensures every team receives strategic, operational, and creative guidance from multiple vantage points."
+    cards={mentorshipCards}
+    theme="light"
+    background="light"
+  />
+
+  <SupportShowcase
+    id="support"
+    title="Outcomes & Support"
+    highlight="Teams that complete the innovation camp and deliver their showcase become eligible for a RMB 100,000 grant dedicated to growing sustainable open collaboration."
+    amount="100,000"
+    amountNote="Upstream Origin Ecosystem Development Grant"
+    sections={[
+      {
+        title: "Ecosystem Grant Focus",
+        bullets: [
+          "Community operations and contributor incentives",
+          "Storytelling assets, video, and documentation",
+          "Partnership building and ecosystem activations",
+          "Governance improvements and long-term mechanisms",
+        ],
+      },
+      {
+        title: "Long-term Support",
+        bullets: [
+          "3-month Upstream Origin Mentorship Program with tailored guidance",
+          "Inclusion in the Upstream Origin Knowledge Archive of open case studies",
+          "Access to government incubation partners for space, policy, and funding support",
+        ],
+      },
+    ]}
+    theme="light"
+    background="lightgray"
+  />
+
+  <section class="section section-apply" id="apply" data-theme-section="dark" data-bg-section="dark">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2 class="custom3">Join Upstream Origin 2025</h2>
+          <p>
+            Tell us about your community, public service project, or civic innovation idea. We welcome teams eager to build sustainable open-source impact across sectors.
+          </p>
+          <div class="apply-actions">
+            <Button
+              text="Submit Your Team"
+              link="https://airtable.com/apply-upstream-ignite"
+              openInNewTab={true}
+              class="btn primary xl btn-hover"
+            />
+            <Button
+              text="Become a Mentor"
+              link="mailto:origin@upstreamlabs.com"
+              openInNewTab={false}
+              class="btn outline btn-hover xl"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .lead {
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
+
+  .section-apply {
+    text-align: left;
+    background: linear-gradient(135deg, rgba(43, 116, 255, 0.92), rgba(255, 198, 64, 0.88));
+  }
+
+  .section-apply p {
+    max-width: 640px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.88);
+  }
+
+  .apply-actions {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .lead {
+      font-size: 1.05rem;
+    }
+  }
+</style>

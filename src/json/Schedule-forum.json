@@ -1,0 +1,290 @@
+[
+  {
+    "date": "May 5",
+    "timeSlot": "09:00 - 10:00",
+    "title": "Registration/Welcome coffee",
+    "content": "",
+    "speakers": []
+  },
+  {
+    "date": "May 5",
+    "timeSlot": "10:00 - 10:15",
+    "title": "Opening Remarks",
+    "content": "",
+    "speakers": [
+      {
+        "id": "gael-blondelle",
+        "name": "Gaël Blondelle",
+        "tags": ["forum"],
+        "roleOrg": "VP at the Eclipse Foundation",
+        "image": "gael-blondelle.png"
+      }
+    ]
+  },
+  {
+    "date": "May 5",
+    "timeSlot": "10:15 - 11:45",
+    "title": "Global Digital Collaboration",
+    "content": "",
+    "speakers": [
+      {
+        "id": "daniel-goldscheider",
+        "name": "Daniel Goldscheider",
+        "tags": ["forum"],
+        "roleOrg": "ED of the OpenWallet Foundation",
+        "image": "daniel-goldscheider.jpg"
+      },
+      {
+        "id": "stefano-mafulli",
+        "name": "Stefano Mafulli",
+        "tags": ["forum"],
+        "roleOrg": "ED of the OSI",
+        "image": "stefano-maffulli.jpg"
+      },
+      {
+        "id": "ciaran-oriordan",
+        "name": "Ciarán O'Riordan",
+        "tags": ["forum"],
+        "roleOrg": "Senior Policy Advisor at OFE",
+        "image": "ciaran-oriordan.jpg"
+      },
+      {
+        "id": "manuel-betin",
+        "name": "Manuel Bétin",
+        "tags": ["forum"],
+        "roleOrg": "Economist at OCDE",
+        "image": "manuel-bétin.jpg"
+      },
+      {
+        "id": "qin-wang",
+        "name": "Professor Qin Wang",
+        "tags": ["forum"],
+        "roleOrg": "Professor at CASS",
+        "image": "qin-wang.jpg"
+      },
+      {
+        "id": "yonghua-lin",
+        "name": "Yonghua Lin",
+        "tags": ["forum"],
+        "roleOrg": "VP of Beijing Academy of Artificial Intelligence",
+        "image": "yonghua-lin.png"
+      }
+    ]
+  },
+  {
+    "date": "May 5",
+    "timeSlot": "11:45 - 12:00",
+    "title": "Coffee break",
+    "content": "",
+    "speakers": []
+  },
+  {
+    "date": "May 5",
+    "timeSlot": "12:00 - 13:00",
+    "title": "Open Source AI enables Sovereignty and Digital Autonomy",
+    "content": "",
+    "speakers": [
+      {
+        "id": "michael-plagge",
+        "name": "Michael Plagge",
+        "tags": ["forum"],
+        "roleOrg": "VP of the Eclipse Foundation",
+        "image": "plagge-michael.jpg"
+      },
+      {
+        "id": "yann-lechelle",
+        "name": "Yann Lechelle",
+        "tags": ["forum"],
+        "roleOrg": "Co-founder CEO of Probabl.ai",
+        "image": "yann-lechelle.jpg"
+      },
+      {
+        "id": "michel-marie-maudet",
+        "name": "Michel-Marie Maudet",
+        "tags": ["forum"],
+        "roleOrg": "Owener of Linagora",
+        "image": "michel-marie-maudet.png"
+      },
+      {
+        "id": "cailean-osborne",
+        "name": "Cailean Osborne",
+        "tags": ["forum"],
+        "roleOrg": "Reasearcher at the Linux Research",
+        "image": "cailean-osborne.png"
+      }
+    ]
+  },
+  {
+    "date": "May 5",
+    "timeSlot": "13:00 - 14:00",
+    "title": "Lunch",
+    "content": "",
+    "speakers": []
+  },
+  {
+    "date": "May 5",
+    "timeSlot": "14:00 - 14:30",
+    "title": "Lightning talks about tools: LMOS, PyTorch, Qwen",
+    "content": "",
+    "speakers": [
+      {
+        "id": "arun-joseph",
+        "name": "Arun Joseph",
+        "tags": ["forum"],
+        "roleOrg": "Head of AI Engineering at Deutsche Telekom",
+        "image": "arun-joseph.jpg"
+      },
+      {
+        "id": "matt-white",
+        "name": "Matt White",
+        "tags": ["forum"],
+        "roleOrg": "ED of the Pytorch Foundation",
+        "image": "matt-white.png"
+      },
+      {
+        "id": "baosong-yang",
+        "name": "Baosong Yang",
+        "tags": ["forum"],
+        "roleOrg": "Researcher at Alibaba Yongyi Lab",
+        "image": "baosong-yang.png"
+      }
+    ]
+  },
+  {
+    "date": "May 5",
+    "timeSlot": "14:30 - 15:30",
+    "title": "Open-Source AI and Research",
+    "content": "",
+    "speakers": [
+      {
+        "id": "gael-blondelle",
+        "name": "Gaël Blondelle",
+        "tags": ["forum"],
+        "roleOrg": "VP of the Eclipse Foundation",
+        "image": "gael-blondelle.png"
+      },
+      {
+        "id": "ovidiu-vermesan",
+        "name": "Ovidiu Vermesan",
+        "tags": ["forum"],
+        "roleOrg": "Chief Scientist of SINTEF",
+        "image": "ovidiu-vermesan.jpg"
+      },
+      {
+        "id": "pierre-gaillard",
+        "name": "Pierre Gaillard",
+        "tags": ["forum"],
+        "roleOrg": "Embedded AI Program Manager at CEA",
+        "image": "pierre-gaillard.png"
+      },
+      {
+        "id": "yumei-he",
+        "name": "Yumei He",
+        "tags": ["forum"],
+        "roleOrg": "Assitant Professor at Tulane University",
+        "image": "yumei-he.jpeg"
+      },
+      {
+        "id": "jenia-jitsev",
+        "name": "Jenia Jitseva",
+        "tags": ["forum"],
+        "roleOrg": "Co-founder & Scientific Lead ofLAION",
+        "image": "jenia-jitsev.jpeg"
+      },
+      {
+        "id": "marianna-nezhurina",
+        "name": "Marianna Nezhurina",
+        "tags": ["forum"],
+        "roleOrg": "Member and Core Researcher at LAION",
+        "image": "marianna-nezhurina.jpg"
+      }
+    ]
+  },
+  {
+    "date": "May 5",
+    "timeSlot": "15:30 - 15:45",
+    "title": "Coffee break",
+    "content": "",
+    "speakers": []
+  },
+  {
+    "date": "May 5",
+    "timeSlot": "15:45 - 16:45",
+    "title": "Open-Source AI Solutions",
+    "content": "",
+    "speakers": [
+      {
+        "id": "alexy-khrabrov",
+        "name": "Alexy Khrabrov",
+        "tags": ["forum"],
+        "roleOrg": "Open-Source Science and AI Community Leader at Neo4J",
+        "image": "alexy-khrabrov.jpg"
+      },
+      {
+        "id": "quentin-adam",
+        "name": "Quentin Adam",
+        "tags": ["forum"],
+        "roleOrg": "CEO of CleverCloud",
+        "image": "quentin-adam.png"
+      },
+      {
+        "id": "arun-joseph",
+        "name": "Arun Joseph",
+        "tags": ["forum"],
+        "roleOrg": "Head of AI Engineering at Deutsche Telekom",
+        "image": "arun-joseph.jpg"
+      }
+    ]
+  },
+  {
+    "date": "May 5",
+    "timeSlot": "16:45 - 17:45",
+    "title": "Responsible AI",
+    "content": "",
+    "speakers": [
+      {
+        "id": "volha-litvinets",
+        "name": "Volha Litvinets",
+        "tags": ["forum"],
+        "roleOrg": "Digital Ethics Lead at EY",
+        "image": "volha-litvinets.jpg"
+      },
+      {
+        "id": "roberto-di-cosmo",
+        "name": "Roberto Di Cosmo",
+        "tags": ["forum"],
+        "roleOrg": "ED of the SW Heritage Foundation",
+        "image": "roberto-di-cosmo.png"
+      },
+      {
+        "id": "sray-agarwal",
+        "name": "Sray Agarwal",
+        "tags": ["forum"],
+        "roleOrg": "Head of Responsible AI Office at Infosys",
+        "image": "sray-agarwal.jpg"
+      }
+    ]
+  },
+  {
+    "date": "May 5",
+    "timeSlot": "17:45 - 18:00",
+    "title": "Conclusion / Closing Remarks",
+    "content": "",
+    "speakers": [
+      {
+        "id": "gael-blondelle",
+        "name": "Gaël Blondelle",
+        "tags": ["forum"],
+        "roleOrg": "VP of the Eclipse Foundation",
+        "image": "gael-blondelle.png"
+      }
+    ]
+  },
+  {
+    "date": "May 5",
+    "timeSlot": "18:30 - 22:00",
+    "title": "Seine River Cruise Dinner",
+    "content": "",
+    "speakers": []
+  }
+]

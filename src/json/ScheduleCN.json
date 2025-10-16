@@ -1,0 +1,399 @@
+{
+  "days": [
+    {
+      "date": "9月13日",
+      "title": "2025年9月13日",
+      "url": "/cn/agenda/"
+    }
+  ],
+  "categories": [
+    {
+      "name": "所有会议",
+      "id": "all-sessions"
+    },
+    {
+      "name": "主题演讲",
+      "id": "keynote"
+    },
+    {
+      "name": "小组讨论",
+      "id": "panel"
+    },
+    {
+      "name": "展示分享",
+      "id": "show-tell"
+    },
+    {
+      "name": "休息",
+      "id": "break"
+    }
+  ],
+  "sessions": {
+    "all-sessions": [
+      {
+        "date": "9月13日",
+        "timeSlot": "10:10 - 10:50",
+        "title": "开幕主题演讲",
+        "content": "<p><strong>欢迎致辞 (20分钟):</strong> 黄铁军教授 (北京大学教授，北京智源人工智能研究院理事长)</p><p><strong>开幕主题演讲 (20分钟):</strong> Dr. Mehdi Snene (联合国技术特使办公室首席人工智能官)</p><p><em>开幕会议为探索开放技术如何推动全球可持续发展奠定基调。</em></p>",
+        "speakers": [
+          {
+            "id": "tiejun-huang",
+            "name": "黄铁军",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "北京大学教授，北京智源人工智能研究院理事长",
+            "image": "tiejun-huang.jpg"
+          },
+          {
+            "id": "mehdi-snene",
+            "name": "Mehdi Snene",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "联合国技术特使办公室首席人工智能官",
+            "image": "mehdi-snene.png"
+          }
+        ]
+      },
+      {
+        "date": "9月13日",
+        "timeSlot": "10:50 - 11:50",
+        "title": "Open Data 开放数据促进联合国可持续发展目标",
+        "content": "<p><strong>小组讨论 (60分钟)</strong></p><p><strong>主持人:</strong> 林咏华 (北京智源人工智能研究院副总裁兼首席工程师)</p><p><strong>讨论嘉宾:</strong></p><ul><li>Nicolas Flores Herr (弗劳恩霍夫IAIS基础模型与生成式AI系统团队负责人)</li><li>Joaquin Salvachua (马德里理工大学教授，ML-OPS 与大数据专家，ML-OPS与大数据专家)</li><li>Johann Diedrick (Mozilla首席科学家，Mozilla开放数据倡议负责人)</li><li>边思康 (战略与新产品总监 (OSS)，蚂蚁集团)</li><li>秦勇 (南开大学教授)</li></ul><p><em>探讨开放数据倡议如何通过改善数据共享和协作来加速联合国可持续发展目标的进展。</em></p>",
+        "speakers": [
+          {
+            "id": "yonghua-lin",
+            "name": "林咏华",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "北京智源人工智能研究院副总裁兼首席工程师",
+            "image": "yonghua-lin.jpg"
+          },
+          {
+            "id": "nicolas-flores-herr",
+            "name": "Nicolas Flores Herr",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "弗劳恩霍夫IAIS基础模型与生成式AI系统团队负责人",
+            "image": "nicolas-flores-herr.jpg"
+          },
+          {
+            "id": "joaquin-salvachua",
+            "name": "Joaquin Salvachua",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "马德里理工大学教授，ML-OPS 与大数据专家",
+            "image": "joaquin-salvachua.jpg"
+          },
+          {
+            "id": "johann-diedrick",
+            "name": "Johann Diedrick",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "Mozilla首席科学家，Mozilla开放数据倡议负责人",
+            "image": "johann-diedrick.jpg"
+          },
+          {
+            "id": "richard-bian",
+            "name": "边思康",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "战略与新产品总监 (OSS)，蚂蚁集团",
+            "image": "richard-bian.jpg"
+          },
+          {
+            "id": "yong-qin",
+            "name": "秦勇",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "南开大学教授",
+            "image": "yong-qin.png"
+          }
+        ]
+      },
+      {
+        "date": "9月13日",
+        "timeSlot": "11:50 - 12:00",
+        "title": "GitCode 全球开源洞察（闪电演讲 #1）",
+        "content": "<p><strong>闪电演讲 #1 (10分钟)</strong></p><p>于邦旭 (CSDN 高级副总裁 & GitCode CEO)</p>",
+        "speakers": [
+            {
+              "id": "bangxu-yu",
+              "name": "于邦旭",
+              "tags": [
+                "keynote"
+              ],
+              "roleOrg": "CSDN 高级副总裁 & GitCode CEO",
+              "image": "0-placeholder-person.png"
+            }
+        ]
+      },
+      {
+        "date": "9月13日",
+        "timeSlot": "12:00 - 12:10",
+        "title": "Intelligence BooM AI 开源基础软件赋能协作生态建设（闪电演讲 #2）",
+        "content": "<p><strong>闪电演讲 #2 (10分钟)</strong></p><p>胡欣蔚 (openEuler社区技术委员会主席)</p><p><em>探讨开源基础软件如何赋能AI开发的协作生态建设。</em></p>",
+        "speakers": [
+          {
+            "id": "xinwei-hu",
+            "name": "胡欣蔚",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "openEuler社区技术委员会主席",
+            "image": "xinwei-hu.jpeg"
+          }
+        ]
+      },
+      {
+        "date": "9月13日",
+        "timeSlot": "12:10 - 14:00",
+        "title": "午餐",
+        "content": "<p>午餐与交流</p>",
+        "speakers": []
+      },
+      {
+        "date": "9月13日",
+        "timeSlot": "14:00 - 15:00",
+        "title": "Open Policy 开放政策促进联合国可持续发展目标",
+        "content": "<p><strong>小组讨论 (60分钟)</strong></p><p><strong>主持人:</strong> Anni Lai (生成式AI共同体联合主席)</p><p><strong>讨论嘉宾:</strong></p><ul><li>Nooman Fehri (突尼斯前数字技术部长)</li><li>Vincent Caldeira (红帽亚太区首席技术官，2023 年亚太区十大 CTO，2023年亚太区十大CTO)</li><li>Matt White (PyTorch基金会执行董事)</li><li>林旅强 (开源社联合创始人，RTE开发者社区主理人)</li><li>杨丽蕴 (木兰社区 - 中国政府开源政策战略)</li></ul><p><em>讨论联合国参与开源社区的治理模式、贡献路径、政策与法律考量，以及协调机制。</em></p>",
+        "speakers": [
+          {
+            "id": "anni-lai",
+            "name": "Anni Lai",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "生成式AI共同体联合主席",
+            "image": "anni-lai.png"
+          },
+          {
+            "id": "nooman-fehri",
+            "name": "Nooman Fehri",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "突尼斯前数字技术部长",
+            "image": "nooman-fehri.jpg"
+          },
+          {
+            "id": "vincent-caldeira",
+            "name": "Vincent Caldeira",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "红帽亚太区首席技术官，2023 年亚太区十大 CTO",
+            "image": "vincent-caldeira.jpeg"
+          },
+          {
+            "id": "matt-white",
+            "name": "Matt White",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "PyTorch基金会执行董事",
+            "image": "matt-white.png"
+          },
+          {
+            "id": "richard-lin",
+            "name": "林旅强",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "开源社联合创始人，RTE开发者社区主理人",
+            "image": "richard-lin.png"
+          },
+          {
+            "id": "liyun-yang",
+            "name": "杨丽蕴",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "木兰社区 - 中国政府开源政策战略",
+            "image": "liyun-yang.jpg"
+          }
+        ]
+      },
+      {
+        "date": "9月13日",
+        "timeSlot": "15:00 - 15:10",
+        "title": "Ant Design：十年开源之路（闪电演讲 #3）",
+        "content": "<p><strong>闪电演讲 #3 (10分钟)</strong></p><p>朱兴民 (蚂蚁集团前端工程师，Ant Design 开源贡献者)</p>",
+        "speakers": [
+          {
+            "id": "alex-zhu",
+            "name": "朱兴民",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "蚂蚁集团前端工程师，Ant Design 开源贡献者",
+            "image": "0-placeholder-person.png"
+          }
+        ]
+      },
+      {
+        "date": "9月13日",
+        "timeSlot": "15:10 - 15:30",
+        "title": "下午茶歇",
+        "content": "<p>交流与茶点</p>",
+        "speakers": []
+      },
+      {
+        "date": "9月13日",
+        "timeSlot": "15:30 - 16:30",
+        "title": "Open Science 开放科学促进联合国可持续发展目标",
+        "content": "<p><strong>小组讨论 (60分钟)</strong></p><p><strong>主持人:</strong> Alexy Khrabrov (Neo4j AI/ML社区架构师)</p><p><strong>讨论嘉宾:</strong></p><ul><li>周明辉 (北京大学计算机学院终身教授、副院长)</li><li>Mohamed Farahat (前联合国秘书长AI高级别咨询委员会成员，UNESCO法律专家)</li><li>Walid Mathlouthi (国际电信联盟基础设施部门负责人)</li><li>胡欣蔚 (openEuler社区技术委员会主席)</li><li>林咏华 (北京智源人工智能研究院副总裁兼首席工程师)</li></ul><p><em>探讨开放科学原则如何通过透明度、协作和可及性加速联合国可持续发展目标的进展。重点关注障碍、推动因素、跨境协作和伦理考量。</em></p>",
+        "speakers": [
+          {
+            "id": "alexy-khrabrov-",
+            "name": "Alexy Khrabrov",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "Neo4j AI/ML社区架构师",
+            "image": "alexy-khrabrov-.jpeg"
+          },
+          {
+            "id": "minghui-zhou",
+            "name": "周明辉",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "北京大学计算机学院终身教授、副院长",
+            "image": "minghui-zhou.jpg"
+          },
+          {
+            "id": "mohamed-farahat",
+            "name": "Mohamed Farahat",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "前联合国秘书长AI高级别咨询委员会成员，UNESCO法律专家",
+            "image": "mohamed-farahat.jpg"
+          },
+          {
+            "id": "walid-mathlouthi",
+            "name": "Walid Mathlouthi",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "国际电信联盟基础设施部门负责人",
+            "image": "walid-mathlouthi.jpg"
+          },
+          {
+            "id": "xinwei-hu",
+            "name": "胡欣蔚",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "openEuler社区技术委员会主席",
+            "image": "xinwei-hu.jpeg"
+          },
+          {
+            "id": "yonghua-lin",
+            "name": "林咏华",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "北京智源人工智能研究院副总裁兼首席工程师",
+            "image": "yonghua-lin.jpg"
+          }
+        ]
+      },
+      {
+        "date": "9月13日",
+        "timeSlot": "16:30 - 16:40",
+        "title": "灵巧手在 AI Agent 的应用拓展（闪电演讲 #4）",
+        "content": "<p><strong>闪电演讲 #4 (10分钟)</strong></p><p>陈瑶 (傲意科技 COO)</p>",
+        "speakers": [
+          {
+            "id": "yao-chen",
+            "name": "陈瑶",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "傲意科技 COO",
+            "image": "0-placeholder-person.png"
+          }
+        ]
+      },
+      {
+        "date": "9月13日",
+        "timeSlot": "16:40 - 17:40",
+        "title": "Future AI 未来人工智能促进联合国可持续发展目标",
+        "content": "<p><strong>小组讨论 (60分钟)</strong></p><p><strong>主持人:</strong> Bryan Che (Eclipse基金会和LF CNCF董事会成员)</p><p><strong>讨论嘉宾:</strong></p><ul><li>杜凯 (清华大学心理与认知科学系助理教授)</li><li>殷鹏 (香港中文大学数据科学学院助理教授)</li><li>Dr. Satya Mallick (OpenCV.org 首席执行官，AI 与计算机视觉专家，AI与计算机视觉专家)</li><li>Adina Yakefu (Hugging Face EA / AI研究员)</li><li>Serge Stinckwich (联合国大学澳门研究所研究负责人)</ul><p><em>展望AI在可持续发展背景下的未来。重点关注包容性和公平的AI未来，连接创新与影响，促进多方利益相关者协作。</em></p>",
+        "speakers": [
+          {
+            "id": "bryan-che",
+            "name": "Bryan Che",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "Eclipse基金会和LF CNCF董事会成员",
+            "image": "bryan-che.jpg"
+          },
+          {
+            "id": "kai-du",
+            "name": "杜凯",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "清华大学心理与认知科学系助理教授",
+            "image": "kai-du.jpg"
+          },
+          {
+            "id": "satya-mallick",
+            "name": "Satya Mallick",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "OpenCV.org 首席执行官，AI 与计算机视觉专家",
+            "image": "satya-mallick.jpg"
+          },
+          {
+            "id": "yin-peng",
+            "name": "殷鹏",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "香港中文大学数据科学学院助理教授",
+            "image": "0-placeholder-person.png"
+          },
+          {
+            "id": "adina-yakefu",
+            "name": "Adina Yakefu",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "Hugging Face EA / AI研究员",
+            "image": "adina-yakefu.png"
+          },
+                    {
+            "id": "serge-stinckwich",
+            "name": "Serge Stinckwich",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "研究负责人，联合国大学澳门研究所",
+            "image": "serge-stinckwich.png"
+          }
+        ]
+      },
+
+      {
+        "date": "9月13日",
+        "timeSlot": "17:40 - 18:00",
+        "title": "闭幕式",
+        "content": "<p><strong>综合总结与关键要点</strong></p><p><strong>行动号召与后续步骤</strong></p><p><em>总结大会见解，概述推进联合国可持续发展目标开放协作的具体行动。</em></p>",
+        "speakers": []
+      }
+    ]
+  }
+}

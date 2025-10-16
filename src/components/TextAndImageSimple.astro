@@ -1,0 +1,100 @@
+---
+// Components
+import Button from "components/Button.astro";
+
+interface Props {
+	title: string,
+    text: string,
+    image: string,
+    imageAlt: string,
+    textAlign?: 'left' | 'right',
+    ctaButton?: {
+        text: string,
+        link: string,
+        openInNewTab?: boolean,
+    };
+    id?: string;
+    theme?: 'light' | 'dark';
+    background?: 'light' | 'lightgray' | 'dark' | 'primary';
+}
+
+const {
+  title,
+  text,
+  image,
+  imageAlt,
+  textAlign = 'left',
+  ctaButton,
+  id,
+  theme = 'dark',
+  background = 'dark',
+} = Astro.props;
+---
+
+<section
+    class={`section section-register-gosim spotlight-section ${textAlign === 'right' ? 'text-right' : ''}`}
+    id={id ?? 'spotlight'}
+    data-theme-section={theme}
+    data-bg-section={background}
+>
+    <div class="container">
+        <div class="row grid">
+            <div class="col">
+                <div class="col-row col-row-title">
+                    <h2 class="custom3">{title}</h2>
+                </div>
+
+                <div class="col-row col-row-text styled-content">
+                    <p>
+                        {text}
+                    </p>
+                </div>
+
+                {ctaButton?.text &&
+                    <div class="col-row col-row-btn">
+                        <Button
+                            text={ctaButton.text}
+                            link={ctaButton.link}
+                            openInNewTab={ctaButton?.openInNewTab}
+                            class="btn primary xl btn-hover"
+                        />
+                    </div>
+                }
+            </div>
+
+            {image &&
+                <div class="col">
+                    <div class="logo-tiles">
+                        <img
+                            src={image}
+                            alt={imageAlt}
+                            class="hexbadge"
+                            style="max-width: 100%; height: auto;"
+                        />
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<style>
+  .section-register-gosim.text-right .row.grid {
+    flex-direction: row-reverse;
+  }
+  
+  .col-row-title h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  @media (max-width: 768px) {
+    .section-register-gosim .row.grid {
+      flex-direction: column;
+    }
+    
+    .col-row-title h2 {
+      font-size: 1.5rem;
+    }
+  }
+</style>

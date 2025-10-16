@@ -1,0 +1,11 @@
+---
+// Simple language detection and redirect
+const acceptLanguage = Astro.request.headers.get('accept-language') || '';
+const isChinesePreferred = acceptLanguage.toLowerCase().includes('zh');
+
+// Default to English unless Chinese is preferred
+const redirectPath = isChinesePreferred ? '/cn/' : '/en/';
+
+// Perform redirect
+return Astro.redirect(redirectPath, 302);
+---

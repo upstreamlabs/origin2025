@@ -1,0 +1,169 @@
+---
+interface Props {
+  id?: string;
+  title: string;
+  text: string;
+  image: string;
+  imageAlt: string;
+  eyebrow?: string;
+  imagePosition?: 'left' | 'right';
+  theme?: 'light' | 'dark';
+  background?: 'light' | 'lightgray' | 'dark' | 'primary';
+}
+
+const {
+  id,
+  title,
+  text,
+  image,
+  imageAlt,
+  eyebrow,
+  imagePosition = 'right',
+  theme = 'light',
+  background = 'lightgray',
+} = Astro.props;
+---
+
+<section
+  class={`feature-spotlight ${imagePosition === 'left' ? 'image-left' : ''}`}
+  id={id}
+  data-theme-section={theme}
+  data-bg-section={background}
+>
+  <div class="feature-backdrop" aria-hidden="true"></div>
+  <div class="container">
+    <div class="feature-grid">
+      <div class="feature-copy">
+        {eyebrow && <p class="feature-eyebrow">{eyebrow}</p>}
+        <h2>{title}</h2>
+        <p>{text}</p>
+      </div>
+      <div class="feature-media">
+        <img src={image} alt={imageAlt} loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .feature-spotlight {
+    position: relative;
+    padding: clamp(3rem, 10vw, 6rem) 0;
+    overflow: hidden;
+  }
+
+  .feature-backdrop {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 15% 20%, rgba(255, 198, 64, 0.2), transparent 55%),
+      radial-gradient(circle at 85% 15%, rgba(43, 116, 255, 0.16), transparent 55%),
+      radial-gradient(circle at 50% 85%, rgba(139, 210, 255, 0.18), transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .feature-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(2rem, 6vw, 4rem);
+    align-items: center;
+  }
+
+  .feature-spotlight.image-left .feature-grid {
+    direction: rtl;
+  }
+
+  .feature-spotlight.image-left .feature-copy {
+    direction: ltr;
+  }
+
+  .feature-copy {
+    max-width: 580px;
+  }
+
+  .feature-copy h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    color: #0d1c3a;
+  }
+
+  [data-theme-section="dark"] .feature-copy h2 {
+    color: rgba(255, 255, 255, 0.92);
+  }
+
+  .feature-copy p {
+    font-size: clamp(1.05rem, 2vw, 1.3rem);
+    line-height: 1.85;
+    color: rgba(13, 28, 58, 0.75);
+  }
+
+  [data-theme-section="dark"] .feature-copy p {
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  .feature-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgba(13, 28, 58, 0.6);
+    margin-bottom: 1rem;
+  }
+
+  [data-theme-section="dark"] .feature-eyebrow {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .feature-media {
+    position: relative;
+  }
+
+  .feature-media::before {
+    content: "";
+    position: absolute;
+    inset: -8%;
+    background: linear-gradient(135deg, rgba(43, 116, 255, 0.25), rgba(255, 198, 64, 0.25));
+    filter: blur(60px);
+    z-index: 0;
+  }
+
+  .feature-media img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    border-radius: 28px;
+    box-shadow: 0 30px 80px rgba(13, 28, 58, 0.18);
+  }
+
+  @media (max-width: 900px) {
+    .feature-grid {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .feature-spotlight.image-left .feature-grid {
+      direction: ltr;
+    }
+
+    .feature-copy {
+      margin-inline: auto;
+    }
+
+    .feature-copy h2 {
+      font-size: clamp(1.8rem, 7vw, 2.5rem);
+    }
+
+    .feature-copy p {
+      font-size: 1.05rem;
+    }
+
+    .feature-media {
+      max-width: 520px;
+      margin: 0 auto;
+    }
+  }
+</style>

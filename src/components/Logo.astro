@@ -1,0 +1,50 @@
+---
+interface Props {
+  width?: number | string;
+  height?: number | string;
+}
+
+const width = Astro.props.width ?? 220;
+const height = Astro.props.height ?? 52;
+---
+
+<svg
+  width={width}
+  height={height}
+  viewBox="0 0 220 52"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  aria-label="Upstream Origin 2025｜源起之道"
+>
+  <defs>
+    <linearGradient id="upstreamGradient" x1="0" y1="0" x2="220" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2B74FF" />
+      <stop offset="1" stop-color="#FFC640" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="220" height="52" rx="16" fill="url(#upstreamGradient)" />
+  <text
+    x="22"
+    y="24"
+    font-size="16"
+    font-weight="700"
+    letter-spacing="0.08em"
+    fill="#FFD15A"
+    font-family="'Manrope', 'Inter', sans-serif"
+    style="text-transform: uppercase;"
+  >
+    Upstream Origin
+  </text>
+  <text
+    x="22"
+    y="39"
+    font-size="13"
+    font-weight="600"
+    letter-spacing="0.18em"
+    fill="#FFC040"
+    font-family="'Manrope', 'Inter', sans-serif"
+  >
+    源起之道 · 2025
+  </text>
+</svg>

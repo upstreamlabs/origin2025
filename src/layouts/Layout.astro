@@ -1,0 +1,76 @@
+---
+// Components
+import Header from 'components/Header.astro';
+import Footer from 'components/Footer.astro';
+import Seo from 'components/Seo.astro';
+
+// Styles
+import 'styles/Normalize.scss';
+import 'styles/Fonts.scss';
+import 'styles/StyleGuide.scss';
+import 'styles/Style.scss';
+import 'styles/Components.scss';
+import 'styles/Flickity.scss';
+
+interface Props {
+	title: string;
+	description: string;
+    noindex?: boolean;
+	navDarkMode?: boolean,
+	bgNav?: string,
+	navBackground?: string,
+	pageTransitionName?: string;
+}
+
+const { title, description, noindex, navDarkMode, navBackground, pageTransitionName } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="lenis lenis-smooth">
+	<head>
+		<Seo
+			title={title}
+			description={description}
+			noindex={noindex}
+			pageTransitionName={pageTransitionName}
+		/>
+	</head>
+
+	<body
+		data-theme-page="light"
+		data-navigation-status="not-active"
+		data-modal-prelaunch-status="not-active"
+		data-modal-status="not-active"
+		data-modal-tickets-status="not-active"
+		data-nav-filter-status="not-active"
+		data-theme-nav={navDarkMode ? 'dark' : 'light'}
+		data-scrolling-started="false"
+		data-bg-nav={navBackground}
+		data-scrolling-direction="down"
+		data-barba="wrapper"
+	>
+
+		<Header />
+
+		<main
+	  		id="main"
+			class="main"
+			data-barba="container"
+			data-barba-namespace="home"
+			data-page-title={pageTransitionName || "GOSIM"}
+		>
+	  		<slot />
+		</main>
+
+		<Footer />
+
+		<script defer src="https://code.jquery.com/jquery-3.7.0.min.js"/>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"/>
+		<!-- <script defer src="https://cdn.jsdelivr.net/npm/@barba/core@2.9.7"/> -->
+		<script defer src="https://unpkg.com/@studio-freight/lenis@1.0.36/dist/lenis.min.js"/>
+		<script defer src="https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.min.js"/>
+		<script defer src="/js/ScrollTrigger.min.js"/>
+		<script defer src="/js/Animations.js"/>
+
+	</body>
+</html>

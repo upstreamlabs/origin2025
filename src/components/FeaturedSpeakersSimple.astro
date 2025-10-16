@@ -1,0 +1,73 @@
+---
+interface Speaker {
+  name: string;
+  role: string;
+  company: string;
+  image: string;
+}
+
+interface Props {
+  title: string;
+  subtitle?: string;
+  speakers: Speaker[];
+}
+
+const { title, subtitle, speakers } = Astro.props;
+---
+
+<section class="section section-featured-speakers" data-theme-section="light" data-bg-section="white">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="section-header text-center mb-5">
+          <h2 class="h2 split-words animate-read">{title}</h2>
+          {subtitle && <p class="lead mt-3">{subtitle}</p>}
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      {speakers.map((speaker) => (
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="speaker-card text-center">
+            <div class="speaker-image mb-3">
+              <img 
+                src={speaker.image} 
+                alt={speaker.name}
+                class="rounded-circle"
+                style="width: 150px; height: 150px; object-fit: cover;"
+              />
+            </div>
+            <h3 class="h5 mb-1">{speaker.name}</h3>
+            <p class="small text-muted mb-0">{speaker.role}</p>
+            <p class="small text-muted">{speaker.company}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+    <div class="row mt-4">
+      <div class="col text-center">
+        <p class="text-muted">More speakers to be announced</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .speaker-card {
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .speaker-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .speaker-image img {
+    border: 3px solid #f0f0f0;
+    transition: border-color 0.3s ease;
+  }
+  
+  .speaker-card:hover .speaker-image img {
+    border-color: #002f5f;
+  }
+</style>

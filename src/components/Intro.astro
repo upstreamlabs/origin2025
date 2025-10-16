@@ -1,0 +1,26 @@
+---
+interface Props {
+  id?: string;
+  theme?: 'light' | 'dark';
+  background?: 'light' | 'lightgray' | 'dark' | 'primary';
+}
+
+const { id, theme = 'light', background = 'light' } = Astro.props;
+---
+
+<section
+    class="section section-home-intro"
+    id={id}
+    data-theme-section={theme}
+    data-bg-section={background}
+>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <slot /> 
+                
+            </div>
+        </div>
+    </div>
+</section>

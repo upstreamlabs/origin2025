@@ -1,0 +1,400 @@
+{
+  "days": [
+    {
+      "date": "September 13",
+      "title": "September 13, 2025",
+      "url": "/en/agenda/"
+    }
+  ],
+  "categories": [
+    {
+      "name": "All Sessions",
+      "id": "all-sessions"
+    },
+    {
+      "name": "Keynote",
+      "id": "keynote"
+    },
+    {
+      "name": "Panel Discussion",
+      "id": "panel"
+    },
+    {
+      "name": "Show & Tell",
+      "id": "show-tell"
+    },
+    {
+      "name": "Break",
+      "id": "break"
+    }
+  ],
+  "sessions": {
+    "all-sessions": [
+      {
+        "date": "September 13",
+        "timeSlot": "10:10 - 10:50",
+        "title": "Opening Keynote Session",
+        "content": "<p><strong>Welcome Speech (20 min):</strong> Prof. Tiejun Huang (Professor from Peking University, Chairman of BAAI)</p><p><strong>Opening Keynote (20 min):</strong> Dr. Mehdi Snene (Chief AI Officer at UN ODET)</p><p><em>The opening session sets the stage for a day of exploration into how open technologies can drive sustainable development globally.</em></p>",
+        "speakers": [
+          {
+            "id": "tiejun-huang",
+            "name": "Tiejun Huang",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "Prof. from Peking Univ., Chairman of BAAI",
+            "image": "tiejun-huang.jpg"
+          },
+          {
+            "id": "mehdi-snene",
+            "name": "Mehdi Snene",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "Chief AI Officer, Digital infrastructure and emerging technologies, UN",
+            "image": "mehdi-snene.png"
+          }
+        ]
+      },
+      {
+        "date": "September 13",
+        "timeSlot": "10:50 - 11:50",
+        "title": "Open Data for the UN SDGs",
+        "content": "<p><strong>Panel Discussion (60 min)</strong></p><p><strong>Moderator:</strong> Yonghua Lin (VP and Chief Engineer at BAAI)</p><p><strong>Panelists:</strong></p><ul><li>Nicolas Flores Herr (Team Lead Foundation Models & Gen AI Systems, Fraunhofer IAIS)</li><li>Joaquin Salvachua (Professor at Universidad Politécnica de Madrid, ML-OPS & Big Data expert)</li><li>Johann Diedrick (Mozilla Leading Scientist, Open Data Initiative at Mozilla)</li><li>Richard Bian (Director of Strategy and New Product (OSS), Ant Group)</li><li>Yong Qin (Prof., Nankai University)</li></ul><p><em>Exploring how open data initiatives can accelerate progress toward the UN SDGs through improved data sharing and collaboration.</em></p>",
+        "speakers": [
+          {
+            "id": "yonghua-lin",
+            "name": "Yonghua Lin",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "VP and Chief Engineer at BAAI",
+            "image": "yonghua-lin.jpg"
+          },
+          {
+            "id": "nicolas-flores-herr",
+            "name": "Nicolas Flores Herr",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "Team Lead Foundation Models & Gen AI Systems, Fraunhofer IAIS",
+            "image": "nicolas-flores-herr.jpg"
+          },
+          {
+            "id": "joaquin-salvachua",
+            "name": "Joaquin Salvachua",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "Professor at Universidad Politécnica de Madrid, ML-OPS & Big Data expert",
+            "image": "joaquin-salvachua.jpg"
+          },
+          {
+            "id": "johann-diedrick",
+            "name": "Johann Diedrick",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "Mozilla Leading Scientist, Open Data Initiative at Mozilla",
+            "image": "johann-diedrick.jpg"
+          },
+          {
+            "id": "richard-bian",
+            "name": "Richard Bian",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "Director of Strategy and New Product (OSS), Ant Group",
+            "image": "richard-bian.jpg"
+          },
+          {
+            "id": "yong-qin",
+            "name": "Yong Qin",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "Prof., Nankai University",
+            "image": "yong-qin.png"
+          }
+        ]
+      },
+      {
+        "date": "September 13",
+        "timeSlot": "11:50 - 12:00",
+        "title": "GitCode Global Open Source Insights (Show & Tell #1)",
+        "content": "<p><strong>Show & Tell #1 (10 min)</strong></p><p>Bangxu Yu (SVP of CSDN & CEO of GitCode)</p>",
+        "speakers": [
+          {
+            "id": "bangxu-yu",
+            "name": "Bangxu Yu",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "Senior Vice President of CSDN, CEO of GitCode ",
+            "image": "0-placeholder-person.png"
+          }
+      ]
+      },
+      {
+        "date": "September 13",
+        "timeSlot": "12:00 - 12:10",
+        "title": "Intelligence BooM AI Open-Source Foundational Software Enables Collaborative Ecosystem Building (Show & Tell #2)",
+        "content": "<p><strong>Show & Tell #2 (10 min)</strong></p><p>Xinwei Hu (Chair of the openEuler Community Technical Committee)</p><p><em>Exploring how open-source foundational software can enable collaborative ecosystem building for AI development.</em></p>",
+        "speakers": [
+          {
+            "id": "xinwei-hu",
+            "name": "Xinwei Hu",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "Chair of the openEuler Community Technical Committee",
+            "image": "xinwei-hu.jpeg"
+          }
+        ]
+      },
+      {
+        "date": "September 13",
+        "timeSlot": "12:10 - 14:00",
+        "title": "Lunch Break",
+        "content": "<p>Lunch and Networking</p>",
+        "speakers": []
+      },
+      {
+        "date": "September 13",
+        "timeSlot": "14:00 - 15:00",
+        "title": "Open Policy for the UN SDGs",
+        "content": "<p><strong>Panel Discussion (60 min)</strong></p><p><strong>Moderator:</strong> Anni Lai (Co-Chair, Generative AI Commons)</p><p><strong>Panelists:</strong></p><ul><li>Nooman Fehri (Former Digital and Technology Minister, Tunisia)</li><li>Vincent Caldeira (CTO of Red Hat APAC, Top 10 CTO in APAC 2023)</li><li>Matt White (Executive Director, PyTorch Foundation)</li><li>Richard Lin (Co-founder of Kaiyuanshe, Head of the RTE Developer Community)</li><li>Liyun Yang (Mulan Community - Open Source Policy Strategy for China Government)</li></ul><p><em>Discussing governance models, contribution pathways, policy and legal considerations, and alignment mechanisms for UN engagement with open source communities.</em></p>",
+        "speakers": [
+          {
+            "id": "anni-lai",
+            "name": "Anni Lai",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "Co-Chair, Generative AI Commons",
+            "image": "anni-lai.png"
+          },
+          {
+            "id": "nooman-fehri",
+            "name": "Nooman Fehri",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "Former Digital and technology minister, Tunisia",
+            "image": "nooman-fehri.jpg"
+          },
+          {
+            "id": "vincent-caldeira",
+            "name": "Vincent Caldeira",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "CTO of Red Hat APAC, Top 10 CTO in APAC 2023",
+            "image": "vincent-caldeira.jpeg"
+          },
+          {
+            "id": "matt-white",
+            "name": "Matt White",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "GM of AI/Executive Director, Linux Foundation/PyTorch Foundation",
+            "image": "matt-white.png"
+          },
+          {
+            "id": "richard-lin",
+            "name": "Richard Lin",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "Co-founder of Kaiyuanshe, Head of the RTE Developer Community",
+            "image": "richard-lin.png"
+          },
+          {
+            "id": "liyun-yang",
+            "name": "Liyun Yang",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "Mulan Community - Open Source Policy Strategy for China Government",
+            "image": "liyun-yang.jpg"
+          }
+        ]
+      },
+      {
+        "date": "September 13",
+        "timeSlot": "15:00 - 15:10",
+        "title": "Ant Design: Openness Is Why We Survive (Show & Tell #3)",
+        "content": "<p><strong>Show & Tell #3 (10 min)</strong></p><p>Alex Zhu (Front-end Engineer, Ant Group | Ant Design Contributor)</p>",
+        "speakers": [
+          {
+            "id": "alex-zhu",
+            "name": "Alex Zhu",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "Front-end Engineer, Ant Group | Ant Design Contributor",
+            "image": "0-placeholder-person.png"
+          }
+        ]
+      },
+      {
+        "date": "September 13",
+        "timeSlot": "15:10 - 15:30",
+        "title": "Afternoon Break",
+        "content": "<p>Networking and Refreshments</p>",
+        "speakers": []
+      },
+      {
+        "date": "September 13",
+        "timeSlot": "15:30 - 16:30",
+        "title": "Open Science for the UN SDGs",
+        "content": "<p><strong>Panel Discussion (60 min)</strong></p><p><strong>Moderator:</strong> Alexy Khrabrov (AI/ML Community Architect, Neo4j)</p><p><strong>Panelists:</strong></p><ul><li>Dr. Minghui Zhou (Tenured Full Professor and Vice Dean, School of Computer Science, Peking University)</li><li>Mohamed Farahat (Former UNSG HLAB member, Legal Expert with UNESCO)</li><li>Walid Mathlouthi (Head of Infrastructure Division, ITU)</li><li>Xinwei Hu (Chair of the openEuler Community Technical Committee, Huawei)</li><li>Yonghua Lin (VP and Chief Engineer at BAAI)</li></ul><p><em>Exploring how Open Science principles can accelerate progress toward UN SDGs through transparency, collaboration, and accessibility. Focus on barriers, enablers, cross-border collaboration, and ethical considerations.</em></p>",
+        "speakers": [
+          {
+            "id": "alexy-khrabrov-",
+            "name": "Alexy Khrabrov",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "AI Community Architect, Neo4j",
+            "image": "alexy-khrabrov-.jpeg"
+          },
+          {
+            "id": "minghui-zhou",
+            "name": "Minghui Zhou",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "Tenured Full Professor and Vice Dean at Peking University",
+            "image": "minghui-zhou.jpg"
+          },
+          {
+            "id": "mohamed-farahat",
+            "name": "Mohamed Farahat",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "Former UNSG HLAB member, former member of UN HLAB on AI, legal expert with UNESCO.",
+            "image": "mohamed-farahat.jpg"
+          },
+          {
+            "id": "walid-mathlouthi",
+            "name": "Walid Mathlouthi",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "ITU, Head of Infrastructure division",
+            "image": "walid-mathlouthi.jpg"
+          },
+          {
+            "id": "xinwei-hu",
+            "name": "Xinwei Hu",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "Chair of the openEuler Community Technical Committee",
+            "image": "xinwei-hu.jpeg"
+          },
+          {
+            "id": "yonghua-lin",
+            "name": "Yonghua Lin",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "VP and Chief Engineer at BAAI",
+            "image": "yonghua-lin.jpg"
+          }
+        ]
+      },
+      {
+        "date": "September 13",
+        "timeSlot": "16:30 - 16:40",
+        "title": "The Application Expansion of Dexterous Hands in AI Agents (Show & Tell #4)",
+        "content": "<p><strong>Show & Tell #4 (10 min)</strong></p><p>Yao Chen (COO, OYMotion)</p>",
+        "speakers": [
+          {
+            "id": "yao-chen",
+            "name": "Yao Chen",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "COO, OYMotion",
+            "image": "0-placeholder-person.png"
+          }
+        ]
+      },
+      {
+        "date": "September 13",
+        "timeSlot": "16:40 - 17:40",
+        "title": "Future AI for the UN SDGs",
+        "content": "<p><strong>Panel Discussion (60 min)</strong></p><p><strong>Moderator:</strong> Bryan Che (Board Member, Eclipse Foundation and LF CNCF)</p><p><strong>Panelists:</strong></p><ul><li>Prof. Kai Du (Assistant Professor, Psychology & Cognitive Science, Tsinghua University)</li><li>Prof. Yin Peng (Assistant Professor, Department of Data Science, CUHK)</li><li>Dr. Satya Mallick (CEO of OpenCV.org, AI & Computer Vision Expert)</li><li>Adina Yakefu (EA / AI researcher, Hugging Face)</li><li>Serge Stinckwich (Head of Research, United Nations University Institute in Macau)</li></ul><p><em>Envisioning the future of AI in sustainable development context. Focus on inclusive and equitable AI futures, bridging innovation with impact, and promoting multistakeholder collaboration.</em></p>",
+        "speakers": [
+          {
+            "id": "bryan-che",
+            "name": "Bryan Che",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "Board Member, Eclipse Foundation and LF CNCF",
+            "image": "bryan-che.jpg"
+          },
+          {
+            "id": "kai-du",
+            "name": "Kai Du",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "Assistant Professor, Psychology & Cognitive Science, Tsinghua University",
+            "image": "kai-du.jpg"
+          },
+          {
+            "id": "satya-mallick",
+            "name": "Satya Mallick",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "CEO of OpenCV.org, AI & Computer Vision Expert",
+            "image": "satya-mallick.jpg"
+          },
+          {
+            "id": "yin-peng",
+            "name": "Yin Peng",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "Assistant Professor, Department of Data Science, CUHK",
+            "image": "0-placeholder-person.png"
+          },
+          {
+            "id": "adina-yakefu",
+            "name": "Adina Yakefu",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "EA / AI researcher, Hugging Face",
+            "image": "adina-yakefu.png"
+          },
+          {
+            "id": "serge-stinckwich",
+            "name": "Serge Stinckwich",
+            "tags": [
+              "open-for-sdg"
+            ],
+            "roleOrg": "Head of Research, United Nations University Institute in Macau",
+            "image": "serge-stinckwich.png"
+          }
+        ]
+      },
+
+      {
+        "date": "September 13",
+        "timeSlot": "17:40 - 18:00",
+        "title": "Closing Session",
+        "content": "<p><strong>Synthesis and Key Takeaways</strong></p><p><strong>Call to Action and Next Steps</strong></p><p><em>Summarizing insights from the conference and outlining concrete actions for advancing open collaboration for UN SDGs.</em></p>",
+        "speakers": []
+      }
+    ]
+  }
+}
+

@@ -1,0 +1,97 @@
+---
+interface Props {
+	title: string,
+    description: string,
+    cards?: Array<{
+        title: string,
+        description: string,
+        image: string,
+    }>;
+    id?: string;
+    theme?: 'light' | 'dark';
+    background?: 'light' | 'lightgray' | 'dark' | 'primary';
+}
+
+const {
+    title,
+    description,
+    cards,
+    id,
+    theme = 'light',
+    background = 'lightgray',
+} = Astro.props;
+---
+
+<section
+    class="section section-home-why"
+    id={id}
+    data-theme-section={theme}
+    data-bg-section={background}
+>
+    <div class="container">
+        <div class="row row-title grid">
+            <div class="col col-title">
+                <h2>{title}</h2>
+            </div>
+
+            <div class="col styled-content">
+                <p>{description}</p>
+            </div>
+        </div>
+
+        <div class="row row-audience grid">
+            {cards?.map((loop) => (
+                <div class="col why-reasons">
+                    <img 
+                        src={loop.image}
+                        alt={loop.title}
+                        width="48"
+                        height="48"
+                        loading="lazy"
+                    />
+                    <div class="why-content">
+                        <h3 class="h5">{loop.title}</h3>
+                        <p>{loop.description}</p>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
+
+<style>
+    .row-title .styled-content p {
+        font-size: 1.25rem;
+        line-height: 1.6;
+    }
+    
+    @media (max-width: 768px) {
+        .row-title .styled-content p {
+            font-size: 1.1rem;
+        }
+
+        .row-audience .why-content p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+    }
+    
+    /* Ensure cards stretch to equal height but content stays top-aligned */
+    .row-audience {
+        align-items: stretch;
+    }
+    
+    .row-audience .why-reasons {
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    
+    .row-audience .why-content {
+        align-self: flex-start;
+    }
+
+    .row-audience .why-content p {
+        font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+        line-height: 1.75;
+    }
+</style>

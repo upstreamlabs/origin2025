@@ -1,0 +1,84 @@
+---
+// Packages
+import { Picture } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+// Components
+import Button from "components/Button.astro";
+
+interface Props {
+	title: string,
+    text: string,
+    logos?: Array<{
+        image: string,
+        imageAlt: string,
+    }>,
+    ctaButton?: {
+        text: string,
+        link: string,
+        openInNewTab?: boolean,
+    };
+}
+
+// Import all sponsors
+const images = import.meta.glob<{ default: ImageMetadata }>('images/sponsors/*.{jpeg,jpg,png,gif,svg}');
+
+const { title, text, logos, ctaButton } = Astro.props;
+---
+
+<section
+    class="section section-home-sponsors"
+    data-theme-section="light"
+    data-bg-section="lightgray"
+>
+    <div class="container">
+        <div class="row grid">
+            <div class="col">
+                <div class="col-row col-row-title">
+                    <h2>{title}</h2>
+                </div>
+
+                <div class="col-row col-row-text styled-content">
+                    <p>{text}</p>
+                </div>
+                
+                {ctaButton?.text &&
+                    <div class="col-row col-row-btn">
+                        <Button
+                            text={ctaButton.text}
+                            link={ctaButton.link}
+                            openInNewTab={ctaButton?.openInNewTab}
+                            class="btn outline btn-hover xl"
+                        />
+                    </div>
+                }
+            </div>
+
+            <div class="col">
+                <div class="logo-tiles">
+                    {logos?.map((loop) => (
+                        <div class="single-logo-tile">
+                            <div class={`boxed-logo xl ${loop.image === 'baai-logo-black.svg' ? 'baai-logo' : ''}`}>
+                                {loop?.image &&
+                                    <Picture
+                                        src={images[`/public/images/sponsors/${loop.image}`]()}
+                                        formats={['webp', 'jpg']}
+                                        alt={loop.imageAlt}
+                                        widths={[75, 150, 225, 450]}
+                                        sizes="(max-width: 480px) 75px, 225px"
+                                    />
+                                }
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .baai-logo {
+        padding: 10px;
+    }
+</style>

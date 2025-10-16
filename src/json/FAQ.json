@@ -1,0 +1,31 @@
+{
+    "categories": [
+        { "name": "All" },
+        { "name": "Where can I stay?" },
+        { "name": "In-person experience" },
+        { "name": "Tickets" },
+        { "name": "Venue" }
+    ],
+    "faqs": [
+        {
+            "category": "Where can I stay?",
+            "question": "Where can I stay?",
+            "answer": "Looking for a place to kick back and relax after a full day of networking? There are loads of great hotels within walking distance. <br /> We have secured a discounted rate at the <a href=''>BobW</a> properties - please use the code"
+        },
+        {
+            "category": "In-person experience",
+            "question": "Where do I get my badge?",
+            "answer": "You will receive an email from. Present the ticket email on May 29 and collect your badge from our onsite team.<br />You can also access your badge via the app <br /> Events app  <br /> <a href=''>App Store</a><br />play.google.com<br /><a href=''>Events app - Google</a>"
+        },
+        {
+            "category": "Tickets",
+            "question": "How many tickets are available for non-hoteliers?",
+            "answer": "A limited number of tickets are available for"
+        },
+        {
+            "category": "Venue",
+            "question": "How do I get to Paris?",
+            "answer": "Paris is accessible by plane, train, bike and foot – you could even get there by horse if you have one handy. Point is, it's seriously central, just over a 10-minute walk from Paris Centraal Station. Check out the venue section of the website for the map and details.<br />Mews Events app <br /><a href=''>App Store</a><br />play.google.com<br /><a href=''>Events app - Google</a>"
+        }
+    ]
+}

@@ -1,0 +1,342 @@
+---
+import Layout from "layouts/Layout.astro";
+import Hero from "components/Hero.astro";
+import Intro from "components/Intro.astro";
+import FeatureSpotlight from "components/FeatureSpotlight.astro";
+import ProgramTimeline from "components/ProgramTimeline.astro";
+import SupportShowcase from "components/SupportShowcase.astro";
+import Cards from "components/Cards.astro";
+import Statistics from "components/Statistics.astro";
+import Button from "components/Button.astro";
+
+import statOnline from "images/upstream/stat-online.svg";
+import statOffline from "images/upstream/stat-offline.svg";
+import statGrant from "images/upstream/stat-grant.svg";
+
+const heroLinks = [
+  {
+    text: "立即报名",
+    link: "#apply",
+  },
+  {
+    text: "查看课程安排",
+    link: "#program",
+  },
+];
+
+const heroHighlights = [
+  "4 周线上训练营，聚焦社区治理与可持续运营",
+  "5 天北京线下创新营，共创生态方案",
+  "Upstream Origin 开源生态发展基金 10 万元",
+];
+
+const objectives = [
+  {
+    title: "普及开源文化",
+    description: "深入理解开源精神、治理机制与公共产品的现代意义。",
+    image: "/icons/open-source-ai.svg",
+  },
+  {
+    title: "培育生态型人才",
+    description: "培养具备社区运营、传播与可持续能力的生态领航者。",
+    image: "/icons/networking.svg",
+  },
+  {
+    title: "连接多元伙伴",
+    description: "联结政府、产业与社区资源，支持公共产品的长期发展。",
+    image: "/icons/collaboration.svg",
+  },
+];
+
+const stats = [
+  {
+    title: "4",
+    subtitle: "周线上训练营与远程导师辅导",
+    image: statOnline,
+    imageAlt: "象征持续学习的流动波形",
+  },
+  {
+    title: "5",
+    subtitle: "天北京线下共创营",
+    image: statOffline,
+    imageAlt: "象征现场协作的金色光纹",
+  },
+  {
+    title: "100,000",
+    subtitle: "元 Upstream Origin 生态发展基金",
+    image: statGrant,
+    imageAlt: "象征资金支持的放射曲线",
+  },
+];
+
+const stageOverviewCards = [
+  {
+    title: "大本营｜线上训练",
+    description: "通过四周线上课程、实践任务与同伴互助，完成《开源生态可持续发展计划》。",
+    image: "/icons/workshops.svg",
+  },
+  {
+    title: "挺进营｜沉浸式共创",
+    description: "在北京开展五天共创营，完成项目配对、治理设计、传播打磨与成果路演。",
+    image: "/icons/startups.svg",
+  },
+];
+
+const stageOneTimeline = [
+  {
+    label: "第一周",
+    title: "开源基础理论",
+    text: "系统梳理开源运动的历史沿革、典型事件与成功案例；解析主流开源许可证的异同及合规要点；分享开源社区建设的理论与实操技巧；探索开放核心、双许可及基金会在品牌信任中的作用。",
+  },
+  {
+    label: "第二周",
+    title: "社区治理与生态运营",
+    text: "设计贡献者路径、激励机制与社区治理框架，打造健康的社区文化节奏，并协调政府、产业与社区多方资源。",
+  },
+  {
+    label: "第三周",
+    title: "开源产品管理和营销技能",
+    text: "掌握 Git/GitHub 协作、CI/CD 流程及 Linux 与云环境部署，运用 AIGC 制作宣传物料，结合产品管理思维与多平台社区运营、社交媒体策略，提升项目迭代效率与用户基础。",
+  },
+  {
+    label: "第四周",
+    title: "探索公共服务型商业模式与长期治理工具",
+    text: "从公共服务型商业模式与长期治理工具出发，结合 SaaS 案例、AARRR 指标与增长黑客技巧，在导师指导下设计转化漏斗与投资人沟通策略，兼顾公共价值与商业可持续。",
+  },
+];
+
+const stageTwoTimeline = [
+  {
+    label: "第一天",
+    title: "启航",
+    text: "开营仪式、项目发布、导师与团队配对，快速建立共同语言。",
+  },
+  {
+    label: "第二天",
+    title: "共识",
+    text: "目标共创、文化共建，形成社区节奏与行动框架。",
+  },
+  {
+    label: "第三天",
+    title: "共创",
+    text: "导师深度辅导，打磨治理体系与生态发展方案。",
+  },
+  {
+    label: "第四天",
+    title: "共鸣",
+    text: "AIGC 传播实战，完善故事线与展示材料。",
+  },
+  {
+    label: "第五天",
+    title: "共展",
+    text: "成果路演、专家点评与颁奖，链接后续资源。",
+  },
+];
+
+const mentorshipCards = [
+  {
+    title: "学术导师",
+    description: "高校教授与研究机构，提供理论框架与文化指引。",
+    image: "/icons/whitepaper.svg",
+  },
+  {
+    title: "社区导师",
+    description: "开源项目 Maintainer，分享实践经验与生态洞察。",
+    image: "/icons/sovereignty.svg",
+  },
+  {
+    title: "企业导师",
+    description: "企业级 OSPO 负责人，带来产业规模化运作经验。",
+    image: "/icons/aimodels.svg",
+  },
+  {
+    title: "政府与孵化机构",
+    description: "政策顾问与科技园区伙伴，提供场地、政策与落地支持。",
+    image: "/icons/governance.svg",
+  },
+  {
+    title: "投资机构",
+    description: "开源创新基金与可持续资本，链接长期资源与融资通道。",
+    image: "/icons/positionpaper.svg",
+  },
+];
+---
+
+<Layout
+  title="Upstream Origin 2025｜源起之道"
+  description="Upstream Origin 2025 通过四周线上训练营与五天北京线下共创营，培养具备公共产品意识与可持续能力的开源生态人才。"
+  navDarkMode={true}
+  navBackground="header-home"
+  pageTransitionName="Upstream Origin 2025"
+>
+  <Hero
+    title="Upstream Origin 2025｜源起之道"
+    tagline="凡创新者，皆溯源而行；凡协作者，皆向光而生。"
+    description="「回到源头，重启协作之光。」Upstream Origin 以开源精神为根、以公共产品为核，汇聚政府、产业、社区与高校伙伴，共探开源生态的可持续范式。"
+    backgroundImage="/images/upstream/hero-flow.svg"
+    backgroundAlt="体现流动源力的渐变背景"
+    highlights={heroHighlights}
+    links={heroLinks}
+  />
+
+  <FeatureSpotlight
+    id="overview"
+    title="开源协作即公共基础设施"
+    text="Upstream Origin 是一个聚焦开源生态建设与可持续发展的学习与实践平台。学员将在真实项目中理解社区治理、公共产品与叙事传播，完成可持续生态行动方案，并投入长期的公共影响力共创。"
+    image="/images/upstream/overview-flow.svg"
+    imageAlt="体现流动协作的渐变图形"
+    theme="light"
+    background="lightgray"
+  />
+
+  <FeatureSpotlight
+    id="philosophy"
+    title="核心理念"
+    text="Upstream Origin 以开源精神滋养公共产品。商业化并非终点，而是维系生态信任与活力的支撑力量，让协作文明得以长期生长。Upstream Origin 相信开源不仅是一种技术路径，更是一种协作文明。我们以信任与公共产品为基石，共建可持续的开源未来。"
+    image="/images/upstream/flow-core.svg"
+    imageAlt="体现流动概念的几何图形"
+    imagePosition="left"
+    theme="dark"
+    background="dark"
+  />
+
+  <Cards
+    id="objectives"
+    title="项目目标"
+    description="双阶段学习 + 实践路径，帮助团队夯实治理能力、传播能力与生态可持续能力。"
+    cards={objectives}
+    theme="light"
+    background="lightgray"
+  />
+
+  <Statistics
+    id="metrics"
+    stats={stats}
+    theme="light"
+    background="light"
+  />
+
+  <Cards
+    id="program"
+    title="双阶段课程结构"
+    description="线上沉浸式学习夯实基础，线下共创营推动项目落地，并延伸至长期陪伴。"
+    cards={stageOverviewCards}
+    theme="light"
+    background="lightgray"
+  />
+
+  <ProgramTimeline
+    id="phase-one"
+    title="大本营｜线上训练"
+    items={stageOneTimeline}
+    theme="light"
+    background="light"
+  />
+
+  <ProgramTimeline
+    id="phase-two"
+    title="挺进营｜沉浸式共创"
+    items={stageTwoTimeline}
+    theme="light"
+    background="lightgray"
+    variant="residency"
+  />
+
+  <Cards
+    id="mentors"
+    title="导师与生态支持"
+    description="跨界导师团与合作伙伴，为团队提供战略、运营与资源的全方位陪伴。"
+    cards={mentorshipCards}
+    theme="light"
+    background="light"
+  />
+
+  <SupportShowcase
+    id="support"
+    title="成果与激励"
+    highlight="完成线下创新营并通过成果展示的团队，可获得 Upstream Origin 开源生态发展基金 10 万元，用于推进开源生态的长期建设。"
+    amount="100,000"
+    amountNote="Upstream Origin 开源生态发展基金"
+    sections={[
+      {
+        title: "基金用途建议",
+        bullets: [
+          "社区运营与贡献者激励计划",
+          "官网、视频与叙事内容建设",
+          "生态合作拓展与活动组织",
+          "治理优化与长期机制设计",
+        ],
+      },
+      {
+        title: "长期支持机制",
+        bullets: [
+          "Upstream Origin Mentorship Program｜3 个月持续导师辅导",
+          "Upstream Origin Knowledge Archive｜优秀案例收录公开教材",
+          "政府孵化合作｜提供场地、政策、资金与落地资源",
+        ],
+      },
+    ]}
+    theme="light"
+    background="lightgray"
+  />
+
+  <section class="section section-apply" id="apply" data-theme-section="dark" data-bg-section="dark">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2 class="custom3">加入 Upstream Origin 2025</h2>
+          <p>
+            如果你正在建设开源社区、公共服务项目或社会创新方案，欢迎携团队报名。我们也期待导师与合作伙伴的加入，共同点亮开源生态的长期价值。
+          </p>
+          <div class="apply-actions">
+            <Button
+              text="提交团队申请"
+              link="https://airtable.com/apply-upstream-ignite"
+              openInNewTab={true}
+              class="btn primary xl btn-hover"
+            />
+            <Button
+              text="申请成为导师"
+              link="mailto:origin@upstreamlabs.com"
+              openInNewTab={false}
+              class="btn outline btn-hover xl"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .lead {
+    font-size: 1.15rem;
+    line-height: 1.7;
+  }
+
+  .section-apply {
+    text-align: left;
+    background: linear-gradient(135deg, rgba(43, 116, 255, 0.92), rgba(255, 198, 64, 0.88));
+  }
+
+  .section-apply p {
+    max-width: 640px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.88);
+  }
+
+  .apply-actions {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .lead {
+      font-size: 1.02rem;
+    }
+  }
+</style>

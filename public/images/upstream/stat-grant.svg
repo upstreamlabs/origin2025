@@ -1,0 +1,20 @@
+<svg width="360" height="360" viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="coreGrant" cx="50%" cy="45%" r="60%" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF2C6" />
+      <stop offset="1" stop-color="#2B74FF" stop-opacity="0.1" />
+    </radialGradient>
+    <linearGradient id="arcGrant" x1="30" y1="320" x2="330" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFC640" />
+      <stop offset="0.5" stop-color="#FFDA7A" />
+      <stop offset="1" stop-color="#2B74FF" />
+    </linearGradient>
+  </defs>
+  <rect width="360" height="360" rx="32" fill="#0F1A21" />
+  <circle cx="180" cy="160" r="140" fill="url(#coreGrant)" />
+  <path d="M70 260C120 200 170 210 220 190C270 170 300 110 320 90" stroke="url(#arcGrant)" stroke-width="16" stroke-linecap="round" />
+  <path d="M80 300C140 300 200 260 260 220C300 194 320 160 340 120" stroke="#74A9FF" stroke-width="10" stroke-linecap="round" stroke-opacity="0.6" stroke-dasharray="18 24" />
+  <circle cx="120" cy="240" r="14" fill="#FFC640" />
+  <circle cx="248" cy="208" r="12" fill="#74A9FF" />
+  <circle cx="302" cy="130" r="16" fill="#FFEF9E" />
+</svg>
