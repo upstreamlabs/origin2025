@@ -9,8 +9,8 @@ export default defineConfig({
   site: "https://upstreamignite.org",
   base: process.env.GITHUB_PAGES === 'true' ? "/origin-2025" : "/",
   i18n: {
-    defaultLocale: "en",
-    locales: ["en", "cn"],
+    defaultLocale: "cn",
+    locales: ["cn", "en"],
     routing: {
       prefixDefaultLocale: true
     }
