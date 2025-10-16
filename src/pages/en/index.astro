@@ -35,13 +35,13 @@ const objectives = [
     title: "Spread Open Culture",
     description:
       "Build shared understanding of open-source principles, governance models, and public goods.",
-    image: "/icons/open-source-ai.svg",
+    image: "ri:open-source-line",
   },
   {
     title: "Grow Ecosystem Talent",
     description:
       "Equip community organizers and storytellers with the skills to sustain open ecosystems.",
-    image: "/icons/networking.svg",
+    image: "game-icons:compass",
   },
   {
     title: "Connect Cross-Sector Partners",
@@ -77,13 +77,19 @@ const stageOverviewCards = [
     title: "Base Camp · Online Training",
     description:
       "Four-week remote program featuring weekly live sessions, peer studios, and guided assignments that culminate in a sustainable ecosystem action plan.",
-    image: "/icons/workshops.svg",
+    image: "streamline-logos:basecamp-logo-1",
   },
   {
     title: "Ascend Camp · Immersive Bootcamp",
     description:
       "Five-day residency in Beijing combining project pairing, governance design sprints, storytelling labs, and final showcases.",
-    image: "/icons/startups.svg",
+    image: "streamline:money-graph-arrow-increase-ascend-growth-up-arrow-stats-graph-right-grow",
+  },
+  {
+    title: "Summit Camp · Long-term Collaboration",
+    description:
+      "Top-performing teams receive funding and are paired with open-source project teams for a 6-month collaborative development program.",
+    image: "streamline-sharp:summit",
   },
 ];
 
@@ -142,27 +148,27 @@ const mentorshipCards = [
   {
     title: "Academic Mentors",
     description: "Professors and researchers guiding theoretical framing and cultural grounding.",
-    image: "/icons/whitepaper.svg",
+    image: "uil:university",
   },
   {
     title: "Community Mentors",
     description: "Maintainers and community builders sharing operational best practices.",
-    image: "/icons/sovereignty.svg",
+    image: "fluent:people-community-28-regular",
   },
   {
     title: "Industry Mentors",
     description: "OSPO leads and open-source strategists contributing enterprise experience.",
-    image: "/icons/aimodels.svg",
+    image: "carbon:network-enterprise",
   },
   {
     title: "Government & Incubators",
     description: "Policy partners offering pilot spaces, regulatory insights, and local resources.",
-    image: "/icons/governance.svg",
+    image: "game-icons:incubator",
   },
   {
     title: "Investment Partners",
     description: "Impact funds and sustainable capital linking long-term financial and ecosystem support.",
-    image: "/icons/positionpaper.svg",
+    image: "streamline:investment-selection",
   },
 ];
 ---
@@ -355,6 +361,10 @@ const mentorshipCards = [
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+  }
+
+  .apply-actions .btn.primary span {
+    color: #ffffff !important;
   }
 
   @media (max-width: 768px) {

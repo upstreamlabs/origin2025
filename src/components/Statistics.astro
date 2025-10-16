@@ -9,6 +9,7 @@ interface Props {
         image: any,
         imageAlt: string,
         hasPlus?: boolean,
+        suffix?: string,
     }>;
     id?: string;
     theme?: 'light' | 'dark';
@@ -39,6 +40,7 @@ const {
                         <h2>
                             <span class="count-up">{loop.title}</span>
                             {loop?.hasPlus &&<span class="number-after">+</span>}
+                            {loop?.suffix &&<span class="number-after">{loop.suffix}</span>}
                         </h2>
                         <p>{loop.subtitle}</p>
                     </div>
@@ -58,8 +60,17 @@ const {
                     </div>
                     </>
                 ))}
-                
+
             </div>
         </div>
     </div>
 </section>
+
+<style>
+    .single-stat.outline p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 0 1rem;
+    }
+</style>

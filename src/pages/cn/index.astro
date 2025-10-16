@@ -34,12 +34,12 @@ const objectives = [
   {
     title: "普及开源文化",
     description: "深入理解开源精神、治理机制与公共产品的现代意义。",
-    image: "/icons/open-source-ai.svg",
+    image: "ri:open-source-line",
   },
   {
     title: "培育生态型人才",
     description: "培养具备社区运营、传播与可持续能力的生态领航者。",
-    image: "/icons/networking.svg",
+    image: "game-icons:compass",
   },
   {
     title: "连接多元伙伴",
@@ -51,21 +51,24 @@ const objectives = [
 const stats = [
   {
     title: "4",
-    subtitle: "周线上训练营与远程导师辅导",
+    suffix: "周",
+    subtitle: "全面的开源生态和商业技能线上训练营与远程导师辅导",
     image: statOnline,
     imageAlt: "象征持续学习的流动波形",
   },
   {
-    title: "5",
-    subtitle: "天北京线下共创营",
-    image: statOffline,
-    imageAlt: "象征现场协作的金色光纹",
-  },
-  {
-    title: "100,000",
-    subtitle: "元 Upstream Origin 生态发展基金",
+    title: "10",
+    suffix: "万元",
+    subtitle: "Upstream Origin 生态发展基金和 Upstream 导师和设施服务",
     image: statGrant,
     imageAlt: "象征资金支持的放射曲线",
+  },
+  {
+    title: "5",
+    suffix: "天",
+    subtitle: "沉浸式的伙伴协作和导师辅导共创营",
+    image: statOffline,
+    imageAlt: "象征现场协作的金色光纹",
   },
 ];
 
@@ -73,12 +76,17 @@ const stageOverviewCards = [
   {
     title: "大本营｜线上训练",
     description: "通过四周线上课程、实践任务与同伴互助，完成《开源生态可持续发展计划》。",
-    image: "/icons/workshops.svg",
+    image: "streamline-logos:basecamp-logo-1",
   },
   {
     title: "挺进营｜沉浸式共创",
     description: "在北京开展五天共创营，完成项目配对、治理设计、传播打磨与成果路演。",
-    image: "/icons/startups.svg",
+    image: "streamline:money-graph-arrow-increase-ascend-growth-up-arrow-stats-graph-right-grow",
+  },
+  {
+    title: "登顶营｜长期协作",
+    description: "优胜团队获得资助和开源项目团队结对进行为期 6 个月项目协作开发。在下一轮 Upstream Origin 进行项目展示。",
+    image: "streamline-sharp:summit",
   },
 ];
 
@@ -137,27 +145,27 @@ const mentorshipCards = [
   {
     title: "学术导师",
     description: "高校教授与研究机构，提供理论框架与文化指引。",
-    image: "/icons/whitepaper.svg",
+    image: "uil:university",
   },
   {
     title: "社区导师",
     description: "开源项目 Maintainer，分享实践经验与生态洞察。",
-    image: "/icons/sovereignty.svg",
+    image: "fluent:people-community-28-regular",
   },
   {
     title: "企业导师",
     description: "企业级 OSPO 负责人，带来产业规模化运作经验。",
-    image: "/icons/aimodels.svg",
+    image: "carbon:network-enterprise",
   },
   {
     title: "政府与孵化机构",
     description: "政策顾问与科技园区伙伴，提供场地、政策与落地支持。",
-    image: "/icons/governance.svg",
+    image: "game-icons:incubator",
   },
   {
     title: "投资机构",
     description: "开源创新基金与可持续资本，链接长期资源与融资通道。",
-    image: "/icons/positionpaper.svg",
+    image: "streamline:investment-selection",
   },
 ];
 ---
@@ -350,6 +358,10 @@ const mentorshipCards = [
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+  }
+
+  .apply-actions .btn.primary span {
+    color: #ffffff !important;
   }
 
   @media (max-width: 768px) {

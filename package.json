@@ -13,6 +13,7 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.2.1",
     "astro": "^5.13.3",
+    "astro-iconify": "^1.2.0",
     "sass": "^1.85.1"
   },
   "devDependencies": {

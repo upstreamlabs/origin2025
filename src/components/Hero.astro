@@ -305,6 +305,15 @@ const enLine = (mottoEn ?? fallbackEn) || null;
     justify-content: center;
   }
 
+  .btn-home-wrap :global(.btn) {
+    width: 180px;
+    white-space: nowrap;
+  }
+
+  .btn-home-wrap :global(.btn .btn-content) {
+    width: 100%;
+  }
+
   @media (max-width: 768px) {
     .hero-eyebrow {
       margin-bottom: 1rem;

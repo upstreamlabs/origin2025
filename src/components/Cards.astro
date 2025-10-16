@@ -1,4 +1,6 @@
 ---
+import { Icon } from "astro-iconify";
+
 interface Props {
 	title: string,
     description: string,
@@ -20,6 +22,9 @@ const {
     theme = 'light',
     background = 'lightgray',
 } = Astro.props;
+
+// Helper function to check if string is an iconify icon name (format: collection:icon)
+const isIconifyIcon = (str: string) => str.includes(':') && !str.startsWith('http') && !str.startsWith('/');
 ---
 
 <section
@@ -42,13 +47,21 @@ const {
         <div class="row row-audience grid">
             {cards?.map((loop) => (
                 <div class="col why-reasons">
-                    <img 
-                        src={loop.image}
-                        alt={loop.title}
-                        width="48"
-                        height="48"
-                        loading="lazy"
-                    />
+                    {isIconifyIcon(loop.image) ? (
+                        <Icon
+                            name={loop.image}
+                            width="48"
+                            height="48"
+                        />
+                    ) : (
+                        <img
+                            src={loop.image}
+                            alt={loop.title}
+                            width="48"
+                            height="48"
+                            loading="lazy"
+                        />
+                    )}
                     <div class="why-content">
                         <h3 class="h5">{loop.title}</h3>
                         <p>{loop.description}</p>
