@@ -1,14 +1,9 @@
 ---
-const acceptLanguage = Astro.request.headers.get('accept-language') || '';
-const serverPreferred = acceptLanguage.toLowerCase().includes('zh') ? '/cn/' : '/en/';
+const serverPreferred = '/cn/';
 
 const clientRedirectScript = `
   (function () {
-    var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language];
-    var prefersChinese = langs.some(function (lang) {
-      return lang && lang.toLowerCase().startsWith('zh');
-    });
-    var target = prefersChinese ? '/cn/' : '/en/';
+    var target = '/cn/';
 
     if (window.location.pathname !== target) {
       window.location.replace(target);
