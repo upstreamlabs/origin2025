@@ -16,7 +16,8 @@ export default defineConfig({
     }
   },
   redirects: {
-    '/schedule': '/en/agenda',
-    '/agenda': '/en/agenda',
+    '/': '/cn/',
+    '/schedule': '/cn/agenda',
+    '/agenda': '/cn/agenda',
   },
 });
