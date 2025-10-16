@@ -1,9 +1,11 @@
+@import url('https://chinese-fonts-cdn.netlify.app/packages/syst/dist/SourceHanSerifCN/result.css');
+
 @font-face {
     font-display: swap;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    src: local('Inter Regular'), local('Inter-Regular'), 
+    src: local('Inter Regular'), local('Inter-Regular'),
          url('/fonts/inter-v18-latin-regular.woff2') format('woff2');
 }
  
@@ -32,4 +34,13 @@
     font-weight: 700;
     src: local('Manrope Bold'), local('Manrope-Bold'),
         url('/fonts/Manrope-Bold.ttf') format('ttf');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Zhuque Fangsong';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Zhuque Fangsong'), local('ZhuqueFangsong-Regular'),
+        url('/fonts/ZhuqueFangsong-Regular.ttf') format('truetype');
 }

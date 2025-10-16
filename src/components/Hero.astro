@@ -24,6 +24,8 @@ interface Props {
   logos?: HeroLogo[];
   highlights?: string[];
   links?: HeroLink[];
+  mottoCn?: string;
+  mottoEn?: string;
 }
 
 const {
@@ -38,7 +40,15 @@ const {
   logos,
   highlights,
   links,
+  mottoCn,
+  mottoEn,
 } = Astro.props;
+
+const splitTagline = tagline && tagline.includes('|') ? tagline.split('|') : undefined;
+const fallbackCn = splitTagline ? splitTagline[0]?.trim() : tagline?.trim();
+const fallbackEn = splitTagline && splitTagline[1] ? splitTagline[1].trim() : undefined;
+const cnLine = (mottoCn ?? fallbackCn) || null;
+const enLine = (mottoEn ?? fallbackEn) || null;
 ---
 
 <section
@@ -62,11 +72,17 @@ const {
     <div class="row">
       <div class="col hero-column">
         <div class="hero-content-top">
-          {tagline && <p class="hero-eyebrow">{tagline}</p>}
-
           <div class="hero-title">
             <h1 class="display-title">{title}</h1>
           </div>
+
+          {(cnLine || enLine) && (
+            <div class={`hero-eyebrow ${cnLine && enLine ? 'multiline' : ''}`}>
+              {cnLine && <span class="cn">{cnLine}</span>}
+              {cnLine && enLine && <span class="separator">|</span>}
+              {enLine && <span class="en">{enLine}</span>}
+            </div>
+          )}
 
           {description && <p class="hero-description">{description}</p>}
 
@@ -118,15 +134,20 @@ const {
   .hero-column {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     min-height: calc(100vh - 6rem);
-    padding-top: 5rem;
-    align-items: flex-start;
+    padding-top: clamp(4rem, 15vh, 10rem);
+    align-items: center;
+    position: relative;
   }
 
-  .hero-title {
-    margin-bottom: 2.5rem;
-    text-align: left;
+  .hero-content-top {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
   }
 
   .hero-eyebrow {
@@ -134,24 +155,69 @@ const {
     font-weight: 600;
     letter-spacing: 0.18em;
     text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.82);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-eyebrow.multiline {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    letter-spacing: normal;
+    text-transform: none;
+    color: white;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  .hero-eyebrow.multiline .cn {
+    font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    font-family: 'Zhuque Fangsong', 'Noto Serif SC', 'STSong', 'SimSun', serif;
     color: rgba(255, 255, 255, 0.85);
-    margin-bottom: 1rem;
+  }
+
+  .hero-eyebrow.multiline .en {
+    font-size: clamp(0.85rem, 1.3vw, 1rem);
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-family: 'IBM Plex Mono', 'JetBrains Mono', 'Inter', monospace;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .hero-eyebrow.multiline .separator {
+    font-size: clamp(0.9rem, 1.4vw, 1.05rem);
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .hero-title {
+    margin-bottom: 0;
+    text-align: left;
   }
 
   .display-title {
-    font-size: clamp(2rem, 5vw, 3.75rem);
-    font-weight: 700;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 400;
     color: white;
-    text-align: left;
     line-height: 1.05;
     margin: 0;
+    white-space: nowrap;
+    font-family: 'Zhuque Fangsong', serif;
   }
 
   .hero-description {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.86);
     max-width: 640px;
+    margin: 6rem 0 0;
+    text-align: left;
+    font-family: 'Zhuque Fangsong', serif;
   }
 
   .event-facts {
@@ -160,6 +226,7 @@ const {
     margin-top: 2.5rem;
     margin-bottom: 1.5rem;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .event-facts p {
@@ -177,14 +244,16 @@ const {
     margin: 1.5rem 0 0;
     display: grid;
     gap: 0.75rem;
+    max-width: 700px;
   }
 
   .hero-highlights li {
     position: relative;
     padding-left: 1.75rem;
-    font-size: 1rem;
+    font-size: 1.05rem;
     color: rgba(255, 255, 255, 0.88);
     line-height: 1.5;
+    font-family: 'Zhuque Fangsong', serif;
   }
 
   .hero-highlights li::before {
@@ -200,6 +269,7 @@ const {
 
   .organizer-block {
     margin-top: 2rem;
+    text-align: center;
   }
 
   .organizer-heading {
@@ -215,6 +285,7 @@ const {
     gap: 2rem;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .org-logo {
@@ -224,16 +295,44 @@ const {
   }
 
   .btn-home-wrap {
-    margin-top: 3rem;
-    padding-bottom: 2.5rem;
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    justify-content: center;
   }
 
   @media (max-width: 768px) {
+    .hero-eyebrow {
+      margin-bottom: 1rem;
+    }
+
+    .hero-eyebrow.multiline {
+      gap: 0.4rem;
+      margin-top: 1rem;
+      margin-bottom: 0;
+    }
+
+    .hero-eyebrow.multiline .cn {
+      font-size: clamp(0.85rem, 2.8vw, 1.05rem);
+      letter-spacing: 0.02em;
+    }
+
+    .hero-eyebrow.multiline .en {
+      font-size: clamp(0.75rem, 2.5vw, 0.95rem);
+      letter-spacing: 0.05em;
+    }
+
+    .hero-eyebrow.multiline .separator {
+      font-size: clamp(0.8rem, 2.6vw, 1rem);
+    }
+
     .display-title {
-      font-size: clamp(1.75rem, 9vw, 2.75rem);
+      font-size: clamp(2rem, 8vw, 3rem);
+      white-space: normal;
     }
 
     .hero-description {
@@ -250,6 +349,7 @@ const {
 
     .hero-column {
       min-height: auto;
+      padding-top: clamp(3rem, 12vh, 6rem);
     }
   }
 </style>
