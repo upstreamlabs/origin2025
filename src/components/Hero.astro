@@ -384,5 +384,20 @@ const enLine = (mottoEn ?? fallbackEn) || null;
       min-height: auto;
       padding-top: clamp(3rem, 12vh, 6rem);
     }
+
+    .btn-home-wrap {
+      position: static;
+      transform: none;
+      left: auto;
+      bottom: auto;
+      width: 100%;
+      margin-top: 2.5rem;
+      justify-content: center;
+    }
+
+    .btn-home-wrap :global(.btn) {
+      width: 100%;
+      max-width: 320px;
+    }
   }
 </style>
