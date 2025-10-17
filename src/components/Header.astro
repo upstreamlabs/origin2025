@@ -23,7 +23,11 @@ const navLinks = isChinesePage
     ];
 
 const cta = isChinesePage
-  ? { text: "立即报名", link: `${langPrefix}/#apply` }
+  ? {
+      text: "立即报名",
+      link: "https://opencamp.cn/UpstreamLabs/camp/2025",
+      openInNewTab: true,
+    }
   : { text: "Apply Now", link: `${langPrefix}/#apply` };
 
 const currentPath = pathname.replace(/^\/(en|cn)/, '');
@@ -38,7 +42,7 @@ const slug = Astro.url.pathname;
     <Button
       text={cta.text}
       link={cta.link}
-      openInNewTab={false}
+      openInNewTab={cta.openInNewTab ?? false}
       class="btn primary btn-floating btn-hover"
     />
   </div>
@@ -74,7 +78,7 @@ const slug = Astro.url.pathname;
         <Button
           text={cta.text}
           link={cta.link}
-          openInNewTab={false}
+          openInNewTab={cta.openInNewTab ?? false}
           class="btn primary xl btn-hover"
         />
       </div>
@@ -129,7 +133,7 @@ const slug = Astro.url.pathname;
         <Button
           text={cta.text}
           link={cta.link}
-          openInNewTab={false}
+          openInNewTab={cta.openInNewTab ?? false}
           class="btn outline btn-hover"
         />
       </div>
