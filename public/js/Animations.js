@@ -435,11 +435,10 @@ function initCheckScrollUpDown() {
  * Lenis - ScrollTo Anchor Links
  */
 function initScrollToAnchor() {
-   var scrollToOffset = ($(".main-nav-bar").innerHeight() * -1);
-
    $("[data-anchor-target]").click(function (e) {
       e.preventDefault(); // Prevent default anchor behavior
 
+      var navOffset = ($(".main-nav-bar").innerHeight() * -1);
       let targetScrollToAnchorLenis = $(this).attr('data-anchor-target');
 
       // Update page title if provided
@@ -447,11 +446,15 @@ function initScrollToAnchor() {
       $('[data-change-page-title]').text(pageTitle);
 
       // Scroll to anchor
-      scroll.scrollTo(targetScrollToAnchorLenis, {
-         duration: 1,
-         offset: scrollToOffset,
-         easing: (x) => (x < 0.5 ? 8 * x * x * x * x : 1 - Math.pow(-2 * x + 2, 4) / 2),
-      });
+      if (scroll && typeof scroll.scrollTo === 'function') {
+         scroll.scrollTo(targetScrollToAnchorLenis, {
+            duration: 1,
+            offset: navOffset,
+            easing: (x) => (x < 0.5 ? 8 * x * x * x * x : 1 - Math.pow(-2 * x + 2, 4) / 2),
+         });
+      } else {
+         smoothScrollFallback(targetScrollToAnchorLenis, navOffset);
+      }
 
       // Update URL without page reload
       if (history.pushState) {
@@ -464,22 +467,45 @@ function initScrollToAnchor() {
       const hash = window.location.hash;
       if (hash) {
          setTimeout(() => {
-            scroll.scrollTo(hash, {
-               duration: 1,
-               offset: scrollToOffset,
-               easing: (x) => (x < 0.5 ? 8 * x * x * x * x : 1 - Math.pow(-2 * x + 2, 4) / 2),
-            });
+            var navOffset = ($(".main-nav-bar").innerHeight() * -1);
+            if (scroll && typeof scroll.scrollTo === 'function') {
+               scroll.scrollTo(hash, {
+                  duration: 1,
+                  offset: navOffset,
+                  easing: (x) => (x < 0.5 ? 8 * x * x * x * x : 1 - Math.pow(-2 * x + 2, 4) / 2),
+               });
+            } else {
+               smoothScrollFallback(hash, navOffset);
+            }
          }, 500);
       }
    });
 
    $(".filter-container [data-filter-category]").click(function () {
       setTimeout(function () {
-         scroll.scrollTo("#grid", {
-            immediate: true,
-            offset: scrollToOffset,
-         });
+         var navOffset = ($(".main-nav-bar").innerHeight() * -1);
+         if (scroll && typeof scroll.scrollTo === 'function') {
+            scroll.scrollTo("#grid", {
+               immediate: true,
+               offset: navOffset,
+            });
+         } else {
+            smoothScrollFallback('#grid', navOffset, true);
+         }
       }, 200);
+   });
+}
+
+function smoothScrollFallback(target, offset = 0, immediate = false) {
+   const element = typeof target === 'string' ? document.querySelector(target) : target;
+   if (!element) {
+      return;
+   }
+
+   const targetTop = element.getBoundingClientRect().top + window.pageYOffset + offset;
+   window.scrollTo({
+      top: targetTop,
+      behavior: immediate ? 'auto' : 'smooth',
    });
 }
 
