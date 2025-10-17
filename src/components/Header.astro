@@ -56,17 +56,29 @@ const slug = Astro.url.pathname;
       </div>
       <nav class="box-row box-row-nav" aria-label="Navigation Mobile">
         <ul>
-          {navLinks.map((link) => (
-            <li
-              class="link link-hover"
-              data-barba-update
-              data-link-status={link.link === slug ? 'active' : 'not-active'}
-            >
-              <a class="link-click" href={link.link}>
-                <span>{link.text}</span>
-              </a>
-            </li>
-          ))}
+          {navLinks.map((link) => {
+            const hashIndex = link.link.indexOf('#');
+            const isAnchorLink = hashIndex !== -1;
+            const anchorTarget = isAnchorLink ? link.link.slice(hashIndex) : null;
+            const linkHref = isAnchorLink ? anchorTarget : link.link;
+
+            return (
+              <li
+                class="link link-hover"
+                data-barba-update
+                data-link-status={link.link === slug ? 'active' : 'not-active'}
+              >
+                <a
+                  class="link-click"
+                  href={linkHref}
+                  data-anchor-target={anchorTarget || undefined}
+                  data-page-title={anchorTarget ? link.text : undefined}
+                >
+                  <span>{link.text}</span>
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </nav>
       <div class="box-row box-row-btn" style="display: flex; gap: 1rem; align-items: center;">
@@ -110,17 +122,29 @@ const slug = Astro.url.pathname;
 
       <nav aria-label="Navigation Desktop" style="padding-top: 35px;">
         <ul>
-          {navLinks.map((link) => (
-            <li
-              class="link link-hover"
-              data-barba-update
-              data-link-status={link.link === slug ? 'active' : 'not-active'}
-            >
-              <a class="link-click" href={link.link}>
-                <span>{link.text}</span>
-              </a>
-            </li>
-          ))}
+          {navLinks.map((link) => {
+            const hashIndex = link.link.indexOf('#');
+            const isAnchorLink = hashIndex !== -1;
+            const anchorTarget = isAnchorLink ? link.link.slice(hashIndex) : null;
+            const linkHref = isAnchorLink ? anchorTarget : link.link;
+
+            return (
+              <li
+                class="link link-hover"
+                data-barba-update
+                data-link-status={link.link === slug ? 'active' : 'not-active'}
+              >
+                <a
+                  class="link-click"
+                  href={linkHref}
+                  data-anchor-target={anchorTarget || undefined}
+                  data-page-title={anchorTarget ? link.text : undefined}
+                >
+                  <span>{link.text}</span>
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </nav>
 
