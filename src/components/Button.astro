@@ -7,14 +7,16 @@ interface Props {
 }
 
 const { text, link, openInNewTab, class: className } = Astro.props;
+const targetAttr = openInNewTab ? '_blank' : undefined;
+const relAttr = openInNewTab ? 'noopener noreferrer' : undefined;
 ---
 
 <div class={className || 'btn outline btn-hover xl'}>
     <a
         href={link}
         class="btn-click"
-        target={openInNewTab ? "_blank" : "_self"}
-        rel={openInNewTab ? "noopener noreferrer" : ""}
+        target={targetAttr}
+        rel={relAttr}
     >
         <div class="btn-content duplicate">
             <div class="btn-fill"></div>
