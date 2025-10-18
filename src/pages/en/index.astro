@@ -9,9 +9,9 @@ import Cards from "components/Cards.astro";
 import Statistics from "components/Statistics.astro";
 import Button from "components/Button.astro";
 
-import statOnline from "images/upstream/stat-online.svg";
-import statOffline from "images/upstream/stat-offline.svg";
-import statGrant from "images/upstream/stat-grant.svg";
+import statOnline from "images/upstream/stat-online.png";
+import statOffline from "images/upstream/stat-offline.png";
+import statGrant from "images/upstream/stat-grant.png";
 
 const heroLinks = [
   {
@@ -198,7 +198,7 @@ const mentorshipCards = [
     id="overview"
     title="Open Collaboration as Public Goods Infrastructure"
     text="Upstream Origin is a learning-and-doing platform devoted to sustainable open-source ecosystems. Participants deepen their understanding of community governance, civic value, and ecosystem storytelling while co-creating real projects that activate public impact."
-    image="/images/upstream/overview-flow.svg"
+    image="/images/upstream/infra.png"
     imageAlt="Flowing gradient artwork highlighting open-source collaboration"
     theme="light"
     background="lightgray"
@@ -208,11 +208,11 @@ const mentorshipCards = [
     id="philosophy"
     title="Core Philosophy"
     text="Upstream Origin is rooted in open-source spirit and centered on public goods. Commercial momentum is never the destination—it is the sustaining force that preserves trust, vitality, and shared stewardship across the ecosystem. Upstream Origin believes open source is more than a technical pathway—it is a collaborative civic culture that cultivates trust, shared value, and long-term sustainability so collective innovation can power a shared future."
-    image="/images/upstream/flow-core.svg"
+    image="/images/upstream/flow-core.png"
     imageAlt="Gradient square illustrating the Flow of Source concept"
     imagePosition="left"
-    theme="dark"
-    background="dark"
+    theme="light"
+    background="light"
   />
 
   <Cards
@@ -375,5 +375,69 @@ const mentorshipCards = [
     .lead {
       font-size: 1.05rem;
     }
+  }
+
+  #overview.feature-spotlight .feature-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(1rem, 3vw, 2rem);
+    background: linear-gradient(135deg, rgba(88, 140, 255, 0.18) 0%, rgba(150, 190, 255, 0.12) 50%, rgba(255, 204, 130, 0.18) 100%);
+    border-radius: 28px;
+  }
+
+  #overview.feature-spotlight .feature-media::before {
+    display: none;
+  }
+
+  #overview.feature-spotlight .feature-media img {
+    border-radius: 26px;
+    mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 58%, rgba(0, 0, 0, 0) 98%);
+    -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 58%, rgba(0, 0, 0, 0) 98%);
+    mask-size: 125% 125%;
+    -webkit-mask-size: 125% 125%;
+    mask-position: center;
+    -webkit-mask-position: center;
+    background-color: transparent;
+  }
+
+  #philosophy.feature-spotlight {
+    background: linear-gradient(135deg, rgba(88, 140, 255, 0.95) 0%, rgba(150, 190, 255, 0.82) 48%, rgba(255, 204, 130, 0.8) 100%);
+  }
+
+  #philosophy.feature-spotlight .feature-backdrop {
+    background: none;
+  }
+
+  #philosophy.feature-spotlight .feature-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(1rem, 3vw, 2rem);
+    background: linear-gradient(135deg, rgba(40, 90, 220, 0.18) 0%, rgba(96, 140, 255, 0.14) 50%, rgba(255, 196, 120, 0.22) 100%);
+    border-radius: 28px;
+  }
+
+  #philosophy.feature-spotlight .feature-media::before {
+    display: none;
+  }
+
+  #philosophy.feature-spotlight .feature-media img {
+    border-radius: 26px;
+    mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 58%, rgba(0, 0, 0, 0) 98%);
+    -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 58%, rgba(0, 0, 0, 0) 98%);
+    mask-size: 125% 125%;
+    -webkit-mask-size: 125% 125%;
+    mask-position: center;
+    -webkit-mask-position: center;
+    background-color: transparent;
+  }
+
+  #philosophy.feature-spotlight .feature-copy h2 {
+    color: rgba(13, 28, 58, 0.92);
+  }
+
+  #philosophy.feature-spotlight .feature-copy p {
+    color: rgba(13, 28, 58, 0.78);
   }
 </style>

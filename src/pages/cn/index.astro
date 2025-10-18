@@ -9,9 +9,9 @@ import Cards from "components/Cards.astro";
 import Statistics from "components/Statistics.astro";
 import Button from "components/Button.astro";
 
-import statOnline from "images/upstream/stat-online.svg";
-import statOffline from "images/upstream/stat-offline.svg";
-import statGrant from "images/upstream/stat-grant.svg";
+import statOnline from "images/upstream/stat-online.png";
+import statOffline from "images/upstream/stat-offline.png";
+import statGrant from "images/upstream/stat-grant.png";
 
 const heroLinks = [
   {
@@ -193,7 +193,7 @@ const mentorshipCards = [
     id="overview"
     title="开源公共产品基础设施"
     text="Upstream Origin 是一个聚焦开源生态建设与可持续发展的学习与实践平台。学员将在真实项目中理解社区治理、公共产品与叙事传播，完成可持续生态行动方案，并投入长期的公共影响力共创。"
-    image="/images/upstream/overview-flow.svg"
+    image="/images/upstream/infra.png"
     imageAlt="体现流动协作的渐变图形"
     theme="light"
     background="lightgray"
@@ -203,11 +203,11 @@ const mentorshipCards = [
     id="philosophy"
     title="核心理念"
     text="Upstream Origin 以开源精神滋养公共产品。商业化并非终点，而是维系生态信任与活力的支撑力量，让协作文明得以长期生长。Upstream Origin 相信开源不仅是一种技术路径，更是一种协作文明。我们以信任与公共产品为基石，共建可持续的开源未来。"
-    image="/images/upstream/flow-core.svg"
+    image="/images/upstream/flow-core.png"
     imageAlt="体现流动概念的几何图形"
     imagePosition="left"
-    theme="dark"
-    background="dark"
+    theme="light"
+    background="light"
   />
 
   <Cards
@@ -370,5 +370,69 @@ const mentorshipCards = [
     .lead {
       font-size: 1.02rem;
     }
+  }
+
+  #overview.feature-spotlight .feature-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(1rem, 3vw, 2rem);
+    background: linear-gradient(135deg, rgba(88, 140, 255, 0.18) 0%, rgba(150, 190, 255, 0.12) 50%, rgba(255, 204, 130, 0.18) 100%);
+    border-radius: 28px;
+  }
+
+  #overview.feature-spotlight .feature-media::before {
+    display: none;
+  }
+
+  #overview.feature-spotlight .feature-media img {
+    border-radius: 26px;
+    mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 58%, rgba(0, 0, 0, 0) 98%);
+    -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 58%, rgba(0, 0, 0, 0) 98%);
+    mask-size: 125% 125%;
+    -webkit-mask-size: 125% 125%;
+    mask-position: center;
+    -webkit-mask-position: center;
+    background-color: transparent;
+  }
+
+  #philosophy.feature-spotlight {
+    background: linear-gradient(135deg, rgba(88, 140, 255, 0.95) 0%, rgba(150, 190, 255, 0.82) 48%, rgba(255, 204, 130, 0.8) 100%);
+  }
+
+  #philosophy.feature-spotlight .feature-backdrop {
+    background: none;
+  }
+
+  #philosophy.feature-spotlight .feature-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(1rem, 3vw, 2rem);
+    background: linear-gradient(135deg, rgba(40, 90, 220, 0.18) 0%, rgba(96, 140, 255, 0.14) 50%, rgba(255, 196, 120, 0.22) 100%);
+    border-radius: 28px;
+  }
+
+  #philosophy.feature-spotlight .feature-media::before {
+    display: none;
+  }
+
+  #philosophy.feature-spotlight .feature-media img {
+    border-radius: 26px;
+    mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 58%, rgba(0, 0, 0, 0) 98%);
+    -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 58%, rgba(0, 0, 0, 0) 98%);
+    mask-size: 125% 125%;
+    -webkit-mask-size: 125% 125%;
+    mask-position: center;
+    -webkit-mask-position: center;
+    background-color: transparent;
+  }
+
+  #philosophy.feature-spotlight .feature-copy h2 {
+    color: rgba(13, 28, 58, 0.92);
+  }
+
+  #philosophy.feature-spotlight .feature-copy p {
+    color: rgba(13, 28, 58, 0.78);
   }
 </style>
