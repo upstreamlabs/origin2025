@@ -42,7 +42,7 @@ const {
           </div>
           <div class="content">
             <h3>{item.title}</h3>
-            <p>{item.text}</p>
+            <p set:html={item.text}></p>
           </div>
         </div>
       ))}
@@ -109,7 +109,7 @@ const {
     position: relative;
     padding-left: 2rem;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.5rem;
     min-height: 1.8rem;
   }
@@ -118,13 +118,13 @@ const {
     content: "";
     position: absolute;
     left: 0;
-    top: 50%;
+    top: 0.15rem;
     width: 1.05rem;
     height: 1.05rem;
     border-radius: 999px;
     background: linear-gradient(135deg, rgba(43, 116, 255, 0.95), rgba(255, 198, 64, 0.95));
     box-shadow: 0 0 0 6px rgba(43, 116, 255, 0.12);
-    transform: translateY(-50%);
+    transform: none;
   }
 
   .marker-label {
@@ -154,6 +154,11 @@ const {
     line-height: 1.8;
     color: rgba(13, 28, 58, 0.75);
     margin: 0;
+  }
+
+  .content p br {
+    display: block;
+    content: "";
   }
 
   .program-timeline.variant-residency::before {
