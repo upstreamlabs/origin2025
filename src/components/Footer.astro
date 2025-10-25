@@ -32,8 +32,8 @@ const secondaryLinks = isChinesePage
 
 const contactLabel = isChinesePage ? "联系我们" : "Stay in touch";
 const contactText = isChinesePage
-  ? "若你希望成为导师、合作伙伴或申请团队，请通过邮件与 Upstream Origin 联系。"
-  : "Interested in mentoring, partnering, or applying with your team? Reach out to the Upstream Origin organizers.";
+  ? "若你希望成为导师、合作伙伴或申请团队，请通过邮件与 Upstream 联系。"
+  : "Interested in mentoring, partnering, or applying with your team? Reach out to the Upstream organizers.";
 
 const emailLabel = isChinesePage ? "邮箱" : "Email";
 const emailLinkText = "origin@upstreamlabs.org";
@@ -132,8 +132,8 @@ const slug = Astro.url.pathname;
       <div class="col col-copyright">
         <p>
           {isChinesePage
-            ? `© ${new Date().getFullYear()} Upstream Origin. 保留所有权利。`
-            : `© ${new Date().getFullYear()} Upstream Origin. All rights reserved.`}
+            ? `© ${new Date().getFullYear()} Upstream. 保留所有权利。`
+            : `© ${new Date().getFullYear()} Upstream. All rights reserved.`}
         </p>
       </div>
     </div>
