@@ -109,7 +109,8 @@
     "pdf": "/pdf/Moxin_AI_Upstream.pdf",
     "github": [
       "https://github.com/moxin-org"
-    ]
+    ],
+    "logoScale": 2
   },
   {
     "id": "project-matrix-suite",

@@ -19,6 +19,7 @@ interface Props {
     backgroundSvg?: string;
     pdfLink?: string;
     githubLinks?: string[];
+    logoScale?: number;
 }
 
 const {
@@ -34,6 +35,7 @@ const {
   backgroundSvg,
   pdfLink,
   githubLinks = [],
+  logoScale = 1,
 } = Astro.props;
 
 const imageSources = Array.isArray(image) ? image : image ? [image] : [];
@@ -43,13 +45,39 @@ const altSources = Array.isArray(imageAlt)
   ? [imageAlt]
   : imageSources.map(() => title);
 
+const gradientPairs = [
+  "linear-gradient(135deg, rgba(88, 140, 255, 0.25), rgba(255, 204, 130, 0.25))",
+  "linear-gradient(135deg, rgba(150, 190, 255, 0.25), rgba(255, 160, 122, 0.25))",
+  "linear-gradient(135deg, rgba(106, 215, 196, 0.25), rgba(255, 225, 140, 0.25))",
+  "linear-gradient(135deg, rgba(120, 190, 255, 0.25), rgba(195, 140, 255, 0.25))",
+];
+
 const sectionStyle = backgroundSvg
-  ? `background-image: url('${backgroundSvg}'); background-size: cover; background-position: center; background-repeat: no-repeat;`
+  ? `--project-bg: url('${backgroundSvg}');
+     --project-gradient: ${gradientPairs[
+       (title?.length ?? 0) % gradientPairs.length
+     ]};`
   : undefined;
+
+const resourceLinks = [
+  ...(pdfLink ? [{ label: "Download PDF", href: pdfLink }] : []),
+  ...githubLinks.map((href) => {
+    const cleaned = href.replace(/\/+$/, "");
+    const segments = cleaned.split("/");
+    const repoName = segments[segments.length - 1] || "GitHub";
+    return {
+      label: repoName,
+      href,
+    };
+  }),
+];
+
+const getLogoStyle = (idx: number) =>
+  logoScale !== 1 ? `transform: scale(${logoScale});` : undefined;
 ---
 
 <section
-    class={`section section-register-gosim spotlight-section ${textAlign === 'right' ? 'text-right' : ''}`}
+    class={`section section-register-gosim spotlight-section project-spotlight ${textAlign === 'right' ? 'text-right' : ''}`}
     id={id ?? 'spotlight'}
     data-theme-section={theme}
     data-bg-section={background}
@@ -68,17 +96,21 @@ const sectionStyle = backgroundSvg
                     </p>
                 </div>
 
-                {(pdfLink || ctaButton?.text || githubLinks.length > 0) &&
+                {(resourceLinks.length > 0 || ctaButton?.text) &&
                     <div class="col-row col-row-btn">
-                        {pdfLink && (
-                          <a
-                            class="btn primary xl btn-hover resource-btn"
-                            href={pdfLink}
-                            target="_blank"
-                            rel="noopener"
-                          >
-                            下载项目 PDF
-                          </a>
+                        {resourceLinks.length > 0 && (
+                          <div class="resource-links">
+                            {resourceLinks.map(link => (
+                              <a
+                                class="resource-pill"
+                                href={link.href}
+                                target="_blank"
+                                rel="noopener"
+                              >
+                                {link.label}
+                              </a>
+                            ))}
+                          </div>
                         )}
                         {ctaButton?.text && (
                           <Button
@@ -88,19 +120,6 @@ const sectionStyle = backgroundSvg
                               class="btn outline xl btn-hover"
                           />
                         )}
-                        {githubLinks.length > 0 && (
-                          <div class="github-links">
-                            {githubLinks.map(link => (
-                              <a
-                                href={link}
-                                target="_blank"
-                                rel="noopener"
-                              >
-                                GitHub
-                              </a>
-                            ))}
-                          </div>
-                        )}
                     </div>
                 }
             </div>
@@ -109,12 +128,14 @@ const sectionStyle = backgroundSvg
                 <div class="col">
                     <div class="logo-tiles">
                         {imageSources.map((src, idx) => (
-                          <img
-                            src={src}
-                            alt={altSources[idx] ?? altSources[0] ?? title}
-                            class="hexbadge"
-                            loading="lazy"
-                          />
+                          <div class="logo-wrapper" style={getLogoStyle(idx)}>
+                            <img
+                              src={src}
+                              alt={altSources[idx] ?? altSources[0] ?? title}
+                              class="hexbadge"
+                              loading="lazy"
+                            />
+                          </div>
                         ))}
                     </div>
                 </div>
@@ -124,6 +145,45 @@ const sectionStyle = backgroundSvg
 </section>
 
 <style>
+  .project-spotlight {
+    position: relative;
+    overflow: hidden;
+    background: var(--project-gradient, linear-gradient(135deg, rgba(88, 140, 255, 0.25), rgba(255, 204, 130, 0.25)));
+  }
+
+  .project-spotlight::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--project-bg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.55;
+    mix-blend-mode: screen;
+    animation: project-bg-pan 18s ease-in-out infinite alternate;
+  }
+
+  .project-spotlight > .container {
+    position: relative;
+  }
+
+  .project-spotlight .col-row-title h2,
+  .project-spotlight .col-row-text p,
+  .project-spotlight .resource-pill,
+  .project-spotlight .resource-pill:hover {
+    color: #111421;
+  }
+
+  .project-spotlight .resource-pill {
+    background: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0.15);
+  }
+
+  .project-spotlight .resource-pill:hover {
+    background: rgba(0, 0, 0, 0.16);
+  }
+
   .section-register-gosim.text-right .row.grid {
     flex-direction: row-reverse;
   }
@@ -131,6 +191,17 @@ const sectionStyle = backgroundSvg
   .col-row-title h2 {
     font-size: 2rem;
     line-height: 1.2;
+  }
+
+  @keyframes project-bg-pan {
+    0% {
+      transform: scale(1) translateY(0);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1.05) translateY(-2%);
+      opacity: 0.65;
+    }
   }
   
   @media (max-width: 768px) {
@@ -147,6 +218,12 @@ const sectionStyle = backgroundSvg
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-wrapper {
+    display: flex;
     justify-content: center;
     align-items: center;
   }
@@ -171,23 +248,18 @@ const sectionStyle = backgroundSvg
     gap: 0.75rem;
   }
 
-  .resource-btn {
-    text-decoration: none;
+  .resource-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .resource-pill {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-  }
-
-  .github-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.35rem;
-  }
-
-  .github-links a {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.4rem 0.9rem;
+    padding: 0.45rem 1rem;
     border-radius: 999px;
     font-size: 0.85rem;
     color: #f3f4f6;
@@ -197,7 +269,7 @@ const sectionStyle = backgroundSvg
     transition: background 0.2s ease;
   }
 
-  .github-links a:hover {
+  .resource-pill:hover {
     background: rgba(255, 255, 255, 0.2);
   }
 </style>

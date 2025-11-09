@@ -281,7 +281,7 @@ const projectSpotlights = projectSpotlightsData;
     <div class="container">
       <div class="row">
         <div class="col">
-          <p class="eyebrow">Upstream Project Atlas</p>
+          <p class="eyebrow">Upstream 2025 Winter Camp Projects</p>
           <h2 class="custom3">2025 Residency Cohort</h2>
           <p class="lead">
             From intelligent agent protocols and sovereign comms stacks to robotics operating systems,
@@ -305,6 +305,7 @@ const projectSpotlights = projectSpotlightsData;
       backgroundSvg={project.background}
       pdfLink={project.pdf}
       githubLinks={project.github}
+      logoScale={project.logoScale}
     />
   ))}
 
@@ -414,25 +415,25 @@ const projectSpotlights = projectSpotlightsData;
   }
 
   .project-intro {
-    background: radial-gradient(circle at top left, rgba(53, 108, 255, 0.25), transparent 60%), #030712;
-    color: #f3f4f6;
+    background: linear-gradient(135deg, rgba(88, 140, 255, 0.25), rgba(255, 204, 130, 0.25));
+    color: #111421;
   }
 
   .project-intro .eyebrow {
     text-transform: uppercase;
     letter-spacing: 0.2em;
     font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.65);
+    color: rgba(17, 20, 33, 0.6);
     margin-bottom: 0.5rem;
   }
 
   .project-intro h2 {
-    color: #ffffff;
+    color: #111421;
     margin-bottom: 1rem;
   }
 
   .project-intro .lead {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(17, 20, 33, 0.8);
   }
 
   @media (max-width: 768px) {

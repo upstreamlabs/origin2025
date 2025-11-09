@@ -172,7 +172,8 @@
     "imageAlt": [
       "Moxin AI 徽标"
     ],
-    "background": "/images/project-backgrounds/moxin.svg"
+    "background": "/images/project-backgrounds/moxin.svg",
+    "logoScale": 2
   },
   {
     "name": "Matrix Suite for Decentralized Collaboration",

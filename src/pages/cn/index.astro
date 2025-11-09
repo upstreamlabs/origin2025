@@ -68,7 +68,7 @@ const stats = [
     imageAlt: "象征资金支持的放射曲线",
   },
   {
-    title: "5",
+    title: "3",
     suffix: "天",
     subtitle: "沉浸式的伙伴协作和导师辅导共创营",
     image: statOffline,
@@ -274,7 +274,7 @@ const mentorshipCards = [
     <div class="container">
       <div class="row">
         <div class="col">
-          <p class="eyebrow">Upstream 共创阵列</p>
+          <p class="eyebrow">Upstream 2025 冬令营项目</p>
           <h2 class="custom3">2025 入营项目全景</h2>
           <p class="lead">
             从智能体互联网到操作系统内核，再到具身智能与社区协作工具，
@@ -296,6 +296,9 @@ const mentorshipCards = [
       theme="dark"
       background="dark"
       backgroundSvg={project.background}
+      pdfLink={project.pdf}
+      githubLinks={project.github}
+      logoScale={project.logoScale}
     />
   ))}
 
@@ -392,25 +395,25 @@ const mentorshipCards = [
   }
 
   .project-intro {
-    background: radial-gradient(circle at top left, rgba(53, 108, 255, 0.25), transparent 60%), #030712;
-    color: #f3f4f6;
+    background: linear-gradient(135deg, rgba(88, 140, 255, 0.25), rgba(255, 204, 130, 0.25));
+    color: #111421;
   }
 
   .project-intro .eyebrow {
     text-transform: uppercase;
     letter-spacing: 0.2em;
     font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.65);
+    color: rgba(17, 20, 33, 0.6);
     margin-bottom: 0.5rem;
   }
 
   .project-intro h2 {
-    color: #ffffff;
+    color: #111421;
     margin-bottom: 1rem;
   }
 
   .project-intro .lead {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(17, 20, 33, 0.8);
   }
 
   @media (max-width: 768px) {
