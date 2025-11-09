@@ -1,0 +1,16 @@
+<svg width="1440" height="560" viewBox="0 0 1440 560" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad-mofa" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#331D5B" />
+      <stop offset="40%" stop-color="#F25C88" />
+      <stop offset="100%" stop-color="#FFB770" />
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="560" fill="#1B0A2D" />
+  <path d="M0 340C220 420 380 380 560 420C820 480 980 360 1200 420C1320 452 1380 470 1440 480V560H0V340Z" fill="url(#grad-mofa)" opacity="0.9" />
+  <g fill="#FFD9E4" opacity="0.45">
+    <circle cx="280" cy="200" r="80" />
+    <circle cx="1080" cy="160" r="120" />
+    <circle cx="860" cy="120" r="60" />
+  </g>
+</svg>

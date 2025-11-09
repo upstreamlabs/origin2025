@@ -1,0 +1,23 @@
+<svg width="1440" height="560" viewBox="0 0 1440 560" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad-flagos" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#021B42" />
+      <stop offset="60%" stop-color="#0472FF" />
+      <stop offset="100%" stop-color="#06E7F4" />
+    </linearGradient>
+    <linearGradient id="mesh-flagos" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#041225" />
+      <stop offset="100%" stop-color="#0B2C63" />
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="560" fill="url(#mesh-flagos)" />
+  <path d="M0 480C200 420 300 420 520 360C780 290 920 420 1160 360C1280 328 1360 300 1440 280V560H0V480Z" fill="url(#grad-flagos)" opacity="0.85" />
+  <g stroke="#3ED6FF" stroke-opacity="0.35" stroke-width="1.5">
+    <path d="M0 420H1440" />
+    <path d="M0 360H1440" />
+    <path d="M0 300H1440" />
+  </g>
+  <g stroke="#22B2FF" stroke-width="2" stroke-linecap="round" opacity="0.5">
+    <path d="M220 260C360 220 480 240 620 200C840 140 980 200 1180 160C1280 140 1360 120 1440 120" />
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+<svg width="1440" height="560" viewBox="0 0 1440 560" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad-moxin" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#041A2C" />
+      <stop offset="50%" stop-color="#0D6687" />
+      <stop offset="100%" stop-color="#7C4DFF" />
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="560" fill="#030812" />
+  <path d="M0 400C200 320 360 320 560 360C820 412 960 320 1160 360C1280 384 1360 420 1440 440V560H0V400Z" fill="url(#grad-moxin)" opacity="0.85" />
+  <g stroke="#7FE8FF" stroke-width="2" opacity="0.6">
+    <path d="M160 260C260 200 360 200 460 240C560 280 660 280 760 240C860 200 960 200 1060 240C1160 280 1260 280 1360 240" />
+  </g>
+  <g stroke="#C1A4FF" stroke-width="1.5" opacity="0.4">
+    <path d="M160 320C260 360 360 360 460 320C560 280 660 280 760 320C860 360 960 360 1060 320C1160 280 1260 280 1360 320" />
+  </g>
+</svg>

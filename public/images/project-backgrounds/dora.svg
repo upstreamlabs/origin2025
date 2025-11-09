@@ -1,0 +1,18 @@
+<svg width="1440" height="560" viewBox="0 0 1440 560" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad-dora" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#2F0C25" />
+      <stop offset="60%" stop-color="#FF7A18" />
+      <stop offset="100%" stop-color="#FEB692" />
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="560" fill="#12040C" />
+  <path d="M0 420C260 340 380 300 560 320C780 344 820 440 1040 420C1160 408 1280 360 1440 320V560H0V420Z" fill="url(#grad-dora)" opacity="0.8" />
+  <g stroke="#FFB585" stroke-width="2" opacity="0.4">
+    <path d="M120 140C220 180 320 160 420 220C520 280 640 260 720 320" />
+    <path d="M840 220C920 260 1040 240 1160 300C1240 340 1340 320 1440 360" />
+  </g>
+  <g stroke="#FFDFB5" stroke-width="3" stroke-linecap="round" opacity="0.4">
+    <path d="M220 380L320 260L420 360L520 260L620 380" />
+  </g>
+</svg>

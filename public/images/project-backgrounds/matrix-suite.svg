@@ -1,0 +1,18 @@
+<svg width="1440" height="560" viewBox="0 0 1440 560" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad-matrix" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B2F24" />
+      <stop offset="60%" stop-color="#1F7A5F" />
+      <stop offset="100%" stop-color="#4FE1B7" />
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="560" fill="#03140F" />
+  <path d="M0 360C180 320 360 340 540 380C760 432 900 360 1100 380C1240 396 1340 420 1440 430V560H0V360Z" fill="url(#grad-matrix)" opacity="0.9" />
+  <g stroke="#74FFD9" stroke-width="1.4" stroke-opacity="0.4">
+    <path d="M0 300H1440" />
+    <path d="M0 260H1440" />
+  </g>
+  <g stroke="#50C89F" stroke-width="2" stroke-linecap="round" opacity="0.5">
+    <path d="M160 200L320 320L480 220L640 340L800 220L960 340L1120 220L1280 320" />
+  </g>
+</svg>

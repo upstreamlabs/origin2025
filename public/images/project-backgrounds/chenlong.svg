@@ -1,0 +1,22 @@
+<svg width="1440" height="560" viewBox="0 0 1440 560" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad-chenlong" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#031C34" />
+      <stop offset="45%" stop-color="#0A4360" />
+      <stop offset="100%" stop-color="#1AB0A6" />
+    </linearGradient>
+    <linearGradient id="pulse-chenlong" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4FFFE1" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#4BB1FF" stop-opacity="0.2" />
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="560" fill="#010915" />
+  <path d="M0 410C220 450 320 520 530 520C820 520 850 360 1120 360C1280 360 1350 420 1440 450V560H0V410Z" fill="url(#grad-chenlong)"/>
+  <circle cx="260" cy="180" r="120" fill="#0D4C77" opacity="0.45" />
+  <circle cx="1220" cy="150" r="160" fill="#0F9BA5" opacity="0.25" />
+  <g stroke="url(#pulse-chenlong)" stroke-width="2" stroke-linecap="round" opacity="0.7">
+    <path d="M120 240H260L320 180H420L460 220H520" />
+    <path d="M760 320H880L920 260H1020L1080 320H1200" />
+    <path d="M240 360L320 320L400 360L460 320L520 360" opacity="0.4" />
+  </g>
+</svg>

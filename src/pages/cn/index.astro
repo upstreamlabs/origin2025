@@ -7,7 +7,8 @@ import ProgramTimeline from "components/ProgramTimeline.astro";
 import SupportShowcase from "components/SupportShowcase.astro";
 import Cards from "components/Cards.astro";
 import Statistics from "components/Statistics.astro";
-import Button from "components/Button.astro";
+import TextAndImageSimple from "components/TextAndImageSimple.astro";
+import projectSpotlightsData from "../../data/upstream-projects-cn.json";
 
 import statOnline from "images/upstream/stat-online.png";
 import statOffline from "images/upstream/stat-offline.png";
@@ -148,6 +149,8 @@ const stageTwoTimeline = [
   },
 ];
 
+const projectSpotlights = projectSpotlightsData;
+
 const mentorshipCards = [
   {
     title: "学术导师",
@@ -267,6 +270,35 @@ const mentorshipCards = [
     background="light"
   />
 
+  <section class="section project-intro" id="projects" data-theme-section="dark" data-bg-section="primary">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p class="eyebrow">Upstream 共创阵列</p>
+          <h2 class="custom3">2025 入营项目全景</h2>
+          <p class="lead">
+            从智能体互联网到操作系统内核，再到具身智能与社区协作工具，
+            这些伙伴将在 Upstream 共创营中打磨治理、传播与长期增长方案。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {projectSpotlights.map((project, index) => (
+    <TextAndImageSimple
+      id={project.id}
+      title={project.title}
+      text={project.text}
+      image={project.images}
+      imageAlt={project.imageAlt}
+      textAlign={index % 2 ? 'right' : 'left'}
+      theme="dark"
+      background="dark"
+      backgroundSvg={project.background}
+    />
+  ))}
+
   <SupportShowcase
     id="support"
     title="成果与激励"
@@ -357,6 +389,28 @@ const mentorshipCards = [
 
   .apply-actions .btn.primary span {
     color: #ffffff !important;
+  }
+
+  .project-intro {
+    background: radial-gradient(circle at top left, rgba(53, 108, 255, 0.25), transparent 60%), #030712;
+    color: #f3f4f6;
+  }
+
+  .project-intro .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 0.5rem;
+  }
+
+  .project-intro h2 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+  }
+
+  .project-intro .lead {
+    color: rgba(255, 255, 255, 0.8);
   }
 
   @media (max-width: 768px) {

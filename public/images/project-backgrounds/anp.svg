@@ -1,0 +1,27 @@
+<svg width="1440" height="560" viewBox="0 0 1440 560" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="rad-anp" cx="30%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#441D8F" />
+      <stop offset="45%" stop-color="#1F0A3D" />
+      <stop offset="100%" stop-color="#05020C" />
+    </radialGradient>
+    <linearGradient id="link-anp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F36BFF" />
+      <stop offset="100%" stop-color="#7BF2FF" />
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="560" fill="url(#rad-anp)" />
+  <circle cx="320" cy="200" r="160" stroke="#8549E6" stroke-opacity="0.4" fill="none" stroke-width="2" />
+  <circle cx="1080" cy="160" r="200" stroke="#59D6FF" stroke-opacity="0.35" fill="none" stroke-width="2" />
+  <g stroke="url(#link-anp)" stroke-opacity="0.7" stroke-width="1.5">
+    <path d="M240 180L420 320L700 180L980 320L1200 140" />
+    <path d="M180 340L380 420L640 260L900 420L1180 300" opacity="0.6" />
+  </g>
+  <g fill="#F8E1FF" opacity="0.35">
+    <circle cx="420" cy="320" r="6"/>
+    <circle cx="700" cy="180" r="6"/>
+    <circle cx="900" cy="420" r="6"/>
+    <circle cx="1180" cy="300" r="6"/>
+    <circle cx="240" cy="180" r="6"/>
+  </g>
+</svg>

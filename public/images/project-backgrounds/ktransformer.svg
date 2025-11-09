@@ -1,0 +1,26 @@
+<svg width="1440" height="560" viewBox="0 0 1440 560" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad-ktransformer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#09021F" />
+      <stop offset="40%" stop-color="#1C0F4F" />
+      <stop offset="100%" stop-color="#3E2C7C" />
+    </linearGradient>
+    <linearGradient id="pulse-ktransformer" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#FF2E80" />
+      <stop offset="100%" stop-color="#18F3FF" />
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="560" fill="#02010B" />
+  <path d="M0 380C180 420 360 420 540 360C760 286 900 320 1100 360C1240 388 1340 360 1440 340V560H0V380Z" fill="url(#grad-ktransformer)" />
+  <g stroke="url(#pulse-ktransformer)" stroke-width="3" stroke-linecap="round" opacity="0.85">
+    <path d="M120 320C220 320 260 280 360 280C460 280 500 340 600 340C700 340 740 280 840 280C940 280 980 340 1080 340C1180 340 1220 280 1320 280C1380 280 1400 300 1440 320" />
+  </g>
+  <g fill="#FFEFF7" opacity="0.4">
+    <circle cx="220" cy="320" r="4" />
+    <circle cx="360" cy="280" r="4" />
+    <circle cx="600" cy="340" r="4" />
+    <circle cx="840" cy="280" r="4" />
+    <circle cx="1080" cy="340" r="4" />
+    <circle cx="1320" cy="280" r="4" />
+  </g>
+</svg>

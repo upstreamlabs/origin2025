@@ -5,8 +5,8 @@ import Button from "components/Button.astro";
 interface Props {
 	title: string,
     text: string,
-    image: string,
-    imageAlt: string,
+    image?: string | string[],
+    imageAlt?: string | string[],
     textAlign?: 'left' | 'right',
     ctaButton?: {
         text: string,
@@ -16,6 +16,9 @@ interface Props {
     id?: string;
     theme?: 'light' | 'dark';
     background?: 'light' | 'lightgray' | 'dark' | 'primary';
+    backgroundSvg?: string;
+    pdfLink?: string;
+    githubLinks?: string[];
 }
 
 const {
@@ -28,7 +31,21 @@ const {
   id,
   theme = 'dark',
   background = 'dark',
+  backgroundSvg,
+  pdfLink,
+  githubLinks = [],
 } = Astro.props;
+
+const imageSources = Array.isArray(image) ? image : image ? [image] : [];
+const altSources = Array.isArray(imageAlt)
+  ? imageAlt
+  : imageAlt
+  ? [imageAlt]
+  : imageSources.map(() => title);
+
+const sectionStyle = backgroundSvg
+  ? `background-image: url('${backgroundSvg}'); background-size: cover; background-position: center; background-repeat: no-repeat;`
+  : undefined;
 ---
 
 <section
@@ -36,6 +53,7 @@ const {
     id={id ?? 'spotlight'}
     data-theme-section={theme}
     data-bg-section={background}
+    style={sectionStyle}
 >
     <div class="container">
         <div class="row grid">
@@ -50,27 +68,54 @@ const {
                     </p>
                 </div>
 
-                {ctaButton?.text &&
+                {(pdfLink || ctaButton?.text || githubLinks.length > 0) &&
                     <div class="col-row col-row-btn">
-                        <Button
-                            text={ctaButton.text}
-                            link={ctaButton.link}
-                            openInNewTab={ctaButton?.openInNewTab}
-                            class="btn primary xl btn-hover"
-                        />
+                        {pdfLink && (
+                          <a
+                            class="btn primary xl btn-hover resource-btn"
+                            href={pdfLink}
+                            target="_blank"
+                            rel="noopener"
+                          >
+                            下载项目 PDF
+                          </a>
+                        )}
+                        {ctaButton?.text && (
+                          <Button
+                              text={ctaButton.text}
+                              link={ctaButton.link}
+                              openInNewTab={ctaButton?.openInNewTab}
+                              class="btn outline xl btn-hover"
+                          />
+                        )}
+                        {githubLinks.length > 0 && (
+                          <div class="github-links">
+                            {githubLinks.map(link => (
+                              <a
+                                href={link}
+                                target="_blank"
+                                rel="noopener"
+                              >
+                                GitHub
+                              </a>
+                            ))}
+                          </div>
+                        )}
                     </div>
                 }
             </div>
 
-            {image &&
+            {imageSources.length > 0 &&
                 <div class="col">
                     <div class="logo-tiles">
-                        <img
-                            src={image}
-                            alt={imageAlt}
+                        {imageSources.map((src, idx) => (
+                          <img
+                            src={src}
+                            alt={altSources[idx] ?? altSources[0] ?? title}
                             class="hexbadge"
-                            style="max-width: 100%; height: auto;"
-                        />
+                            loading="lazy"
+                          />
+                        ))}
                     </div>
                 </div>
             }
@@ -96,5 +141,63 @@ const {
     .col-row-title h2 {
       font-size: 1.5rem;
     }
+  }
+
+  .logo-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-tiles img {
+    max-width: 160px;
+    width: auto;
+    height: auto;
+    filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.35));
+  }
+
+  @media (max-width: 640px) {
+    .logo-tiles img {
+      max-width: 120px;
+    }
+  }
+
+  .col-row-btn {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .resource-btn {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .github-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+
+  .github-links a {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    color: #f3f4f6;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+
+  .github-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
   }
 </style>

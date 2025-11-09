@@ -8,6 +8,8 @@ import SupportShowcase from "components/SupportShowcase.astro";
 import Cards from "components/Cards.astro";
 import Statistics from "components/Statistics.astro";
 import Button from "components/Button.astro";
+import TextAndImageSimple from "components/TextAndImageSimple.astro";
+import projectSpotlightsData from "../../data/upstream-projects.json";
 
 import statOnline from "images/upstream/stat-online.png";
 import statOffline from "images/upstream/stat-offline.png";
@@ -180,6 +182,8 @@ const mentorshipCards = [
     image: "streamline:investment-selection",
   },
 ];
+
+const projectSpotlights = projectSpotlightsData;
 ---
 
 <Layout
@@ -272,6 +276,37 @@ const mentorshipCards = [
     theme="light"
     background="light"
   />
+
+  <section class="section project-intro" id="projects" data-theme-section="dark" data-bg-section="primary">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p class="eyebrow">Upstream Project Atlas</p>
+          <h2 class="custom3">2025 Residency Cohort</h2>
+          <p class="lead">
+            From intelligent agent protocols and sovereign comms stacks to robotics operating systems,
+            these collaborators will co-design governance, storytelling, and sustainable growth paths throughout the Upstream residency.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {projectSpotlights.map((project, index) => (
+    <TextAndImageSimple
+      id={project.id}
+      title={project.name}
+      text={project.description}
+      image={project.images}
+      imageAlt={project.imageAlt}
+      textAlign={index % 2 ? 'right' : 'left'}
+      theme="dark"
+      background="dark"
+      backgroundSvg={project.background}
+      pdfLink={project.pdf}
+      githubLinks={project.github}
+    />
+  ))}
 
   <SupportShowcase
     id="support"
@@ -376,6 +411,28 @@ const mentorshipCards = [
 
   .apply-actions .btn.primary span {
     color: #ffffff !important;
+  }
+
+  .project-intro {
+    background: radial-gradient(circle at top left, rgba(53, 108, 255, 0.25), transparent 60%), #030712;
+    color: #f3f4f6;
+  }
+
+  .project-intro .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 0.5rem;
+  }
+
+  .project-intro h2 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+  }
+
+  .project-intro .lead {
+    color: rgba(255, 255, 255, 0.8);
   }
 
   @media (max-width: 768px) {

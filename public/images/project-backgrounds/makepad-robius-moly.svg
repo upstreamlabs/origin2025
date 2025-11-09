@@ -1,0 +1,22 @@
+<svg width="1440" height="560" viewBox="0 0 1440 560" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad-makepad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B0536" />
+      <stop offset="50%" stop-color="#5C0D6F" />
+      <stop offset="100%" stop-color="#FF6FB5" />
+    </linearGradient>
+    <linearGradient id="grid-makepad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#210B2F" />
+      <stop offset="100%" stop-color="#44144F" />
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="560" fill="url(#grid-makepad)" />
+  <path d="M0 420C240 360 360 380 560 420C820 472 980 380 1200 420C1320 444 1380 460 1440 470V560H0V420Z" fill="url(#grad-makepad)" opacity="0.9" />
+  <g stroke="#FF9BD0" stroke-width="1.5" stroke-opacity="0.4">
+    <path d="M0 360H1440" />
+    <path d="M0 320H1440" />
+  </g>
+  <g stroke="#FFDAF0" stroke-width="2" stroke-linecap="round" opacity="0.55">
+    <path d="M160 260C260 300 360 240 460 280C560 320 660 260 760 300C860 340 960 280 1060 320C1160 360 1260 300 1360 340" />
+  </g>
+</svg>

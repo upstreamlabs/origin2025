@@ -1,0 +1,156 @@
+[
+  {
+    "id": "project-chenlong",
+    "title": "辰龙操作系统 | 机器人内核实验场",
+    "text": "辰龙团队以清华大学 uCore->rCore->ArceOS 的技术底座，打造完全开源、组件化的具身智能操作系统，并推出“机器人版树莓派”开发套件。Rust 内核、开源 NPU 驱动与标准课程同时开放，让高校实验室与职业院校可以低成本搭建导航、感知与多传感融合原型，快速验证真实场景。",
+    "images": [
+      "/images/project-logos/chenlong.png"
+    ],
+    "imageAlt": [
+      "ChenLongOS 徽标"
+    ],
+    "background": "/images/project-backgrounds/chenlong.svg",
+    "pdf": "/pdf/开源项目介绍-国产辰龙操作系统-ChenLongOS.pdf",
+    "github": [
+      "https://github.com/arceos-org/arceos"
+    ]
+  },
+  {
+    "id": "project-anp",
+    "title": "Agent Network Protocol | 智能体互联网",
+    "text": "ANP 以 DID 身份、端到端加密与语义发现协议，构建“智能体版 HTTP”。该项目希望让个人助理、商业 bot 与公共服务无需重新注册即可可信通信，280+ 社区成员每周迭代 SDK、凭证流与行业协议。",
+    "images": [
+      "/images/project-logos/anp.png"
+    ],
+    "imageAlt": [
+      "Agent Network Protocol 徽标"
+    ],
+    "background": "/images/project-backgrounds/anp.svg",
+    "pdf": "/pdf/ANP开源项目：构建智能商业新生态.pdf",
+    "github": [
+      "https://github.com/agent-network-protocol/AgentNetworkProtocol"
+    ]
+  },
+  {
+    "id": "project-dora",
+    "title": "DORA | 数据流驱动的机器人架构",
+    "text": "dora-rs 用 Rust 建立面向数据流的机器人框架，零拷贝共享内存与 Zenoh 跨端通信可在百微秒内传输 50MB 数据，Python 节点支持热重载。开发者像拼装图谱一样组合感知、规划、控制节点，大幅降低具身智能研发门槛。",
+    "images": [
+      "/images/project-logos/dora.png"
+    ],
+    "imageAlt": [
+      "dora-rs 徽标"
+    ],
+    "background": "/images/project-backgrounds/dora.svg",
+    "pdf": "/pdf/dora.pdf",
+    "github": [
+      "https://github.com/dora-rs/dora"
+    ]
+  },
+  {
+    "id": "project-flagos",
+    "title": "FlagOS | 统一的国产 AI 算力堆栈",
+    "text": "FlagOS 联结 17+ 芯片、云厂商与高校，以 FlagTree 编译器、FlagGEMs 算子与 FlagCX 通信库打通国产 NPU。它像开源版 CUDA，让大模型训练/推理在不同硬件间平滑迁移，并同步推进 ITU 标准、校园课程与全球黑客松。",
+    "images": [
+      "/images/project-logos/flagos.png"
+    ],
+    "imageAlt": [
+      "FlagOS 徽标"
+    ],
+    "background": "/images/project-backgrounds/flagos.svg",
+    "pdf": "/pdf/众智FlagOS  CN-1024.pdf",
+    "github": [
+      "https://github.com/flagos-ai"
+    ]
+  },
+  {
+    "id": "project-ktransformer",
+    "title": "KTransformers | 异构推理引擎",
+    "text": "KTransformers 以 CPUInfer + Marlin Kernel + 大内存缓存，把 DeepSeek-V3 等千亿模型装进单台消费级 GPU。它对不同算子智能调度，Prefill 延迟可降低 30 倍，生成速度提升 3 倍，帮助安全、媒体等行业部署自有 Copilot。",
+    "images": [
+      "/images/project-logos/ktransformer.png"
+    ],
+    "imageAlt": [
+      "KTransformers 徽标"
+    ],
+    "background": "/images/project-backgrounds/ktransformer.svg",
+    "pdf": "/pdf/Ktransformers-项目介绍.pdf",
+    "github": [
+      "https://github.com/kvcache-ai/ktransformers"
+    ]
+  },
+  {
+    "id": "project-mofa",
+    "title": "MoFA Makers Collective | 一人公司的魔法工坊",
+    "text": "MoFA 以 Modular AI Framework 为引擎，召集独立产品经理打造“杀手级”AI 应用：从灵感、原型、叙事到商业化都有同伴与导师陪跑。项目希望证明小而美的团队同样能用开源与 AI 打造可持续公共产品。",
+    "images": [
+      "/images/project-logos/mofa.png"
+    ],
+    "imageAlt": [
+      "MoFA 徽标"
+    ],
+    "background": "/images/project-backgrounds/mofa.svg",
+    "pdf": "/pdf/mofa.pdf",
+    "github": [
+      "https://github.com/mofa-org/mofa"
+    ]
+  },
+  {
+    "id": "project-moxin",
+    "title": "Moxin AI | 边缘语音引擎",
+    "text": "Moxin AI 提供完全开源、可复现的 TTS、ASR 与语音克隆模型，专为“AI 一体机”与私有服务器优化。无需上云即可获得双语语调、极速推理与小样本训练，适合教育、无障碍与公共服务部署安全的语音智能。",
+    "images": [
+      "/images/project-logos/moxin.png"
+    ],
+    "imageAlt": [
+      "Moxin AI 徽标"
+    ],
+    "background": "/images/project-backgrounds/moxin.svg",
+    "pdf": "/pdf/Moxin_AI_Upstream.pdf",
+    "github": [
+      "https://github.com/moxin-org"
+    ]
+  },
+  {
+    "id": "project-matrix-suite",
+    "title": "Palpo · Robrix · TSP | 去中心化协同栈",
+    "text": "Palpo 提供高性能 Matrix 主服务器，Robrix 负责多端客户端体验，而 TSP SDK 则把 OpenWallet 的可验证身份/凭证注入通信流程。三者共同为政府、企业与社区提供可自主管控的通信 + 信任层，支撑开源治理与公共服务。",
+    "images": [
+      "/images/project-logos/palpo.png",
+      "/images/project-logos/robrix.png"
+    ],
+    "imageAlt": [
+      "Palpo 徽标",
+      "Robrix 徽标"
+    ],
+    "background": "/images/project-backgrounds/matrix-suite.svg",
+    "pdf": "/pdf/张汉东-Upstream Labs.pptx",
+    "github": [
+      "https://github.com/palpo-im/palpo",
+      "https://github.com/project-robius/robrix",
+      "https://github.com/openwallet-foundation-labs/tsp"
+    ]
+  },
+  {
+    "id": "project-makepad-robius-moly",
+    "title": "Makepad · Robius · Moly | 全栈 Rust 的 AI-Native 框架",
+    "text": "Makepad GPU UI 引擎、Robius 应用框架与 Moly 客户端 SDK 打造“端云一体”的 Rust AI 开发生态。开发者可在同一代码基调度本地/云端模型、构建 Agent UI，并通过 Moly Server 集成本地 LLM。它面向 AI 原生应用的全流程：界面、网络、推理与分发。",
+    "images": [
+      "/images/project-logos/makepad.png",
+      "/images/project-logos/robius.png",
+      "/images/project-logos/moly.webp"
+    ],
+    "imageAlt": [
+      "Makepad 徽标",
+      "Robius 徽标",
+      "Moly 徽标"
+    ],
+    "background": "/images/project-backgrounds/makepad-robius-moly.svg",
+    "pdf": "/pdf/张汉东-Upstream Labs.pptx",
+    "github": [
+      "https://github.com/makepad/makepad",
+      "https://github.com/project-robius/robrix",
+      "https://github.com/moxin-org/moly"
+    ]
+  }
+]

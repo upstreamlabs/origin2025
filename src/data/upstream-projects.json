@@ -1,0 +1,237 @@
+[
+  {
+    "name": "ChenLongOS Robot Dev Stack",
+    "logo": null,
+    "github": [
+      "https://github.com/arceos-org/arceos"
+    ],
+    "tagline": "Open robotics OS kits for every builder",
+    "description": "ChenLongOS extends Tsinghua University's uCore->rCore lineage into a fully open, componentized operating system tailored for embodied intelligence. The project is shipping an affordable \"robotics Raspberry Pi\" kit that pairs Rockchip NPUs with Rust-first firmware, so labs and vocational schools can prototype localization, perception, and fleet control without proprietary firmware. Community priorities include modularizing StarryOS services, upstreaming Rust NPU drivers, and publishing open courseware that lowers robotics education costs. By tying curriculum, hardware, and ChenLongOS distributions together, the team wants young engineers to build autonomous machines that are as hackable as microcontrollers yet ready for industrial field deployment across China now.",
+    "keywords": [
+      "robotics",
+      "operating system",
+      "Rust",
+      "education",
+      "NPU"
+    ],
+    "pdf": "/pdf/开源项目介绍-国产辰龙操作系统-ChenLongOS.pdf",
+    "id": "project-chenlong",
+    "images": [
+      "/images/project-logos/chenlong.png"
+    ],
+    "imageAlt": [
+      "ChenLongOS 徽标"
+    ],
+    "background": "/images/project-backgrounds/chenlong.svg"
+  },
+  {
+    "name": "Agent Network Protocol (ANP)",
+    "logo": null,
+    "github": [
+      "https://github.com/agent-network-protocol/AgentNetworkProtocol"
+    ],
+    "tagline": "Define the HTTP moment for intelligent agents",
+    "description": "Agent Network Protocol (ANP) imagines the agentic internet as a peer-to-peer fabric where identities, conversations, and transactions travel through open specifications instead of siloed platforms. The project already defined DID-based authentication, encrypted transport, and a semantic discovery registry so personal copilots, commerce bots, and civic services can handshake without extra accounts. With weekly community calls and 280+ contributors from major Chinese clouds, ANP is iterating SDKs, credential flows, and domain-specific application protocols. The Upstream camp helps pressure-test interoperability demos, align with W3C and IETF partners, and recruit fellows who can turn ANP into the HTTP moment for intelligent agents globally.",
+    "keywords": [
+      "agents",
+      "protocol",
+      "DID",
+      "interoperability",
+      "open-source"
+    ],
+    "pdf": "/pdf/ANP开源项目：构建智能商业新生态.pdf",
+    "id": "project-anp",
+    "images": [
+      "/images/project-logos/anp.png"
+    ],
+    "imageAlt": [
+      "Agent Network Protocol 徽标"
+    ],
+    "background": "/images/project-backgrounds/anp.svg"
+  },
+  {
+    "name": "dora-rs Dataflow Robotics",
+    "logo": null,
+    "github": [
+      "https://github.com/dora-rs/dora"
+    ],
+    "tagline": "Rust dataflow stack for embodied intelligence",
+    "description": "dora-rs is a Rust-native, dataflow-oriented robotics framework engineered for the AI era, modeling every perception, planning, and control block as graph nodes that can be recomposed across edge, cloud, and humanoid deployments. Zero-copy shared memory, Apache Arrow buffers, and Zenoh transport push 50 MB payloads in sub-100 microseconds, while YAML-driven deployment keeps multi-machine topologies declarative. Compared with ROS2 it cuts latency by two orders of magnitude, boosts MCU viability, and bakes in hot-reload Python APIs plus prebuilt Dora Node Hub packages. Upstream support accelerates community workshops, hardware adapters, and bilingual documentation so any lab can ship trustworthy embodied intelligence globally.",
+    "keywords": [
+      "robotics",
+      "Rust",
+      "dataflow",
+      "runtime",
+      "AI"
+    ],
+    "pdf": "/pdf/dora.pdf",
+    "id": "project-dora",
+    "images": [
+      "/images/project-logos/dora.png"
+    ],
+    "imageAlt": [
+      "dora-rs 徽标"
+    ],
+    "background": "/images/project-backgrounds/dora.svg"
+  },
+  {
+    "name": "FlagOS Unified AI Computing",
+    "logo": null,
+    "github": [
+      "https://github.com/flagos-ai"
+    ],
+    "tagline": "One open stack for every domestic AI chip",
+    "description": "FlagOS unites China's AI chipmakers, cloud vendors, and universities behind a single open system software stack that mirrors CUDA's completeness while staying vendor-neutral. Through FlagTree compilers, FlagGEMs kernels, FlagCX communication, and FlagScale orchestration, the community lets large models train or infer across domestic NPUs without rewriting operators. The roadmap pairs ITU standardization with campus curricula, global hackathons, and developer bounties so thousands of engineers can port Triton kernels, benchmark heterogenous clusters, and harden reference deployments. Winning Upstream unlocks more co-creation with public clouds and SDG coalitions that want affordable, sovereign compute for embodied intelligence and civic-scale AI labs throughout Asia.",
+    "keywords": [
+      "AI chips",
+      "compiler",
+      "system software",
+      "standardization",
+      "open community"
+    ],
+    "pdf": "/pdf/众智FlagOS  CN-1024.pdf",
+    "id": "project-flagos",
+    "images": [
+      "/images/project-logos/flagos.png"
+    ],
+    "imageAlt": [
+      "FlagOS 徽标"
+    ],
+    "background": "/images/project-backgrounds/flagos.svg"
+  },
+  {
+    "name": "KTransformers Heterogeneous Inference",
+    "logo": null,
+    "github": [
+      "https://github.com/kvcache-ai/ktransformers"
+    ],
+    "tagline": "Run trillion-parameter copilots on a single rig",
+    "description": "KTransformers attacked the cost wall of large-model inference by splitting workloads intelligently across GPUs, CPUs, and oversized RAM, letting DeepSeek-V3 and similar giants run from a single consumer workstation. The open-source engine layers CPUInfer scheduling, Marlin kernels, quantized caches, and attention-aware offloading so prefills shrink thirtyfold and generation speeds triple versus baseline llama.cpp stacks. With 15k+ GitHub stars and partnerships spanning Huawei Ascend to Intel, the team is hardening heterogenous fine-tuning, 1M-token context, and on-device privacy guarantees. Community pilots span media labs worldwide. Upstream mentorship supports roadmap governance, reproducible benchmarks, and venture-ready offerings that democratize high-quality copilots for regulated industries.",
+    "keywords": [
+      "LLM",
+      "inference",
+      "heterogeneous",
+      "optimization",
+      "open-source"
+    ],
+    "pdf": "/pdf/Ktransformers-项目介绍.pdf",
+    "id": "project-ktransformer",
+    "images": [
+      "/images/project-logos/ktransformer.png"
+    ],
+    "imageAlt": [
+      "KTransformers 徽标"
+    ],
+    "background": "/images/project-backgrounds/ktransformer.svg"
+  },
+  {
+    "name": "MoFA Makers Collective",
+    "logo": null,
+    "github": [
+      "https://github.com/mofa-org/mofa"
+    ],
+    "tagline": "Indie makers turning MoFA spells into products",
+    "description": "MoFA rallies indie builders to create \"killer applications\" atop the Modular AI Framework, blending Pieter Levels' one-person-company ethic with pragmatic go-to-market support. The project recruits product managers who can own ideation, prototyping, promotion, and monetization, then backs them with a co-creation guild covering storytelling, social media, offline meetups, and shared revenue playbooks. By pushing for minimalist yet soulful AI tools, MoFA hopes to prove that small, values-aligned teams can ship sustainable software faster than venture-heavy incumbents. Upstream coaching will sharpen program design, funnel mentors, and legitimize MoFA as the community where new AI hits are incubated for creators across Asia.",
+    "keywords": [
+      "product-led",
+      "community",
+      "indie hackers",
+      "AI apps",
+      "mentorship"
+    ],
+    "pdf": "/pdf/mofa.pdf",
+    "id": "project-mofa",
+    "images": [
+      "/images/project-logos/mofa.png"
+    ],
+    "imageAlt": [
+      "MoFA 徽标"
+    ],
+    "background": "/images/project-backgrounds/mofa.svg"
+  },
+  {
+    "name": "Moxin AI Edge Speech Engine",
+    "logo": null,
+    "github": [
+      "https://github.com/moxin-org"
+    ],
+    "tagline": "Private-grade speech AI that lives on your edge",
+    "description": "Moxin AI targets the edge-computing future of speech intelligence, delivering open-source TTS, ASR, and voice-cloning engines that run entirely on personal devices or private servers. By optimizing models for \"AI all-in-one\" hardware, the team sidesteps latency, privacy, and cost pitfalls associated with cloud APIs, while still supporting bilingual prosody, high-fidelity cloning, and rapid fine-tuning with only a few samples. The Upstream journey focuses on wrapping the stack into reproducible toolkits, partnering with civic organizations that need secure voice agents, and expanding documentation so makers can remix models into education, accessibility, and creative storytelling experiences without shipping data off-device. For everyone.",
+    "keywords": [
+      "speech",
+      "edge compute",
+      "privacy",
+      "TTS",
+      "ASR"
+    ],
+    "pdf": "/pdf/Moxin_AI_Upstream.pdf",
+    "id": "project-moxin",
+    "images": [
+      "/images/project-logos/moxin.png"
+    ],
+    "imageAlt": [
+      "Moxin AI 徽标"
+    ],
+    "background": "/images/project-backgrounds/moxin.svg"
+  },
+  {
+    "name": "Matrix Suite for Decentralized Collaboration",
+    "logo": null,
+    "github": [
+      "https://github.com/palpo-im/palpo",
+      "https://github.com/project-robius/robrix",
+      "https://github.com/openwallet-foundation-labs/tsp"
+    ],
+    "tagline": "Rust-native social graph meets agent-first trust",
+    "description": "Matrix Suite brings Palpo's high-performance homeserver, Robrix's multi-platform client, and the OpenWallet-based TSP SDK together so civic orgs can run sovereign messaging, identity, and verifiable credential workflows. It targets cities and cooperatives that need Matrix federation plus DID/VC handshakes, ensuring contributors can authenticate once and collaborate anywhere without centralized dependencies. Upstream mentorship will help the suite document deployment playbooks, align governance with governments and enterprises, and recruit operators who want public digital infrastructure they fully control.",
+    "keywords": [
+      "Matrix",
+      "identity",
+      "DID",
+      "Rust",
+      "federation"
+    ],
+    "pdf": "/pdf/张汉东-Upstream Labs.pptx",
+    "id": "project-matrix-suite",
+    "images": [
+      "/images/project-logos/palpo.png",
+      "/images/project-logos/robrix.png"
+    ],
+    "imageAlt": [
+      "Palpo 徽标",
+      "Robrix 徽标"
+    ],
+    "background": "/images/project-backgrounds/matrix-suite.svg"
+  },
+  {
+    "name": "Makepad · Robius · Moly AI Studio",
+    "logo": null,
+    "github": [
+      "https://github.com/makepad/makepad",
+      "https://github.com/project-robius/robrix",
+      "https://github.com/moxin-org/moly"
+    ],
+    "tagline": "Full-stack Rust tooling for AI-native apps",
+    "description": "Makepad's GPU-accelerated UI engine, the Robius application framework, and the Moly SDK form a vertically integrated toolkit for building AI-native clients entirely in Rust. Developers can ship desktop, mobile, and Web UIs, talk to remote or local LLMs through Moly Server, and hot reload business logic without Electron or Python glue. The trio demonstrates how a single codebase can orchestrate interface, networking, and inference for agents, copilots, and creative workstations. Upstream support focuses on documentation, template apps, and partner showcases that prove Rust can be the expressive, productive base of the AI era.",
+    "keywords": [
+      "Rust",
+      "AI-native",
+      "UI",
+      "SDK",
+      "agents"
+    ],
+    "pdf": "/pdf/张汉东-Upstream Labs.pptx",
+    "id": "project-makepad-robius-moly",
+    "images": [
+      "/images/project-logos/makepad.png",
+      "/images/project-logos/robius.png",
+      "/images/project-logos/moly.webp"
+    ],
+    "imageAlt": [
+      "Makepad 徽标",
+      "Robius 徽标",
+      "Moly 徽标"
+    ],
+    "background": "/images/project-backgrounds/makepad-robius-moly.svg"
+  }
+]
