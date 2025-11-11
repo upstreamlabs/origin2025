@@ -30,7 +30,7 @@ const heroHighlights = [
   "根植开源：深入学习开源精神与治理，理解公共产品的核心价值。",
   "AI 赋能：掌握前沿 AI 工具，高效构建社区影响力与内容生态。",
   "共创实践：深入真实开源项目，为其设计可持续的运营与增长方案。",
-  "生态支持：优秀的共创方案将获得 Upstream 10 万元生态发展基金、导师和其他项目增长设施支持，助力公共产品落地生根。",
+  "生态支持：每个优秀的共创方案将获得 Upstream 10 万元生态发展基金、导师和其他项目增长设施支持，助力公共产品落地生根。",
   "4 周线上 + 3 天线下，我们寻找下一代开源生态的共建者。",
 ];
 
@@ -251,6 +251,35 @@ const mentorshipCards = [
     variant="residency"
   />
 
+  <SupportShowcase
+    id="support"
+    title="成果与激励"
+    highlight="每个完成线下创新营并通过成果展示的团队，可获得 Upstream 开源生态发展基金 10 万元，用于推进开源生态的长期建设。"
+    amount="100,000"
+    amountNote="Upstream 开源生态发展基金"
+    sections={[
+      {
+        title: "基金用途建议",
+        bullets: [
+          "社区运营与贡献者激励计划",
+          "官网、视频与叙事内容建设",
+          "生态合作拓展与活动组织",
+          "治理优化与长期机制设计",
+        ],
+      },
+      {
+        title: "长期支持机制",
+        bullets: [
+          "Upstream Mentorship Program｜6 个月持续导师辅导",
+          "Upstream Knowledge Network｜优秀案例收录公开教材",
+          "政府孵化合作｜提供场地、政策、资金与落地资源",
+        ],
+      },
+    ]}
+    theme="light"
+    background="lightgray"
+  />
+
   <Cards
     id="mentors"
     title="导师与生态支持"
@@ -291,35 +320,6 @@ const mentorshipCards = [
       logoScale={project.logoScale}
     />
   ))}
-
-  <SupportShowcase
-    id="support"
-    title="成果与激励"
-    highlight="完成线下创新营并通过成果展示的团队，可获得 Upstream 开源生态发展基金 10 万元，用于推进开源生态的长期建设。"
-    amount="100,000"
-    amountNote="Upstream 开源生态发展基金"
-    sections={[
-      {
-        title: "基金用途建议",
-        bullets: [
-          "社区运营与贡献者激励计划",
-          "官网、视频与叙事内容建设",
-          "生态合作拓展与活动组织",
-          "治理优化与长期机制设计",
-        ],
-      },
-      {
-        title: "长期支持机制",
-        bullets: [
-          "Upstream Mentorship Program｜6 个月持续导师辅导",
-          "Upstream Knowledge Network｜优秀案例收录公开教材",
-          "政府孵化合作｜提供场地、政策、资金与落地资源",
-        ],
-      },
-    ]}
-    theme="light"
-    background="lightgray"
-  />
 
 
   <section class="section section-apply" id="apply" data-theme-section="dark" data-bg-section="dark">
