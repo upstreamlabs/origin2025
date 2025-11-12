@@ -66,7 +66,7 @@ const resourceLinks = [
     const segments = cleaned.split("/");
     const repoName = segments[segments.length - 1] || "GitHub";
     return {
-      label: repoName,
+      label: `Github - ${repoName}`,
       href,
     };
   }),
@@ -162,6 +162,7 @@ const getLogoStyle = (idx: number) =>
     opacity: 0.55;
     mix-blend-mode: screen;
     animation: project-bg-pan 18s ease-in-out infinite alternate;
+    pointer-events: none;
   }
 
   .project-spotlight > .container {
